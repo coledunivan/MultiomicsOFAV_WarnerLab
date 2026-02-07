@@ -1,0 +1,180 @@
+
+
+#Full RNAseq preprocessing from reads to counts
+
+#SLURM HPC Command
+
+#!/bin/bash
+#SBATCH --job-name=fastqc_ofav
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=64
+#SBATCH --partition=general
+#SBATCH --mem=250G
+#SBATCH --time=02:00:00
+#SBATCH --output=fastqc_%j.out
+#SBATCH --error=fastqc_%j.err
+
+# Load modules
+# Load fastqc
+
+module purge
+module load fastqc
+
+# Set directories
+WORKDIR=/storage/cms/warnerj_lab/cd3393/coralheat_rnaseq
+OUTDIR=${WORKDIR}/fastqc
+
+cd ${WORKDIR} || exit 1
+
+# Create output directory
+mkdir -p ${OUTDIR}
+
+# Run FastQC on all FASTQ files
+fastqc \
+  --threads 64 \
+  --outdir ${OUTDIR} \
+  *.fastq.gz
+
+echo "FastQC completed successfully on $(date)"
+
+#MultiQC (Compiles quality reports)
+# Load modules
+module purge
+module load multiqc
+
+
+# Set directories
+WORKDIR=/storage/cms/warnerj_lab/cd3393/coralheat_rnaseq
+FASTQC_DIR=${WORKDIR}/fastqc
+OUTDIR=${WORKDIR}/multiqc
+
+cd ${WORKDIR} || exit 1
+
+# Create output directory
+mkdir -p ${OUTDIR}
+
+# Run MultiQC
+multiqc \
+  ${FASTQC_DIR} \
+  --outdir ${OUTDIR} \
+  --force
+
+echo "MultiQC completed successfully on $(date)"
+
+
+#Index genome using STAR
+
+source ~/.bashrc
+micromamba activate rnaseq
+
+GENOME_DIR=/storage/cms/warnerj_lab/cd3393/genomes/ofav/star_index
+FASTA=/storage/cms/warnerj_lab/cd3393/genomes/ofav/ofav_v1_genomic.fasta
+GTF=/storage/cms/warnerj_lab/cd3393/genomes/ofav/Orbicella_faveolata.gff3
+mkdir -p ${GENOME_DIR}
+
+STAR \
+  --runThreadN 16 \
+  --runMode genomeGenerate \
+  --genomeDir ${GENOME_DIR} \
+  --genomeFastaFiles ${FASTA} \
+  --sjdbGTFfile ${GTF} \
+  --sjdbOverhang 100
+
+
+#RUN STAR ALIGNER 
+
+
+
+# FIX CLUSTER BASHRC BUG
+set -eo pipefail
+export BASHRCSOURCED=1
+
+
+# Activate micromamba 
+eval "$($HOME/.local/bin/micromamba shell hook --shell bash)"
+micromamba activate rnaseq
+
+
+# Paths
+
+WORKDIR=/storage/cms/warnerj_lab/cd3393/coralheat_rnaseq
+GENOME_DIR=/storage/cms/warnerj_lab/cd3393/genomes/ofav/star_index
+OUTDIR=${WORKDIR}/star_alignments
+
+mkdir -p "${OUTDIR}"
+cd "${WORKDIR}" || exit 1
+
+
+# STAR alignment loop
+
+for R1 in *_R1_001.fastq.gz
+do
+    R2=${R1/_R1_/_R2_}
+    SAMPLE=${R1/_R1_001.fastq.gz/}
+
+    
+    echo "Aligning sample: ${SAMPLE}"
+    
+
+    STAR \
+        --runThreadN 16 \
+        --genomeDir "${GENOME_DIR}" \
+        --readFilesIn "${R1}" "${R2}" \
+        --readFilesCommand zcat \
+        --outFileNamePrefix "${OUTDIR}/${SAMPLE}." \
+        --outSAMtype BAM SortedByCoordinate \
+        --quantMode GeneCounts \
+        --outSAMattributes NH HI AS nM MD \
+        --limitBAMsortRAM 100000000000
+
+done
+
+echo "STAR alignment completed on $(date)"
+
+
+#RUN FEATURE COUNTS 
+
+
+# Fix cluster bashrc bug
+set -eo pipefail
+export BASHRCSOURCED=1
+
+# Paths
+
+WORKDIR=/storage/cms/warnerj_lab/cd3393/coralheat_rnaseq
+BAMDIR=${WORKDIR}/star_alignments
+OUTDIR=${WORKDIR}/featurecounts
+GFF=/storage/cms/warnerj_lab/cd3393/genomes/ofav/Orbicella_faveolata.gff3
+
+mkdir -p ${OUTDIR}
+cd ${WORKDIR}
+
+# Collect NON-EMPTY BAMs only
+BAMS=$(find ${BAMDIR} -name "*.Aligned.sortedByCoord.out.bam" -size +1M)
+
+echo "BAM files to be counted:"
+echo "${BAMS}"
+
+# Safety check
+if [ -z "${BAMS}" ]; then
+  echo "ERROR: No valid BAM files found"
+  exit 1
+fi
+
+# Run featureCounts (Subread)
+subread featureCounts \
+  -T 16 \
+  -p \
+  -O \
+  -t exon \
+  -g Parent \
+  -a ${GFF} \
+  -o ${OUTDIR}/gene_counts.txt \
+  ${BAMS}
+
+echo "featureCounts finished successfully on $(date)"
+
+#Merged Counts Matrix can now be copied from HPC to local machine
+
+
+
