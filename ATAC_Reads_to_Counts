@@ -1,0 +1,288 @@
+#Full Bash ATAC HPC Pipeline
+
+#Slurm command for HPC
+
+#!/bin/bash
+#SBATCH --job-name=fastqc_atac
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=64
+#SBATCH --partition=general
+#SBATCH --mem=250G
+#SBATCH --time=12:00:00
+#SBATCH --output=fastqc_%j.out
+#SBATCH --error=fastqc_%j.err
+
+## --- LOAD MODULES ---
+module load fastqc
+module load samtools
+module load bedtools
+module load deeptools
+module load macs2
+
+# --- MOVE TO DATA DIRECTORY ---
+cd /storage/cms/warnerj_lab/cd3393/coralheat_atac
+
+# --- CREATE OUTPUT DIR ---
+mkdir -p fastqc_out
+
+echo "Starting FastQC on ATAC samples..."
+echo "Working directory: $(pwd)"
+echo "CPU cores: $SLURM_NTASKS"
+
+# --- RUN FASTQC ---
+for R1 in *_R1_001.fastq.gz; do
+    root=$(basename "$R1" _R1_001.fastq.gz)
+
+    R1file=${root}_R1_001.fastq.gz
+    R2file=${root}_R2_001.fastq.gz
+
+    echo "Running FastQC on: $root"
+
+    fastqc $R1file -o fastqc_out &
+    fastqc $R2file -o fastqc_out &
+done
+
+wait
+
+echo "FastQC done"
+                       
+# ---- PATHS ----
+WORKDIR=/storage/cms/warnerj_lab/cd3393/coralheat_atac
+RAWDIR=${WORKDIR}/rawdata
+OUTDIR=${WORKDIR}/bwa_out
+FASTQC_OUT=${WORKDIR}/fastqc_out
+GENOME=/storage/cms/warnerj_lab/cd3393/genomes/ofav/ofav_v1_genomic.fasta
+
+cd "${WORKDIR}"
+
+mkdir -p "${OUTDIR}"
+mkdir -p "${FASTQC_OUT}"
+
+echo "Working directory: $(pwd)"
+echo "Raw data dir: ${RAWDIR}"
+echo "Output BAM dir: ${OUTDIR}"
+echo "FastQC output dir: ${FASTQC_OUT}"
+echo "Genome: ${GENOME}"
+
+
+# Loop to process ATAC data 
+for fastq in ${RAWDIR}/*_R1_001.fastq.gz; do
+
+  cd "${WORKDIR}"
+
+  # Extract the base of the filename 
+  root=$(basename "${fastq}" _R1_001.fastq.gz)
+
+  R1=${RAWDIR}/${root}_R1_001.fastq.gz
+  R2=${RAWDIR}/${root}_R2_001.fastq.gz
+
+  
+  echo "Processing sample: ${root}"
+  echo "  R1: ${R1}"
+  echo "  R2: ${R2}"
+
+  # ---- FastQC on both reads ----
+  fastqc -o "${FASTQC_OUT}" "${R1}" &
+  fastqc -o "${FASTQC_OUT}" "${R2}" &
+
+  # ---- Clean + align with skewer_bwa.sh 
+#This is a custom script that uses BWA-MEM aligner
+
+  # Arguments:
+  #   1) Read 1
+  #   2) Read 2
+  #   3) sample name
+  #   4) genome fasta
+  #   5) output dir
+  sh /storage/cms/warnerj_lab/shared/scripts/skewer_bwa.sh \
+        "${R1}" \
+        "${R2}" \
+        "${root}" \
+        "${GENOME}" \
+        "${OUTDIR}" \
+        >> "${OUTDIR}/${root}.log" 2>&1
+
+  # ---- Go into bwa_out for downstream steps ----
+  cd "${OUTDIR}"
+
+  # ---- Sort and index alignment ----
+  samtools sort -@ 32 -o ${root}.bwa.mem.sorted.bam ${root}.bwa.mem.bam
+  samtools index ${root}.bwa.mem.sorted.bam
+
+  #  Filter alignments (ATAC-style) 
+  # alignmentSieve, bamCoverage, bamPEFragmentSize)
+  deeptools alignmentSieve -b ${root}.bwa.mem.sorted.bam \
+    --numberOfProcessors max \
+	--minMappingQuality 5 \
+    --maxFragmentLength 850 \
+    --samFlagExclude 256 \
+    --ATACshift \
+    -o ${root}.sorted.filtered.bam \
+    --filterMetrics ${root}.metrics.txt
+
+  #  Re-sort filtered alignments 
+  samtools sort -@ 32 -o ${root}.sorted.filtered.sorted.bam ${root}.sorted.filtered.bam
+  rm ${root}.sorted.filtered.bam
+  samtools index ${root}.sorted.filtered.sorted.bam
+
+#  Coverage track (bigWig) 
+  deeptools bamCoverage \
+    --bam ${root}.sorted.filtered.sorted.bam \
+    -o ${root}.sorted.filtered.coverage.bw \
+    --numberOfProcessors max \
+    --binSize 10 \
+    --maxFragmentLength 850 \
+    --extendReads# 
+
+# Fragment size distribution 
+  deeptools bamPEFragmentSize \
+    -hist ${root}.fragSize.png \
+    --logScale \
+    --maxFragmentLength 1000 \
+    -T "Fragment size of ATAC data: ${root}" \
+    -b ${root}.bwa.mem.sorted.bam
+
+  echo "Finished sample: ${root}"
+done
+
+echo "All samples completed."
+
+#Call peaks
+
+source ~/atac_env/bin/activate
+
+# ---- Directory where final BAMs live ----
+BAMDIR="/storage/cms/warnerj_lab/cd3393/coralheat_atac/bwa_out"
+
+# ---- Output directory ----
+OUTDIR="${BAMDIR}/macs2_peaks"
+mkdir -p $OUTDIR
+
+# ---- Effective genome size for Orbicella faveolata (approx) ----
+GENOME_SIZE=4.5e8   # ~450 Mb
+
+cd $BAMDIR
+echo "Starting MACS2 peak calling..."
+
+
+# Loop through only the final cleaned ATAC BAMs
+for bam in *.sorted.filtered.sorted.bam; do
+
+    # Extract sample name
+    sample=$(basename "$bam" .sorted.filtered.sorted.bam)
+
+    echo "[RUNNING] Sample: $sample"
+
+    macs2 callpeak \
+        -t "$bam" \
+        -f BAMPE \
+        -g $GENOME_SIZE \
+        --nomodel \
+        --shift -100 \
+        --extsize 200 \
+        -n "$sample" \
+        --outdir "$OUTDIR" \
+        --keep-dup all
+
+    echo "[FINISHED] Peak calling for $sample"
+
+done
+
+echo "All peak calling completed!"
+
+
+
+# Build peak x sample count matrix 
+set -euo pipefail
+
+
+WORKDIR="/storage/cms/warnerj_lab/cd3393/coralheat_atac"
+PEAKDIR="${WORKDIR}/bwa_out/macs2_peaks"
+BAMDIR="${WORKDIR}/bwa_out"
+
+MERGED_PEAKS="${PEAKDIR}/merged_peaks.bed"
+RAW_COUNTS="${PEAKDIR}/peak_counts_raw.tsv"
+HEADER_TMP="${PEAKDIR}/peak_counts_header.tsv"
+BODY_TMP="${PEAKDIR}/peak_counts_body.tsv"
+MATRIX_OUT="${PEAKDIR}/peak_counts_matrix.tsv"
+
+echo "Working directory: ${WORKDIR}"
+cd "${WORKDIR}"
+
+#Bed tools to merge peaks
+if ! command -v bedtools >/dev/null 2>&1; then
+    echo "ERROR: bedtools not found in PATH. Load/install bedtools first." >&2
+    exit 1
+fi
+
+if [[ ! -f "${MERGED_PEAKS}" ]]; then
+    echo "ERROR: merged_peaks.bed not found at: ${MERGED_PEAKS}" >&2
+    exit 1
+fi
+
+# Collect all final ATAC BAMs
+mapfile -t BAMS < <(ls "${BAMDIR}"/*.sorted.filtered.sorted.bam 2>/dev/null || true)
+
+if [[ ${#BAMS[@]} -eq 0 ]]; then
+    echo "ERROR: No *.sorted.filtered.sorted.bam files found in ${BAMDIR}" >&2
+    exit 1
+fi
+
+echo "Found ${#BAMS[@]} BAM files:"
+printf '  %s\n' "${BAMS[@]}"
+                                   
+echo
+echo "Step 1: Running bedtools multicov on merged_peaks.bed..."
+
+bedtools multicov \
+    -bams "${BAMS[@]}" \
+    -bed "${MERGED_PEAKS}" \
+    > "${RAW_COUNTS}"
+
+echo "  Wrote raw counts to: ${RAW_COUNTS}"
+
+
+echo
+echo "Step 2: Building header with sample names..."
+
+# Start header with genomic columns + peak_id
+printf "chr\tstart\tend\tpeak_id" > "${HEADER_TMP}"
+
+for bam in "${BAMS[@]}"; do
+    sample=$(basename "${bam}")
+    # Strip suffix: .sorted.filtered.sorted.bam
+    sample=${sample%.sorted.filtered.sorted.bam}
+    printf "\t%s" "${sample}" >> "${HEADER_TMP}"
+done
+
+printf "\n" >> "${HEADER_TMP}"
+
+echo "  Header written to: ${HEADER_TMP}"
+
+
+echo
+echo "Step 3: Adding peak IDs to each row..."
+
+awk -v OFS="\t" '{
+    peak_id = "peak_" NR;
+    # Print chr, start, end, peak_id, then all sample counts
+    printf "%s\t%s\t%s\t%s", $1, $2, $3, peak_id;
+    for (i = 4; i <= NF; i++) {
+        printf "\t%s", $i;
+    }
+    printf "\n";
+}' "${RAW_COUNTS}" > "${BODY_TMP}"
+
+echo "  Body with peak IDs written to: ${BODY_TMP}"
+
+
+
+echo "Step 4: Combining header and body into final matrix..."
+
+cat "${HEADER_TMP}" "${BODY_TMP}" > "${MATRIX_OUT}"
+
+echo "${MATRIX_OUT}"
+
+# rm -f "${RAW_COUNTS}" "${HEADER_TMP}" "${BODY_TMP}"
+
+echo import ${MATRIX_OUT} into R (DESeq2 / edgeR)."
