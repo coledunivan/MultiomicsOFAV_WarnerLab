@@ -1,0 +1,566 @@
+
+# Fuzzy c-means clustering of RNA-seq time-course DE genes
+# Heat vs Control
+# Correct temporal + membership handling
+
+
+suppressPackageStartupMessages({
+  library(readr)
+  library(dplyr)
+  library(tidyr)
+  library(stringr)
+  library(e1071)
+})
+
+
+# 1. Load RNA DE time-course data
+
+
+rna_de <- read_csv(
+  "RNA_DE_HeatvsControl_Timepoints.csv",
+  show_col_types = FALSE
+)
+
+stopifnot(all(c("gene_id", "time", "log2FoldChange", "padj") %in% colnames(rna_de)))
+
+# 2. Clean gene IDs + standardize timepoints
+
+
+time_levels <- c("30min", "4h", "12h", "24h")
+
+rna_de <- rna_de %>%
+  mutate(
+    gene_id = str_remove(gene_id, "^gene:"),
+    time = case_when(
+      str_detect(time, "^30") ~ "30min",
+      str_detect(time, "^4")  ~ "4h",
+      str_detect(time, "^12") ~ "12h",
+      str_detect(time, "^24") ~ "24h",
+      TRUE ~ NA_character_
+    ),
+    time = factor(time, levels = time_levels)
+  ) %>%
+  filter(!is.na(time))
+
+
+# 3. Filter significant DE genes
+
+
+rna_sig <- rna_de %>%
+  filter(
+    !is.na(padj),
+    padj < 0.05,
+    abs(log2FoldChange) >= 1
+  )
+
+cat("Significant DE rows:", nrow(rna_sig), "\n")
+
+
+# 4. KEEP genes present in ≥2 timepoints (CRITICAL FIX)
+
+
+genes_multi_tp <- rna_sig %>%
+  count(gene_id) %>%
+  filter(n >= 2) %>%
+  pull(gene_id)
+
+rna_sig <- rna_sig %>%
+  filter(gene_id %in% genes_multi_tp)
+
+cat("Genes with ≥2 timepoints:", length(unique(rna_sig$gene_id)), "\n")
+
+
+# 5. Build gene × time matrix (ALLOW partial trajectories)
+
+
+rna_mat <- rna_sig %>%
+  select(gene_id, time, log2FoldChange) %>%
+  pivot_wider(
+    names_from  = time,
+    values_from = log2FoldChange
+  )
+
+# Keep genes present in ≥2 timepoints
+rna_mat <- rna_mat %>%
+  filter(rowSums(!is.na(across(-gene_id))) >= 2)
+
+# Replace remaining NAs with 0 *after filtering*
+rna_mat[is.na(rna_mat)] <- 0
+
+stopifnot(nrow(rna_mat) >= 10)
+
+
+# 6. Scale expression (gene-wise)
+
+
+rna_scaled <- rna_mat %>%
+  column_to_rownames("gene_id") %>%
+  as.matrix()
+
+rna_scaled <- t(scale(t(rna_scaled)))
+rna_scaled <- rna_scaled[complete.cases(rna_scaled), ]
+
+
+# 7. Estimate fuzzifier (m)
+
+
+mestimate <- function(df){
+  N <- nrow(df)
+  D <- ncol(df)
+  1 + (1418/N + 22.05)*D^(-2) +
+    (12.33/N + 0.243)*D^(-0.0406*log(N) - 0.1134)
+}
+
+m <- mestimate(rna_scaled)
+cat("Estimated fuzzifier m =", round(m, 2), "\n")
+
+############################################################
+# 7.5 Optimize number of clusters (k) using fuzzy validity
+#     Metrics: Xie–Beni index + centroid redundancy
+############################################################
+
+library(ggplot2)
+
+## ---- Xie–Beni index function (fuzzy-specific) ----
+xie_beni <- function(fcm, data) {
+  U <- fcm$membership
+  centers <- fcm$centers
+  
+  n <- nrow(data)
+  c <- nrow(centers)
+  
+  # distances from points to centers
+  d_ik <- as.matrix(dist(rbind(data, centers)))[1:n, (n+1):(n+c)]
+  
+  # numerator: compactness
+  num <- sum((U^2) * (d_ik^2))
+  
+  # denominator: separation
+  center_dist <- as.matrix(dist(centers))
+  diag(center_dist) <- Inf
+  denom <- n * min(center_dist^2)
+  
+  num / denom
+}
+
+## ---- Evaluate k range ----
+k_range <- 2:10
+xb_scores <- numeric(length(k_range))
+
+for (i in seq_along(k_range)) {
+  fcm_tmp <- cmeans(
+    rna_scaled,
+    centers = k_range[i],
+    m = m
+  )
+  xb_scores[i] <- xie_beni(fcm_tmp, rna_scaled)
+}
+
+xb_df <- tibble(
+  k = k_range,
+  xie_beni = xb_scores
+)
+
+## ---- Plot Xie–Beni curve ----
+p_xb <- ggplot(xb_df, aes(x = k, y = xie_beni)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2) +
+  theme_classic(base_size = 13) +
+  labs(
+    title = "Fuzzy c-means cluster optimization",
+    subtitle = "Xie–Beni index (lower = better)",
+    x = "Number of clusters (k)",
+    y = "Xie–Beni index"
+  )
+
+ggsave(
+  "RNA_fuzzy_cmeans_XieBeni_k_optimization.png",
+  p_xb,
+  width = 6,
+  height = 4,
+  dpi = 300
+)
+
+## ---- Inspect centroid redundancy at candidate k ----
+cat("\nCentroid correlation matrix for chosen k:\n")
+print(cor(t(cmeans(rna_scaled, centers = k, m = m)$centers)))
+
+cat("\n✔ k-optimization complete. Use Xie–Beni minimum + centroid correlation\n")
+
+
+# 8. Run fuzzy c-means clustering
+
+
+k <- 4   
+
+fcm_res <- cmeans(
+  rna_scaled,
+  centers = k,
+  m = m
+)
+
+
+# 9. Extract cluster + membership
+
+
+fcm_out <- tibble(
+  gene_id    = rownames(rna_scaled),
+  cluster    = fcm_res$cluster,
+  membership = apply(fcm_res$membership, 1, max)
+)
+
+
+# ---------------------------------------------------------
+# Attach DE information at clustering time (CRITICAL FIX)
+# ---------------------------------------------------------
+
+# Long-format DE table (already filtered upstream)
+rna_de_long <- rna_sig %>%
+  select(gene_id, time, log2FoldChange, padj)
+
+# Expand fuzzy cluster assignments across timepoints
+fcm_with_de <- fcm_out %>%
+  inner_join(rna_de_long, by = "gene_id") %>%
+  mutate(
+    cluster = ifelse(membership >= 0.6, cluster, 0)
+  )
+
+# Sanity checks
+stopifnot(
+  all(c("gene_id", "time", "cluster", "membership", "log2FoldChange", "padj") %in%
+        colnames(fcm_with_de))
+)
+
+cat("Rows in fuzzy+DE table:", nrow(fcm_with_de), "\n")
+
+
+# 11. Save outputs
+
+
+write_csv(
+  fcm_filtered,
+  "RNA_fuzzy_cmeans_clusters_membership_filtered.csv"
+)
+
+cat(" Fuzzy c-means clustering COMPLETE\n")
+cat(" Output written: RNA_fuzzy_cmeans_clusters_membership_filtered.csv\n")
+
+#Heatmap
+library(dplyr)
+library(tidyr)
+library(pheatmap)
+
+membership_thresh <- 0.6
+
+cluster_df <- tibble(
+  gene_id    = rownames(rna_scaled),
+  cluster    = fcm_res$cluster,
+  membership = apply(fcm_res$membership, 1, max)
+) %>%
+  filter(membership >= membership_thresh)
+
+
+heat_mat <- rna_scaled[cluster_df$gene_id, ]
+
+# order genes by cluster, then membership (core genes first)
+ord <- cluster_df %>%
+  arrange(cluster, desc(membership)) %>%
+  pull(gene_id)
+
+heat_mat <- heat_mat[ord, ]
+
+row_annot <- cluster_df %>%
+  column_to_rownames("gene_id") %>%
+  select(cluster)
+
+row_annot <- row_annot[rownames(heat_mat), , drop = FALSE]
+
+pheatmap(
+  heat_mat,
+  cluster_rows    = FALSE,      #  preserve fuzzy clusters
+  cluster_cols    = FALSE,
+  show_rownames   = FALSE,
+  color           = colorRampPalette(c("navy", "white", "firebrick"))(100),
+  annotation_row  = row_annot,
+  gaps_row        = cumsum(table(row_annot$cluster)),
+  main            = "Fuzzy c-means Clusters — Heat vs Control",
+  fontsize_col    = 12,
+  border_color    = NA
+)
+
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(forcats)
+
+
+# Gene-level ggplot heatmap
+# Visual ordering by regulation direction
+
+
+plot_df <- rna_mat %>%
+  inner_join(fcm_filtered, by = "gene_id") %>%   # drops cluster 0 automatically
+  filter(cluster != 0) %>%                       #  remove noise cluster
+  pivot_longer(
+    cols = c("30min", "4h", "12h", "24h"),
+    names_to = "time",
+    values_to = "log2FC"
+  ) %>%
+  mutate(
+    time = factor(time, levels = c("30min", "4h", "12h", "24h")),
+    cluster = factor(cluster)
+  )
+
+
+# VISUAL FIX: order genes by direction within each cluster
+
+
+gene_order <- plot_df %>%
+  group_by(cluster, gene_id) %>%
+  summarise(
+    mean_log2FC = mean(log2FC),
+    .groups = "drop"
+  ) %>%
+  arrange(cluster, desc(mean_log2FC)) %>%   # 🔑 UP first, DOWN last
+  group_by(cluster) %>%
+  mutate(order = row_number()) %>%
+  ungroup()
+
+plot_df <- plot_df %>%
+  left_join(gene_order, by = c("cluster", "gene_id")) %>%
+  arrange(cluster, order) %>%
+  mutate(gene_id = factor(gene_id, levels = unique(gene_id)))
+
+
+# Cluster sizes (correct + consistent)
+
+
+cluster_sizes <- plot_df %>%
+  distinct(cluster, gene_id) %>%
+  count(cluster, name = "n_genes")
+
+cluster_labeller <- function(cluster) {
+  n <- cluster_sizes$n_genes[cluster_sizes$cluster == cluster]
+  paste0("Cluster ", cluster, " (n = ", n, ")")
+}
+
+
+# Plot
+
+
+p_gene <- ggplot(plot_df, aes(x = time, y = gene_id, fill = log2FC)) +
+  geom_tile() +
+  facet_wrap(
+    ~ cluster,
+    scales = "free_y",
+    ncol = 1,
+    labeller = as_labeller(cluster_labeller)
+  ) +
+  scale_fill_gradient2(
+    low = "#2c7bb6",
+    mid = "white",
+    high = "#d7191c",
+    midpoint = 0,
+    name = "log2FC\n(Heat − Control)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid = element_blank(),
+    strip.text = element_text(face = "bold"),
+    strip.background = element_rect(fill = "grey90", color = NA)
+  ) +
+  labs(
+    x = "Time after Heat Stress",
+    y = "Genes",
+    title = "Gene-level temporal expression patterns",
+    subtitle = "Fuzzy c-means clusters (log2FoldChange)"
+  )
+
+ggsave(
+  "RNA_fuzzy_clusters_gene_level_heatmap.png",
+  p_gene,
+  width = 8,
+  height = 10,
+  dpi = 300
+)
+
+
+# Gene-level temporal trajectories (paper-style)
+# Uses SAME genes + clusters as heatmap
+
+
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+
+## 1. Use ONLY membership-filtered clusters (REMOVE cluster 0)
+
+
+traj_df <- rna_mat %>%
+  inner_join(fcm_filtered, by = "gene_id") %>%
+  filter(cluster != 0) %>%                     #  remove noise cluster
+  pivot_longer(
+    cols = c("30min", "4h", "12h", "24h"),
+    names_to = "time",
+    values_to = "log2FC"
+  ) %>%
+  mutate(
+    time = factor(time, levels = c("30min", "4h", "12h", "24h")),
+    cluster = factor(cluster)
+  )
+
+
+## 2. Compute cluster centroids
+
+
+centroid_df <- traj_df %>%
+  group_by(cluster, time) %>%
+  summarise(
+    centroid_log2FC = mean(log2FC),
+    .groups = "drop"
+  )
+
+## 3. Cluster sizes (match heatmap)
+
+
+cluster_sizes <- traj_df %>%
+  distinct(cluster, gene_id) %>%
+  count(cluster, name = "n_genes")
+
+cluster_labeller <- function(cluster) {
+  n <- cluster_sizes$n_genes[cluster_sizes$cluster == cluster]
+  paste0("Cluster ", cluster, " (n = ", n, ")")
+}
+
+
+## 4. Plot (ORIGINAL SCALE RESTORED)
+
+
+p_traj <- ggplot(traj_df, aes(x = time, y = log2FC, group = gene_id)) +
+  geom_line(
+    color = "#cc0066",
+    alpha = 0.25,
+    linewidth = 0.4
+  ) +
+  geom_line(
+    data = centroid_df,
+    aes(x = time, y = centroid_log2FC, group = cluster),
+    inherit.aes = FALSE,
+    color = "black",
+    linewidth = 1.2
+  ) +
+  facet_wrap(
+    ~ cluster,
+    nrow = 1,
+    labeller = as_labeller(cluster_labeller)
+  ) +
+  theme_classic(base_size = 13) +
+  theme(
+    strip.background = element_rect(fill = "white", color = "black"),
+    strip.text = element_text(face = "bold"),
+    axis.line = element_line(linewidth = 0.8)
+  ) +
+  labs(
+    title = "Temporal expression dynamics of fuzzy c-means RNA clusters",
+    subtitle = "Thin lines: individual genes | Thick line: cluster centroid",
+    x = "Time after Heat Stress",
+    y = "log2FoldChange (Heat − Control)"
+  )
+
+
+## 5. Save
+
+
+ggsave(
+  "RNA_fuzzy_clusters_temporal_trajectories.png",
+  p_traj,
+  width = 14,
+  height = 5,
+  dpi = 300
+)
+
+write_csv(
+  fcm_with_de,
+  "RNA_fuzzy_clusters_with_DE_by_time.csv"
+)
+
+cat(" Saved: RNA_fuzzy_clusters_with_DE_by_time.csv\n")
+
+#add GO Terms
+#######################################
+
+library(readr)
+library(dplyr)
+
+
+# 1. Load fuzzy clusters WITH DE by time  CORRECT FILE
+
+
+fcm_de <- read_csv(
+  "RNA_fuzzy_clusters_with_DE_by_time.csv",
+  show_col_types = FALSE
+)
+
+stopifnot(all(c(
+  "gene_id",
+  "cluster",
+  "membership",
+  "time",
+  "log2FoldChange",
+  "padj"
+) %in% colnames(fcm_de)))
+
+# Optional: drop noise cluster if you want
+fcm_de <- fcm_de %>%
+  filter(cluster != 0)
+
+
+# 2. Load ATAC → GO mappings (only needed columns)
+
+
+atac_go <- read_csv(
+  "COUNTSATAC.csv",
+  show_col_types = FALSE
+) %>%
+  select(gene_id, go_id) %>%
+  distinct()
+
+stopifnot(all(c("gene_id", "go_id") %in% colnames(atac_go)))
+
+
+# 3. Map GO IDs onto fuzzy clusters + DE
+
+
+final_map <- fcm_de %>%
+  left_join(
+    atac_go,
+    by = "gene_id",
+    relationship = "many-to-many"   # EXPECTED + CORRECT
+  )
+
+
+# 4. Sanity check (important)
+
+
+final_map %>%
+  summarise(
+    rows_total = n(),
+    genes      = n_distinct(gene_id),
+    clusters   = n_distinct(cluster),
+    na_go_id   = sum(is.na(go_id))
+  ) %>%
+  print()
+
+
+# 5. Save final dataset
+
+
+write_csv(
+  final_map,
+  "RNA_ATAC_fuzzy_clusters_with_GO_and_DE_by_time.csv"
+)
+
+cat("Mapping COMPLETE: fuzzy clusters × time × DE × GO IDs\n")
