@@ -1,0 +1,129 @@
+
+library(GenomicRanges)
+library(rtracklayer)
+library(dplyr)
+library(stringr)
+
+
+peak_file <- "Peaks/merged_peaks.bed"
+gff_file  <- "Orbicella_faveolata_gca002042975v1.ofav_dov_v1.62.gff3"
+
+stopifnot(file.exists(peak_file))
+stopifnot(file.exists(gff_file))
+
+cat("Loading merged peaks…\n")
+peaks <- import(peak_file)
+
+cat("Loading genome annotation…\n")
+gff <- import(gff_file)
+
+# Restrict to useful feature types
+allowed_types <- c(
+  "gene", "exon", "mRNA", "CDS", "intron",
+  "lnc_RNA", "ncRNA_gene", "transcript", "region"
+)
+
+gff <- gff[gff$type %in% allowed_types]
+
+
+cat("Building promoter ranges…\n")
+
+genes <- gff[gff$type == "gene"]
+
+# promoters() automatically handles strand
+promoters_gr <- promoters(genes, upstream = 2000, downstream = 2000)
+promoters_gr$type <- "promoter"
+
+# 3) Combine promoter + GFF
+
+
+gff_all <- c(gff, promoters_gr)
+
+
+# 4) FAST Vectorized Overlap
+
+
+cat("Computing overlaps (vectorized)…\n")
+
+hits <- findOverlaps(peaks, gff_all)
+
+annot_raw <- data.frame(
+  peak_id = queryHits(hits),
+  feature_type = gff_all$type[subjectHits(hits)],
+  stringsAsFactors = FALSE
+)
+
+
+# 5) PRIORITY-BASED LABELING
+
+# Biological priority: promoter > exon > CDS > intron > UTR > mRNA > ncRNA > region > intergenic
+
+priority <- c(
+  "promoter",
+  "exon",
+  "CDS",
+  "intron",
+  "lnc_RNA",
+  "ncRNA_gene",
+  "mRNA",
+  "transcript",
+  "gene",
+  "region",
+  "intergenic"
+)
+
+annot_final <- annot_raw %>%
+  mutate(feature_type = factor(feature_type, levels = priority)) %>%
+  arrange(peak_id, feature_type) %>%
+  group_by(peak_id) %>%
+  summarize(top_feature = as.character(dplyr::first(feature_type))) %>%
+  ungroup()
+
+
+# 6) Add missing peaks as "intergenic"
+
+
+annot_final <- annot_final %>%
+  right_join(data.frame(peak_id = seq_along(peaks)), by = "peak_id") %>%
+  mutate(top_feature = ifelse(is.na(top_feature), "intergenic", as.character(top_feature)))
+
+
+# 7) Save Annotation
+
+
+write.csv(annot_final, "ATAC_peak_annotations.csv", row.names = FALSE)
+
+cat("✔ Annotation complete and saved: ATAC_peak_annotations.csv\n")
+
+library(tidyverse)
+
+
+annot <- read_csv("ATAC_peak_annotations.csv", show_col_types = FALSE)
+
+# Check
+head(annot)
+
+
+annot_fixed <- annot %>%
+  mutate(
+    peak_id = paste0("peak_", peak_id)  # convert 1 → peak_1
+  )
+
+# Save fixed version
+write_csv(annot_fixed, "ATAC_peak_annotations_FIXED.csv")
+
+
+counts <- read_csv("Data/peak_counts_matrix_fixed.csv", show_col_types = FALSE)
+
+# Check if peak_id column exists
+stopifnot("peak_id" %in% colnames(counts))
+
+
+counts_annotated <- counts %>%
+  left_join(annot_fixed, by="peak_id")
+
+
+write_csv(counts_annotated, "peak_counts_annotated.csv")
+
+cat("Done! peak_counts_annotated.csv created.\n")
+
