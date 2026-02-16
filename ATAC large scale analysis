@@ -1,0 +1,204 @@
+# Install if needed:
+# install.packages("tidyverse")
+# BiocManager::install("DESeq2")
+
+library(tidyverse)
+library(DESeq2)
+
+counts <- read.csv("peak_counts_matrix_fixed.csv", check.names = FALSE)
+
+# The first 4 columns are genomic coordinates + peak ID
+rownames(counts) <- counts$peak_id
+counts <- counts[ , -(1:4)]  # keep only count columns
+
+# Load metadata
+meta <- read.csv("ATAC_sample_metadata.csv") %>% 
+  mutate(sample = as.character(sample))
+
+# Ensure column names match metadata order
+counts <- counts[, meta$sample]
+
+dim(counts)
+head(counts[,1:5])
+
+dds <- DESeqDataSetFromMatrix(
+  countData = counts,
+  colData = meta,
+  design = ~ group
+)
+
+# Filter out low-signal peaks
+dds <- dds[rowSums(counts(dds)) > 10, ]
+
+dds <- DESeq(dds)
+
+vsd <- vst(dds)
+normalized_counts <- assay(vsd)
+
+library(ggplot2)
+
+pca <- prcomp(t(normalized_counts))
+pc_df <- data.frame(pca$x, meta)
+
+ggplot(pc_df, aes(x = PC1, y = PC2, color = group, shape = treatment)) +
+  geom_point(size = 4, alpha = 0.9) +
+  theme_bw(base_size = 14) +
+  labs(
+    title = "PCA of Chromatin Accessibility (ATAC-seq)",
+    x = paste0("PC1 (", round(summary(pca)$importance[2,1] * 100), "% variance)"),
+    y = paste0("PC2 (", round(summary(pca)$importance[2,2] * 100), "% variance)")
+  )
+
+dir.create("ATAC_DEGs", showWarnings = FALSE)
+
+results_list <- list()
+
+timepoints <- unique(meta$timepoint)
+
+for (tp in timepoints) {
+  
+  message("Processing timepoint: ", tp)
+  
+  meta_subset <- meta %>% filter(timepoint == tp)
+  counts_subset <- counts[, meta_subset$sample]
+  
+  dds_tp <- DESeqDataSetFromMatrix(
+    countData = counts_subset,
+    colData = meta_subset,
+    design = ~ treatment
+  ) %>% DESeq()
+  
+  res <- results(dds_tp, contrast = c("treatment", "Heat", "Control")) %>%
+    as.data.frame() %>%
+    rownames_to_column("peak_id")
+  
+  write.csv(res, paste0("ATAC_DEGs/ATAC_", tp, "_Heat_vs_Control.csv"), row.names = FALSE)
+  
+  results_list[[tp]] <- res
+}
+
+dir.create("ATAC_volcano_plots", showWarnings = FALSE)
+
+plot_volcano <- function(df, tp) {
+  df <- df %>% drop_na(padj)
+  
+  df <- df %>%
+    mutate(
+      sig = case_when(
+        padj < 0.05 & log2FoldChange > 0 ~ "More accessible in Heat",
+        padj < 0.05 & log2FoldChange < 0 ~ "More accessible in Control",
+        TRUE ~ "Not significant"
+      ),
+      neglog = -log10(padj)
+    )
+  
+  ggplot(df, aes(log2FoldChange, neglog, color = sig)) +
+    geom_point(alpha = 0.7) +
+    geom_vline(xintercept = 0, linetype = "dashed") +
+    geom_hline(yintercept = -log10(0.05), linetype = "dotted") +
+    scale_color_manual(values = c("red", "blue", "grey70")) +
+    theme_bw(base_size = 14) +
+    labs(title = paste("Volcano Plot — Time:", tp),
+         x = "log2 fold change",
+         y = "-log10(adjusted p-value)") 
+}
+
+for (tp in names(results_list)) {
+  p <- plot_volcano(results_list[[tp]], tp)
+  ggsave(paste0("ATAC_volcano_plots/Volcano_", tp, ".pdf"), p, width = 6, height = 6)
+}
+
+
+#ATAC Accessibility — Spearman Correlation Heatmap
+library(tidyverse)
+library(ggplot2)
+
+
+#1. Load Counts
+counts <- read_csv("peak_counts_annotated.csv", show_col_types = FALSE)
+
+# sample columns look like:
+# OFav_05_C1_S1, OFav_05_C2_S2, OFav_05_H1_S3, ...
+
+sample_cols <- grep("^OFav_", colnames(counts), value = TRUE)
+
+
+# 2.Parse metadata from sample names
+
+
+meta <- tibble(sample = sample_cols) %>%
+  mutate(
+    block = str_extract(sample, "(?<=OFav_)[0-9]+"),
+    treatment = ifelse(str_detect(sample, "_H"), "Heat", "Control"),
+    condition = paste0(block, "_", treatment)
+  )
+
+
+# 3.Build Condition Level Accessibility Matrix 
+
+# Long format counts
+long_counts <- counts %>%
+  select(peak_id, all_of(sample_cols)) %>%
+  pivot_longer(cols = all_of(sample_cols),
+               names_to = "sample",
+               values_to = "count") %>%
+  left_join(meta, by = "sample")
+
+# Average peaks within each condition (same block & treatment)
+cond_matrix <- long_counts %>%
+  group_by(peak_id, condition) %>%
+  summarise(mean_access = mean(count), .groups = "drop") %>%
+  pivot_wider(names_from = condition, values_from = mean_access)
+
+# Convert to matrix
+mat <- cond_matrix %>%
+  column_to_rownames("peak_id") %>%
+  as.matrix()
+
+
+# 4. SPEARMAN CORRELATION ACROSS CONDITIONS
+cor_mat <- cor(mat, method = "spearman", use = "pairwise.complete.obs")
+
+
+# 5. HIERARCHICAL CLUSTERING ORDER
+row_ord <- hclust(as.dist(1 - cor_mat))$order
+col_ord <- hclust(as.dist(1 - cor_mat))$order
+
+cor_long <- as.data.frame(as.table(cor_mat))
+colnames(cor_long) <- c("Cond1", "Cond2", "cor")
+
+# preserve clustering order
+cor_long$Cond1 <- factor(cor_long$Cond1, levels = colnames(cor_mat)[row_ord])
+cor_long$Cond2 <- factor(cor_long$Cond2, levels = colnames(cor_mat)[col_ord])
+
+
+# 6.Plot Heatmap
+
+
+p <- ggplot(cor_long, aes(x = Cond1, y = Cond2, fill = cor)) +
+  geom_tile(color = "white") +
+  scale_fill_gradientn(
+    colors = c("navy", "white", "firebrick"),
+    values = scales::rescale(c(0.2, 0.5, 1)),
+    name = "Spearman\nCorrelation"
+  ) +
+  labs(
+    title = "ATAC Accessibility – Condition Correlation (Spearman)",
+    x = "",
+    y = ""
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid = element_blank()
+  )
+
+ggsave("ATAC_spearman_condition_correlation_heatmap.pdf",
+       p, width = 9, height = 7)
+
+p
+
+# END OF SCRIPT
+
+
+
