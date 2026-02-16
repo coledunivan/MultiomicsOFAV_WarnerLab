@@ -1,0 +1,183 @@
+
+#GO MAPPING FOR ATAC PEAKS (LC Gene IDs)
+# - Loads ATAC_peak_to_gene_map.csv
+# - Loads GAF GO annotation file
+# - Cleans GO table
+# - Adds LOC prefix if missing
+# - Produces merged peak–gene–GO file
+
+
+library(tidyverse)
+
+
+## 1) Load peak -> gene mapping
+
+
+peak2gene <- read_csv("ATAC_peak_to_gene_map.csv", show_col_types = FALSE)
+
+if (!"gene_id" %in% colnames(peak2gene)) {
+  stop("ERROR: gene_id column missing from ATAC_peak_to_gene_map.csv")
+}
+
+cat("peak2gene loaded:", nrow(peak2gene), "rows\n")
+
+
+
+# 2) Load and clean GO annotation file (GAF)
+
+
+gaf_file <- "GCF_002042975.1_ofav_dov_v1_gene_ontology.gaf"
+
+if (!file.exists(gaf_file)) {
+  stop("ERROR: GO annotation file not found: ", gaf_file)
+}
+
+cat(" Loading GO file:", gaf_file, "\n")
+
+go_raw <- read_tsv(
+  gaf_file,
+  comment = "!",   # Skip metadata lines starting with "!"
+  col_names = FALSE,
+  show_col_types = FALSE
+)
+
+cat("Raw GO rows loaded:", nrow(go_raw), "\n")
+
+
+
+# 3) Extract required GO columns
+# GAF Format:
+# Column 2 = DB Object ID (gene ID)
+# Column 5 = GO Term ID (GO:0008150)
+# Column 9 = Aspect (P/M/F)
+
+
+go_clean <- go_raw %>%
+  transmute(
+    gene_id = X2,
+    go_term = X5,
+    aspect  = X9
+  ) %>%
+  filter(!is.na(gene_id), !is.na(go_term))
+
+cat("GO cleaned:", nrow(go_clean), "entries\n")
+
+
+
+# 4) FIX TYPE MISMATCHES (character vs numeric)
+
+
+# Force both columns to character
+peak2gene$gene_id <- as.character(peak2gene$gene_id)
+go_clean$gene_id  <- as.character(go_clean$gene_id)
+
+cat("Converted gene IDs to character\n")
+
+
+
+## 5) DETECT AND FIX MISSING 'LOC' PREFIXES
+## If GO genes are numeric like "110067150" instead of "LOC110067150"
+## We automatically prepend LOC
+
+peak_example <- head(peak2gene$gene_id, 20)
+needs_prefix <- !any(grepl("^LOC", go_clean$gene_id))
+
+if (needs_prefix) {
+  message("Adding LOC prefix to GO gene IDs...")
+  go_clean$gene_id <- paste0("LOC", go_clean$gene_id)
+} else {
+  message("LOC prefix already present in GO gene IDs")
+}
+
+
+
+# 6) Merge GO terms into peak–gene table
+peak_go_long <- peak2gene %>%
+  left_join(go_clean, by = "gene_id") %>%
+  arrange(peak_id)
+
+cat("Merge complete: ", nrow(peak_go_long), "rows\n")
+cat("Peaks with GO annotations:", sum(!is.na(peak_go_long$go_term)), "\n")
+
+
+
+# 7) Save output
+
+
+write_csv(peak_go_long, "peak_GO_map.csv")
+cat("Output saved → peak_GO_map.csv\n")
+
+
+
+# 8) Optional: summary table of GO counts
+
+
+go_summary <- peak_go_long %>%
+  filter(!is.na(go_term)) %>%
+  count(go_term, sort = TRUE)
+
+write_csv(go_summary, "GO_term_counts.csv")
+
+cat("GO summary saved → GO_term_counts.csv\n")
+cat("GO MAPPING COMPLETE")
+
+
+## BUILD FULLY ANNOTATED ATAC COUNT MATRIX
+## peak_id + gene_id + GO ID + GO Term + Aspect + counts
+
+
+library(tidyverse)
+
+
+## 1) LOAD BASE FILES
+counts_raw <- read_csv("peak_counts_matrix_fixed.csv", show_col_types = FALSE)
+peak2gene  <- read_csv("ATAC_peak_to_gene_map.csv", show_col_types = FALSE)
+
+gaf <- read_tsv(
+  "GCF_002042975.1_ofav_dov_v1_gene_ontology.gaf",
+  comment = "!",
+  col_names = FALSE,
+  show_col_types = FALSE
+)
+
+
+## 2) CLEAN GO TABLE + STANDARDIZE COLUMNS
+
+## GAF fields:
+## X2 = gene ID (numeric)
+## X5 = GO term ID (GO:XXXX)
+## X9 = Aspect (P/M/F)
+
+go_clean <- gaf %>%
+  transmute(
+    gene_id = as.character(X2),
+    go_id   = X5,
+    go_term = X5,     # identical, but kept for readability
+    aspect  = X9
+  ) %>%
+  filter(!is.na(gene_id), !is.na(go_id))
+
+## Add LOC prefix if needed
+if (!any(grepl("^LOC", go_clean$gene_id))) {
+  go_clean$gene_id <- paste0("LOC", go_clean$gene_id)
+}
+
+
+# 3) MERGE peak → gene → GO
+peak2gene$gene_id <- as.character(peak2gene$gene_id)
+
+annot <- peak2gene %>%
+  left_join(go_clean, by = "gene_id")
+
+# 4) MERGE ANNOTATION INTO COUNT MATRIX
+counts_annot <- annot %>%
+  right_join(counts_raw, by = "peak_id") %>%   # keep ALL peaks
+  distinct(peak_id, gene_id, go_id, go_term, aspect, .keep_all = TRUE)
+
+
+# 5) SAVE FINAL ANNOTATED COUNT MATRIX
+write_csv(counts_annot, "peak_counts_with_GO.csv")
+
+cat("SAVED: peak_counts_with_GO.csv\n")
+cat("Rows:", nrow(counts_annot), "\n")
+cat("Columns:", ncol(counts_annot), "\n")
