@@ -1,0 +1,139 @@
+#tidyverse generics
+select <- dplyr::select
+mutate <- dplyr::mutate
+filter <- dplyr::filter
+rename <- dplyr::rename
+
+
+library(tidyverse)
+library(GenomicRanges)
+library(dplyr)
+library(tidyr)
+library(readr)
+
+
+# 1. Load GFF
+
+gff_df <- read.delim(
+  "Orbicella_faveolata_gca002042975v1.ofav_dov_v1.62.gff3",
+  header = FALSE,
+  comment.char = "#",
+  sep = "\t",
+  quote = "",
+  stringsAsFactors = FALSE
+)
+
+colnames(gff_df) <- c(
+  "seqid", "source", "type", "start", "end",
+  "score", "strand", "phase", "attribute"
+)
+
+
+# 2. EXTRACT GENES & GENE IDs
+
+genes <- gff_df %>% filter(type == "gene")
+
+# try exact match first
+genes$gene_id <- sub(".*gene_id=([^;]+).*", "\\1", genes$attribute)
+
+# fallback for entries like "ID=gene:LOCXXXXX"
+missing <- genes$gene_id == genes$attribute | genes$gene_id == ""
+genes$gene_id[missing] <- sub(".*ID=gene:([^;]+).*", "\\1",
+                              genes$attribute[missing])
+
+# final fallback: any ID=
+missing2 <- genes$gene_id == genes$attribute | genes$gene_id == ""
+genes$gene_id[missing2] <- sub(".*ID=([^;]+).*", "\\1",
+                               genes$attribute[missing2])
+
+
+# 3. BUILD TSS TABLE
+tss_df <- genes %>%
+  mutate(
+    tss = ifelse(strand == "+", start, end)
+  ) %>%
+  select(seqid, tss, strand, gene_id)
+
+
+# 4. LOAD PEAKS
+peaks <- read_csv("peak_counts_annotated.csv", show_col_types = FALSE) %>%
+  dplyr::select(chr, start, end, peak_id)
+
+
+# 5. CONVERT TO GRANGES
+gr_peaks <- GRanges(
+  seqnames = peaks$chr,
+  ranges = IRanges(start = peaks$start, end = peaks$end),
+  peak_id = peaks$peak_id
+)
+
+gr_tss <- GRanges(
+  seqnames = tss_df$seqid,
+  ranges = IRanges(start = tss_df$tss, end = tss_df$tss),
+  gene_id = tss_df$gene_id
+)
+
+
+# 6. MAP PEAK → NEAREST GENE
+nearest_hits <- distanceToNearest(gr_peaks, gr_tss)
+
+peak_gene_map <- tibble(
+  peak_id = mcols(gr_peaks)$peak_id[queryHits(nearest_hits)],
+  gene_id = mcols(gr_tss)$gene_id[subjectHits(nearest_hits)]
+)
+
+
+# 7. SAVE OUTPUT
+write_csv(peak_gene_map, "ATAC_peak_to_gene_map.csv")
+
+cat("Peak → Gene mapping completed.\n")
+cat("Output file: ATAC_peak_to_gene_map.csv\n")
+
+
+library(tidyverse)
+
+
+# 1. LOAD FILES
+
+
+counts <- read_csv("peak_counts_annotated.csv", show_col_types = FALSE)
+peak2gene <- read_csv("ATAC_peak_to_gene_map.csv", show_col_types = FALSE)
+
+
+# 2.ensure column names align
+
+
+# Expecting:
+# counts$peak_id   and   peak2gene$peak_id
+
+if (!"peak_id" %in% colnames(counts)) {
+  stop("peak_id column missing from count file.")
+}
+
+if (!"peak_id" %in% colnames(peak2gene)) {
+  stop("peak_id column missing from ATAC_peak_to_gene_map.csv.")
+}
+
+
+# 3 MERGE COUNTS WITH GENE IDs
+
+
+counts_gene <- counts %>%
+  left_join(peak2gene, by = "peak_id")
+
+
+# 4 CHECK FOR UNMAPPED PEAKS
+
+
+num_unmapped <- sum(is.na(counts_gene$gene_id))
+cat("Unmapped peaks:", num_unmapped, "\n")
+
+if (num_unmapped > 0) {
+  cat("Warning: Some peaks did not map to genes.\n")
+}
+
+
+# 5 SAVE FINAL TABLE
+
+write_csv(counts_gene, "peak_counts_with_genes.csv")
+
