@@ -1,0 +1,201 @@
+
+## ATAC-seq VOLCANO + DEG LISTS WITH LC GENE IDs
+
+
+suppressPackageStartupMessages({
+  library(DESeq2)
+  library(tidyverse)
+})
+
+
+## 1) Load peak count matrix
+
+counts_raw <- read.csv("peak_counts_matrix_fixed.csv", check.names = FALSE)
+
+stopifnot(all(c("chr","start","end","peak_id") %in% colnames(counts_raw)))
+
+count_mat <- counts_raw %>% select(-chr, -start, -end)
+rownames(count_mat) <- count_mat$peak_id
+count_mat <- count_mat %>% select(-peak_id) %>% as.matrix()
+mode(count_mat) <- "numeric"
+
+
+## 2) Load metadata
+
+meta <- read.csv("ATAC_sample_metadata.csv", stringsAsFactors = FALSE)
+stopifnot(all(c("sample","treatment","group") %in% colnames(meta)))
+
+meta$sample <- as.character(meta$sample)
+rownames(meta) <- meta$sample
+
+# Extract timepoint ("05_Control" → "05")
+meta$timepoint <- sub("^([^_]+)_.*$", "\\1", meta$group)
+
+# Convert timepoint to HOURS
+meta$hour <- recode(
+  meta$timepoint,
+  "05" = "0.5h",
+  "4"  = "4h",
+  "12" = "12h",
+  "24" = "24h"
+)
+
+meta$hour <- factor(meta$hour, levels = c("0.5h","4h","12h","24h"))
+meta$treatment <- factor(meta$treatment, levels = c("Control","Heat"))
+
+# Align sample order
+common <- intersect(colnames(count_mat), meta$sample)
+count_mat <- count_mat[, common]
+meta <- meta[common, ]
+stopifnot(all(colnames(count_mat) == rownames(meta)))
+
+cat("Samples aligned:\n")
+print(meta[,c("sample","group","hour","treatment")])
+
+
+## 3) Load gene IDs from peak-to-gene map
+
+peak2gene <- read_csv("ATAC_peak_to_gene_map.csv", show_col_types = FALSE)
+
+
+## Helper: write DEG lists with LC IDs
+
+save_deg_lists <- function(res_df, prefix) {
+  up   <- res_df %>% filter(log2FoldChange > 0.5, padj < 0.05)
+  down <- res_df %>% filter(log2FoldChange < -0.5, padj < 0.05)
+  
+  write_csv(up,   paste0(prefix, "_UP.csv"))
+  write_csv(down, paste0(prefix, "_DOWN.csv"))
+  write_csv(res_df, paste0(prefix, "_ALL.csv"))
+  
+  message("  Saved DEG lists → ", prefix)
+}
+
+
+## Helper: Volcano Plot
+
+plot_volcano <- function(res_df, contrast_label, out_file) {
+  res_df <- res_df %>%
+    drop_na(padj) %>%
+    mutate(
+      sig = case_when(
+        padj < 0.05 & log2FoldChange > 0 ~ "More open in Heat",
+        padj < 0.05 & log2FoldChange < 0 ~ "More open in Control",
+        TRUE ~ "NS"
+      ),
+      neglog = -log10(padj)
+    )
+  
+  p <- ggplot(res_df, aes(log2FoldChange, neglog, color = sig)) +
+    geom_point(alpha = 0.6, size = 1.2) +
+    geom_vline(xintercept = 0, linetype = "dashed") +
+    geom_hline(yintercept = -log10(0.05), linetype = "dotted") +
+    scale_color_manual(values=c("More open in Heat"="red",
+                                "More open in Control"="blue",
+                                "NS"="grey70")) +
+    theme_bw(base_size = 13) +
+    labs(
+      title = paste("ATAC Differential Peaks —", contrast_label),
+      x = "log2 Fold Change",
+      y = "-log10(adjusted p-value)"
+    )
+  
+  ggsave(out_file, p, width = 6, height = 6)
+  message("  Volcano saved: ", out_file)
+}
+
+
+## A) WITHIN-TIMEPOINT: Heat vs Control
+cat("\n=== WITHIN-TIMEPOINT: HEAT vs CONTROL ===\n")
+
+dir.create("DEG_lists_within", showWarnings = FALSE)
+dir.create("Volcano_within", showWarnings = FALSE)
+
+for (tp in levels(meta$hour)) {
+  
+  cat("\nProcessing:", tp, "\n")
+  
+  idx <- meta$hour == tp
+  meta_tp   <- meta[idx, ]
+  counts_tp <- count_mat[, idx]
+  
+  if (!all(c("Control","Heat") %in% meta_tp$treatment)) {
+    message("  Skipping ", tp, " (missing groups)")
+    next
+  }
+  
+  meta_tp$treatment <- factor(meta_tp$treatment, levels = c("Control","Heat"))
+  
+  dds_tp <- DESeqDataSetFromMatrix(
+    countData = counts_tp,
+    colData   = meta_tp,
+    design    = ~ treatment
+  )
+  
+  keep <- rowSums(counts(dds_tp)) >= 10
+  dds_tp <- dds_tp[keep, ]
+  dds_tp <- DESeq(dds_tp)
+  
+  res <- results(dds_tp, contrast = c("treatment","Heat","Control")) %>%
+    as.data.frame() %>%
+    rownames_to_column("peak_id") %>%
+    left_join(peak2gene, by="peak_id")   # <-- ADD LC GENE IDs HERE
+  
+  prefix <- paste0("DEG_lists_within/ATAC_", tp, "_Heat_vs_Control")
+  save_deg_lists(res, prefix)
+  
+  plot_file <- paste0("Volcano_within/Volcano_", tp, "_Heat_vs_Control.pdf")
+  plot_volcano(res, paste(tp, "Heat vs Control"), plot_file)
+}
+
+
+## B) BETWEEN-TIMEPOINT (same treatment)
+
+
+cat("\n=== BETWEEN-TIMEPOINT: Same Treatment ===\n")
+
+dir.create("DEG_lists_between", showWarnings = FALSE)
+dir.create("Volcano_between", showWarnings = FALSE)
+
+timepoints <- levels(meta$hour)
+base_tp <- "0.5h"
+
+for (trt in levels(meta$treatment)) {
+  
+  message("\nTreatment:", trt)
+  
+  idx <- meta$treatment == trt
+  meta_tr   <- meta[idx, ]
+  counts_tr <- count_mat[, idx]
+  
+  meta_tr$hour <- factor(meta_tr$hour, levels = timepoints)
+  
+  dds_tr <- DESeqDataSetFromMatrix(
+    countData = counts_tr,
+    colData   = meta_tr,
+    design    = ~ hour
+  )
+  
+  keep <- rowSums(counts(dds_tr)) >= 10
+  dds_tr <- dds_tr[keep, ]
+  dds_tr <- DESeq(dds_tr)
+  
+  other <- setdiff(timepoints, base_tp)
+  
+  for (tp in other) {
+    message("  Comparing ", tp, " vs ", base_tp)
+    
+    res <- results(dds_tr, contrast = c("hour", tp, base_tp)) %>%
+      as.data.frame() %>%
+      rownames_to_column("peak_id") %>%
+      left_join(peak2gene, by="peak_id")
+    
+    prefix <- paste0("DEG_lists_between/", trt, "_", tp, "_vs_", base_tp)
+    save_deg_lists(res, prefix)
+    
+    plot_file <- paste0("Volcano_between/Volcano_", trt, "_", tp, "_vs_", base_tp, ".pdf")
+    plot_volcano(res, paste(tp, "vs", base_tp, " — ", trt), plot_file)
+  }
+}
+
+cat("\n ALL VOLCANO PLOTS and DEG LISTS GENERATED \n")
