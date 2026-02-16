@@ -1,0 +1,213 @@
+### LOAD LIBRARIES
+
+library(tidyverse)
+library(DESeq2)
+library(clusterProfiler)
+library(GO.db)
+library(ComplexHeatmap)
+library(circlize)
+library(grid)
+
+
+
+### 1. LOAD ATAC COUNTS + REMOVE DUPLICATE PEAKS
+
+df_raw <- read.csv("COUNTS.csv", check.names = FALSE)
+
+df_raw$peak_uid <- paste0(df_raw$chr, ":", df_raw$start, "-", df_raw$end)
+
+df <- df_raw %>% dplyr::distinct(peak_uid, .keep_all = TRUE)
+
+sample_cols <- grep("^OFav_", colnames(df), value = TRUE)
+
+count_matrix <- df[, sample_cols, drop = FALSE]
+rownames(count_matrix) <- df$peak_uid
+
+
+
+# 2. LOAD METADATA
+
+meta <- read.csv("ATAC_sample_metadata.csv", row.names = 1)
+meta <- meta[colnames(count_matrix), , drop = FALSE]
+
+meta$treatment <- factor(meta$treatment, levels = c("Control", "Heat"))
+meta$block <- factor(meta$block, levels = sort(unique(meta$block)))
+
+blocks <- levels(meta$block)
+
+# Pretty labels
+label_map <- c("5"="30 min","4"="4 hr","12"="12 hr","24"="24 hr")
+
+
+
+# 3. PEAK → GO MAP 
+
+peak_to_go <- df %>%
+  dplyr::select(peak_uid, go_id) %>%
+  tidyr::separate_rows(go_id, sep = "[,;]") %>%
+  dplyr::filter(!is.na(go_id) & go_id != "")
+
+
+
+### 4. BUILD DESeq2 OBJECT
+dds <- DESeqDataSetFromMatrix(
+  countData = count_matrix,
+  colData   = meta,
+  design    = ~ block + treatment + block:treatment
+)
+
+dds <- DESeq(dds)
+
+
+
+### 5. FIND SIGNIFICANT PEAKS PER TIMEPOINT
+peak_sig_list <- list()
+
+for (tp in blocks) {
+  
+  cat("\n--- TIMEPOINT:", tp, "---\n")
+  
+  tp_samples <- rownames(meta)[meta$block == tp]
+  dds_sub <- dds[, tp_samples]
+  
+  design(dds_sub) <- ~ treatment
+  dds_sub <- DESeq(dds_sub)
+  
+  res <- results(dds_sub, contrast = c("treatment", "Heat", "Control"))
+  
+  sig <- res %>%
+    as.data.frame() %>%
+    tibble::rownames_to_column("peak_uid") %>%
+    dplyr::filter(!is.na(padj) & padj < 0.05 & abs(log2FoldChange) > 1)
+  
+  cat("Significant peaks:", nrow(sig), "\n")
+  
+  peak_sig_list[[tp]] <- sig$peak_uid
+}
+
+
+
+### 6. GO ENRICHMENT USING PEAK IDs
+TERM2GENE <- peak_to_go %>% dplyr::distinct(go_id, peak_uid)
+
+safe_term <- function(goid) {
+  x <- GOTERM[[goid]]
+  if (is.null(x)) return(goid)
+  Term(x)
+}
+
+go_results <- list()
+
+for (tp in blocks) {
+  
+  fg <- peak_sig_list[[tp]]
+  
+  if (length(fg) == 0) {
+    cat(tp, ": No significant peaks → skipping enrichment\n")
+    next
+  }
+  
+  enr <- enricher(
+    gene          = fg,
+    TERM2GENE     = TERM2GENE,
+    pAdjustMethod = "BH",
+    minGSSize     = 1,
+    maxGSSize     = 5000
+  )
+  
+  if (!is.null(enr) && nrow(enr@result) > 0) {
+    tmp <- enr@result
+    tmp$time <- tp
+    go_results[[tp]] <- tmp
+    cat(tp, ": enriched terms =", nrow(tmp), "\n")
+  } else {
+    cat(tp, ": no enriched terms\n")
+  }
+}
+
+
+### 7. BUILD MATRIX (INCLUDING TIMEPOINTS WITH ZERO SIGNAL)
+heat_df <- bind_rows(go_results)
+
+if (nrow(heat_df) == 0)
+  stop("No enriched terms found at ANY timepoint.")
+
+# Translate GO IDs → readable term names
+heat_df$TermName <- sapply(heat_df$ID, safe_term)
+
+# Build table of -log10(padj)
+mat <- heat_df %>%
+  dplyr::mutate(neglog = -log10(p.adjust)) %>%
+  dplyr::select(TermName, time, neglog) %>%
+  tidyr::complete(TermName, time = blocks, fill = list(neglog = 0))
+
+
+
+# 8. FIX TIMEPOINT ORDERING
+
+mat$time <- factor(mat$time, levels = c("5", "4", "12", "24"))
+
+mat_wide <- mat %>%
+  tidyr::pivot_wider(names_from = time, values_from = neglog) %>%
+  tibble::column_to_rownames("TermName")
+
+mat_wide <- mat_wide[, c("5", "4", "12", "24")]
+colnames(mat_wide) <- c("30 min", "4 hr", "12 hr", "24 hr")
+
+
+
+# 9. SELECT TOP 40 VARIABLE TERMS
+
+var_score <- apply(mat_wide, 1, var)
+n_terms <- min(40, length(var_score))
+
+top_terms <- names(sort(var_score, decreasing = TRUE))[1:n_terms]
+mat_top <- mat_wide[top_terms, , drop = FALSE]
+
+
+
+# 10. FIX COLOR MAPPING
+
+maxval <- max(mat_top)
+if (maxval == 0) maxval <- 1
+
+col_fun <- colorRamp2(
+  c(0, maxval*0.3, maxval),
+  c("white", "orange", "red")
+)
+
+
+
+# 11. DRAW FINAL HEATMAP
+
+ht <- Heatmap(
+  as.matrix(mat_top),
+  name = "-log10(padj)",
+  col = col_fun,
+  cluster_rows = TRUE,
+  cluster_columns = FALSE,
+  row_names_gp = gpar(fontsize = 9),
+  column_names_gp = gpar(fontsize = 12),
+  heatmap_legend_param = list(
+    title = "-log10(padj)",
+    legend_height = unit(4, "cm")
+  )
+)
+
+pdf("GO_Enrichment_Heat_vs_Control_By_Time_FIXED.pdf", width = 12, height = 16)
+draw(ht)
+grid.text(
+  "GO Term Enrichment Across Heat-Stress Timepoints (Heat vs Control)",
+  x = unit(0.5, "npc"), y = unit(0.98, "npc"),
+  gp = gpar(fontsize = 18, fontface = "bold")
+)
+dev.off()
+
+png("GO_Enrichment_Heat_vs_Control_By_Time_FIXED.png", width = 2000, height = 2600, res = 300)
+draw(ht)
+grid.text(
+  "GO Term Enrichment Across Heat-Stress Timepoints (Heat vs Control)",
+  x = unit(0.5, "npc"), y = unit(0.98, "npc"),
+  gp = gpar(fontsize = 18, fontface = "bold")
+)
+dev.off()
