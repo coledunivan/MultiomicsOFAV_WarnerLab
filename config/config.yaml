@@ -1,0 +1,132 @@
+# ============================================================================
+# config.yaml  —  Coral multiomics pipeline configuration
+# ----------------------------------------------------------------------------
+# This is the ONLY file you normally need to edit to run the pipeline on a new
+# dataset. Point the paths at your files, describe how your sample names encode
+# timepoint/treatment/replicate, and adjust thresholds if needed.
+# ============================================================================
+
+project:
+  name: "Ofav_heat_stress"          # used in figure titles / output filenames
+  species_label: "Orbicella faveolata"
+  species_common: "mountainous star coral"
+
+# ----------------------------------------------------------------------------
+# INPUT FILES
+# ----------------------------------------------------------------------------
+# RNA: a gene x sample count matrix. First column = gene id, remaining columns
+#      = one per sample. Header sample names must follow the `sample_naming`
+#      pattern below.
+# ATAC: a peak count matrix with chr/start/end/peak_id columns followed by one
+#      count column per sample.
+# annotation: maps each ATAC peak_id to a gene_id and a genomic feature
+#      (promoter/mRNA/exon/...). gene2go maps gene_id -> GO term + aspect.
+inputs:
+  rna_counts:   "data/countsRNAseq_with_C1.csv"
+  atac_counts:  "data/ATAC_peak_counts_clean.csv"
+  peak_annotation: "data/COUNTS_ATAC_or_peak_counts.csv"   # has peak_id, top_feature, gene_id
+  gene2go:      "data/gene2go_from_ATAC_counts.csv"        # gene_id, go_id, go_term, aspect
+
+  # Column names inside the files (override if your files differ)
+  rna_gene_id_col: 0          # 0-based index of the gene-id column in rna_counts
+  atac_id_cols: ["chr","start","end","peak_id"]   # non-count columns in atac_counts
+  gene_id_prefix_strip: "gene:"   # stripped from gene ids if present (set "" to disable)
+
+# ----------------------------------------------------------------------------
+# SAMPLE NAMING  —  how to decode a column header into (timepoint, treatment)
+# ----------------------------------------------------------------------------
+# The pipeline parses each sample column name by splitting on `delimiter` and
+# reading the listed token positions (0-based). Example header:
+#     OFav_05_C1_S1   ->  split by "_"  ->  [OFav, 05, C1, S1]
+#                          time_token = index 1 = "05"
+#                          cond_token = index 2 = "C1"  (starts with C=Control, H=Heat)
+#
+# Map the raw time token to a human label and a numeric time (for ordering /
+# log-axis plotting). EDIT THESE for your experiment.
+sample_naming:
+  delimiter: "_"
+  time_token_index: 1
+  cond_token_index: 2
+  heat_prefix: "H"            # condition token starting with this = Heat
+  control_prefix: "C"         # ... = Control
+  time_map:                   # raw token -> human label
+    "05": "30min"
+    "5":  "30min"
+    "4":  "4h"
+    "12": "12h"
+    "24": "24h"
+  time_numeric:               # human label -> numeric (hours) for ordering
+    "30min": 0.5
+    "4h": 4.0
+    "12h": 12.0
+    "24h": 24.0
+  # Final left-to-right order of timepoints in all outputs:
+  time_order: ["30min", "4h", "12h", "24h"]
+
+# Samples to drop entirely (e.g. confirmed technical outliers). Use the exact
+# column header, or a prefix match. Leave empty to keep all.
+drop_samples: []
+# Samples excluded from PCA ordination only (kept for differential testing):
+pca_exclude_samples: ["OFav_05_C1"]
+
+# ----------------------------------------------------------------------------
+# STATISTICAL THRESHOLDS
+# ----------------------------------------------------------------------------
+thresholds:
+  rna_padj: 0.05              # DE significance (adjusted p)
+  rna_log2fc: 1.0             # DE significance (|log2 fold change|)
+  # ATAC peaks rarely reach genome-wide FDR with low replication, so the
+  # default uses a NOMINAL p threshold for accessibility. Raise rigor here if
+  # you have more replicates (e.g. set atac_use_padj: true).
+  atac_use_padj: false
+  atac_pval: 0.05             # used when atac_use_padj is false
+  atac_padj: 0.10             # used when atac_use_padj is true
+  atac_log2fc: 0.3
+  min_count_sum: 10           # min summed counts to test a gene
+  atac_min_count: 5           # ATAC prefilter: >= this many reads ...
+  atac_min_samples: 2         # ... in at least this many samples (per timepoint)
+
+# ----------------------------------------------------------------------------
+# DIFFERENTIAL DESIGN
+# ----------------------------------------------------------------------------
+# The pipeline tests Heat vs Control WITHIN each timepoint (design ~condition).
+# This mirrors the lab's original per-timepoint DESeq2 scripts and is robust to
+# low replication. (A full ~condition*time model is noted in docs/METHODS.md.)
+design:
+  per_timepoint: true
+  contrast: ["condition", "Heat", "Control"]
+
+# ----------------------------------------------------------------------------
+# FUZZY CLUSTERING (temporal programs)
+# ----------------------------------------------------------------------------
+clustering:
+  min_timepoints_significant: 2   # gene must be DE in >= this many timepoints
+  k_search: [2, 3, 4, 5, 6, 7, 8] # candidate cluster counts (Xie-Beni picks best)
+  k_force: null                   # set an integer to override the auto choice
+  core_membership: 0.6            # membership >= this = "core" cluster member
+  seed: 42
+
+# ----------------------------------------------------------------------------
+# INTEGRATION
+# ----------------------------------------------------------------------------
+integration:
+  lag_pairs:                      # ATAC(earlier) -> RNA(later) lag tests
+    - ["30min", "4h"]
+    - ["30min", "12h"]
+    - ["4h", "12h"]
+    - ["4h", "24h"]
+    - ["12h", "24h"]
+  # Candidate-score weights (see docs/METHODS.md for the formula)
+  score_weights:
+    effect: 2.0
+    concordance: 5.0
+    promoter: 3.0
+
+# ----------------------------------------------------------------------------
+# OUTPUT
+# ----------------------------------------------------------------------------
+output:
+  dir: "results"
+  tables_dir: "results/tables"
+  figures_dir: "results/figures"
+  figure_dpi: 300

@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# pipeline intermediates (regenerated)
+results/_work/
+
+# OS
+.DS_Store
+
+# Large data — uncomment to keep example data out of git and host elsewhere
+# data/*.csv

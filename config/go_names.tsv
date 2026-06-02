@@ -1,0 +1,75 @@
+go_id	go_name
+GO:0016485	protein processing
+GO:0003924	GTPase activity
+GO:0005525	GTP binding
+GO:0060294	cilium movement involved in cell motility
+GO:0005839	proteasome core complex
+GO:0006270	DNA replication initiation
+GO:0006281	DNA repair
+GO:0008194	UDP-glycosyltransferase activity
+GO:0006260	DNA replication
+GO:0030915	Smc5-Smc6 complex
+GO:0009986	cell surface
+GO:0005886	plasma membrane
+GO:0015026	coreceptor activity
+GO:0005035	death receptor activity
+GO:0048406	nerve growth factor binding
+GO:0006506	GPI anchor biosynthetic process
+GO:0140662	ATP-dependent protein folding chaperone
+GO:0071014	post-mRNA release spliceosomal complex
+GO:0045116	protein neddylation
+GO:0005832	chaperonin-containing T-complex
+GO:0008540	proteasome regulatory particle, base subcomplex
+GO:0005737	cytoplasm
+GO:0016887	ATP hydrolysis activity
+GO:0005634	nucleus
+GO:0030433	ubiquitin-dependent ERAD pathway
+GO:0008395	steroid hydroxylase activity
+GO:0003723	RNA binding
+GO:0005739	mitochondrion
+GO:0051787	misfolded protein binding
+GO:0016226	iron-sulfur cluster assembly
+GO:0007266	Rho protein signal transduction
+GO:0000278	mitotic cell cycle
+GO:0007094	mitotic spindle assembly checkpoint signaling
+GO:0016705	oxidoreductase activity (paired donors, O2 incorporation)
+GO:0006261	DNA-templated DNA replication
+GO:0045197	establishment/maintenance of epithelial cell apical/basal polarity
+GO:0003688	DNA replication origin binding
+GO:0005506	iron ion binding
+GO:0003682	chromatin binding
+GO:0046373	L-arabinose metabolic process
+GO:0046556	alpha-L-arabinofuranosidase activity
+GO:0036402	proteasome-activating activity
+GO:0005829	cytosol
+GO:0032991	protein-containing complex
+GO:0007018	microtubule-based movement
+GO:0003697	single-stranded DNA binding
+GO:0020037	heme binding
+GO:0005524	ATP binding
+GO:0034501	protein localization to kinetochore
+GO:0000070	mitotic sister chromatid segregation
+GO:1902975	mitotic DNA replication initiation
+GO:0007157	heterophilic cell-cell adhesion
+GO:0000727	double-strand break repair via break-induced replication
+GO:0017116	single-stranded DNA helicase activity
+GO:0003677	DNA binding
+GO:0070628	proteasome binding
+GO:0036374	glutathione hydrolase activity
+GO:0045910	negative regulation of DNA recombination
+GO:0045943	positive regulation of transcription by RNA polymerase I
+GO:0004298	threonine-type endopeptidase activity
+GO:0034515	proteasome storage granule
+GO:0008569	minus-end-directed microtubule motor activity
+GO:0005663	DNA replication factor C complex
+GO:0005694	chromosome
+GO:0008131	primary amine oxidase activity
+GO:0009308	amine metabolic process
+GO:0019985	translesion synthesis
+GO:0006271	DNA strand elongation involved in DNA replication
+GO:0006457	protein folding
+GO:0009408	response to heat
+GO:0051082	unfolded protein binding
+GO:0034605	cellular response to heat
+GO:0042026	protein refolding
+GO:0016020	membrane

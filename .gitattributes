@@ -1,0 +1,2 @@
+# Large count matrices — track with Git LFS (install: https://git-lfs.com)
+data/*.csv filter=lfs diff=lfs merge=lfs -text
