@@ -1,0 +1,1924 @@
+go_id,go_name,aspect,n_in_set,n_term,set_size,pvalue,padj,fold_enrich,cluster_or_set
+GO:0016485,protein processing,Biological Process,4,35,97,0.00012,0.00408,15.44624,Cluster_1
+GO:0003924,GTPase activity,Molecular Function,7,201,97,0.00072,0.01177,4.70688,Cluster_1
+GO:0005525,GTP binding,Molecular Function,7,217,97,0.00113,0.01177,4.35983,Cluster_1
+GO:0060294,cilium movement involved in cell motility,Biological Process,2,8,97,0.00147,0.01177,33.78866,Cluster_1
+GO:0005839,proteasome core complex,Cellular Component,2,10,97,0.00235,0.01177,27.03093,Cluster_1
+GO:0099536,GO:0099536,Biological Process,2,10,97,0.00235,0.01177,27.03093,Cluster_1
+GO:0033781,GO:0033781,Molecular Function,2,11,97,0.00285,0.01177,24.57357,Cluster_1
+GO:0006707,GO:0006707,Biological Process,2,11,97,0.00285,0.01177,24.57357,Cluster_1
+GO:0007005,GO:0007005,Biological Process,2,12,97,0.00341,0.01249,22.52577,Cluster_1
+GO:0005886,plasma membrane,Cellular Component,11,614,97,0.00559,0.01844,2.42134,Cluster_1
+GO:0015630,GO:0015630,Cellular Component,2,17,97,0.00685,0.02056,15.90055,Cluster_1
+GO:0043565,GO:0043565,Molecular Function,2,44,97,0.04192,0.11528,6.14339,Cluster_1
+GO:0005576,GO:0005576,Cellular Component,4,182,97,0.04602,0.11682,2.97043,Cluster_1
+GO:0038023,GO:0038023,Molecular Function,2,49,97,0.0509,0.11997,5.51652,Cluster_1
+GO:0005737,cytoplasm,Cellular Component,13,1084,97,0.05587,0.12291,1.62086,Cluster_1
+GO:0060271,GO:0060271,Biological Process,2,63,97,0.07915,0.16324,4.29062,Cluster_1
+GO:0005975,GO:0005975,Biological Process,2,89,97,0.14067,0.26255,3.03718,Cluster_1
+GO:0007018,microtubule-based movement,Biological Process,2,90,97,0.14321,0.26255,3.00344,Cluster_1
+GO:0008017,GO:0008017,Molecular Function,2,96,97,0.15863,0.27551,2.81572,Cluster_1
+GO:0004252,GO:0004252,Molecular Function,2,120,97,0.22272,0.36749,2.25258,Cluster_1
+GO:0005506,iron ion binding,Molecular Function,2,129,97,0.24733,0.37922,2.09542,Cluster_1
+GO:0020037,heme binding,Molecular Function,2,131,97,0.25282,0.37922,2.06343,Cluster_1
+GO:0000981,GO:0000981,Molecular Function,4,363,97,0.2815,0.4039,1.48931,Cluster_1
+GO:0005829,cytosol,Cellular Component,4,398,97,0.34011,0.46344,1.35834,Cluster_1
+GO:0005739,mitochondrion,Cellular Component,3,284,97,0.35109,0.46344,1.42769,Cluster_1
+GO:0006357,GO:0006357,Biological Process,4,423,97,0.38235,0.48529,1.27806,Cluster_1
+GO:0005615,GO:0005615,Cellular Component,4,441,97,0.41264,0.50433,1.22589,Cluster_1
+GO:0005524,ATP binding,Molecular Function,7,909,97,0.51308,0.6047,1.04079,Cluster_1
+GO:0005509,GO:0005509,Molecular Function,4,539,97,0.56896,0.64744,1.003,Cluster_1
+GO:0005634,nucleus,Cellular Component,8,1126,97,0.6009,0.66099,0.96025,Cluster_1
+GO:0000978,GO:0000978,Molecular Function,2,295,97,0.64557,0.68722,0.9163,Cluster_1
+GO:0004930,GO:0004930,Molecular Function,3,1123,97,0.99157,0.99833,0.36105,Cluster_1
+GO:0007186,GO:0007186,Biological Process,2,1122,97,0.99833,0.99833,0.24092,Cluster_1
+GO:0006270,DNA replication initiation,Biological Process,5,11,220,0.0,6e-05,27.08678,Cluster_2
+GO:0006281,DNA repair,Biological Process,8,47,220,0.0,6e-05,10.14313,Cluster_2
+GO:0008194,UDP-glycosyltransferase activity,Molecular Function,5,13,220,0.0,6e-05,22.91958,Cluster_2
+GO:0006260,DNA replication,Biological Process,7,36,220,0.0,6e-05,11.58712,Cluster_2
+GO:0030915,Smc5-Smc6 complex,Cellular Component,4,8,220,1e-05,0.00012,29.79545,Cluster_2
+GO:0007094,mitotic spindle assembly checkpoint signaling,Biological Process,4,9,220,1e-05,0.00018,26.48485,Cluster_2
+GO:0006261,DNA-templated DNA replication,Biological Process,4,10,220,1e-05,0.00025,23.83636,Cluster_2
+GO:0003688,DNA replication origin binding,Molecular Function,4,11,220,2e-05,0.00034,21.66942,Cluster_2
+GO:0003682,chromatin binding,Molecular Function,6,37,220,3e-05,0.00041,9.66339,Cluster_2
+GO:0016887,ATP hydrolysis activity,Molecular Function,14,231,220,4e-05,0.00042,3.61157,Cluster_2
+GO:0005634,nucleus,Cellular Component,37,1126,220,5e-05,0.00059,1.95814,Cluster_2
+GO:0000278,mitotic cell cycle,Biological Process,6,45,220,0.0001,0.00097,7.94545,Cluster_2
+GO:0005524,ATP binding,Molecular Function,31,909,220,0.00012,0.00111,2.03225,Cluster_2
+GO:0000070,mitotic sister chromatid segregation,Biological Process,3,7,220,0.00016,0.00114,25.53896,Cluster_2
+GO:1902975,mitotic DNA replication initiation,Biological Process,3,7,220,0.00016,0.00114,25.53896,Cluster_2
+GO:0034501,protein localization to kinetochore,Biological Process,3,7,220,0.00016,0.00114,25.53896,Cluster_2
+GO:0000727,double-strand break repair via break-induced replication,Biological Process,3,8,220,0.00025,0.00161,22.34659,Cluster_2
+GO:0017116,single-stranded DNA helicase activity,Molecular Function,3,8,220,0.00025,0.00161,22.34659,Cluster_2
+GO:0005739,mitochondrion,Cellular Component,14,284,220,0.00032,0.0019,2.93758,Cluster_2
+GO:0005506,iron ion binding,Molecular Function,9,129,220,0.00032,0.0019,4.15751,Cluster_2
+GO:0003677,DNA binding,Molecular Function,13,258,220,0.00042,0.00235,3.00264,Cluster_2
+GO:0003697,single-stranded DNA binding,Molecular Function,5,40,220,0.00052,0.00278,7.44886,Cluster_2
+GO:0005694,chromosome,Cellular Component,4,25,220,0.00074,0.00327,9.53455,Cluster_2
+GO:0005663,DNA replication factor C complex,Cellular Component,2,3,220,0.00083,0.00327,39.72727,Cluster_2
+GO:0008131,primary amine oxidase activity,Molecular Function,2,3,220,0.00083,0.00327,39.72727,Cluster_2
+GO:0003689,GO:0003689,Molecular Function,2,3,220,0.00083,0.00327,39.72727,Cluster_2
+GO:0006271,DNA strand elongation involved in DNA replication,Biological Process,2,3,220,0.00083,0.00327,39.72727,Cluster_2
+GO:0019985,translesion synthesis,Biological Process,2,3,220,0.00083,0.00327,39.72727,Cluster_2
+GO:0009308,amine metabolic process,Biological Process,2,3,220,0.00083,0.00327,39.72727,Cluster_2
+GO:1990423,GO:1990423,Cellular Component,2,3,220,0.00083,0.00327,39.72727,Cluster_2
+GO:0000724,GO:0000724,Biological Process,5,46,220,0.001,0.00379,6.47727,Cluster_2
+GO:0005658,GO:0005658,Cellular Component,2,4,220,0.00165,0.00588,29.79545,Cluster_2
+GO:0051276,GO:0051276,Biological Process,2,4,220,0.00165,0.00588,29.79545,Cluster_2
+GO:0006268,GO:0006268,Biological Process,3,16,220,0.00222,0.00771,11.1733,Cluster_2
+GO:0044772,GO:0044772,Biological Process,2,5,220,0.00271,0.0082,23.83636,Cluster_2
+GO:0042555,GO:0042555,Cellular Component,2,5,220,0.00271,0.0082,23.83636,Cluster_2
+GO:0006273,GO:0006273,Biological Process,2,5,220,0.00271,0.0082,23.83636,Cluster_2
+GO:2000779,GO:2000779,Biological Process,2,5,220,0.00271,0.0082,23.83636,Cluster_2
+GO:0006272,GO:0006272,Biological Process,2,5,220,0.00271,0.0082,23.83636,Cluster_2
+GO:0140359,GO:0140359,Molecular Function,6,85,220,0.00303,0.00894,4.20642,Cluster_2
+GO:0047150,GO:0047150,Molecular Function,2,6,220,0.00402,0.01158,19.86364,Cluster_2
+GO:0000079,GO:0000079,Biological Process,2,7,220,0.00557,0.01528,17.02597,Cluster_2
+GO:0048038,GO:0048038,Molecular Function,2,7,220,0.00557,0.01528,17.02597,Cluster_2
+GO:0020037,heme binding,Molecular Function,7,131,220,0.00657,0.01763,3.18425,Cluster_2
+GO:0016538,GO:0016538,Molecular Function,2,8,220,0.00734,0.01884,14.89773,Cluster_2
+GO:0051301,GO:0051301,Biological Process,2,8,220,0.00734,0.01884,14.89773,Cluster_2
+GO:0000785,GO:0000785,Cellular Component,4,49,220,0.00906,0.02275,4.86456,Cluster_2
+GO:0004180,GO:0004180,Molecular Function,2,9,220,0.00934,0.02296,13.24242,Cluster_2
+GO:0042626,GO:0042626,Molecular Function,2,10,220,0.01154,0.0278,11.91818,Cluster_2
+GO:0048791,GO:0048791,Biological Process,2,11,220,0.01395,0.03167,10.83471,Cluster_2
+GO:0005819,GO:0005819,Cellular Component,2,11,220,0.01395,0.03167,10.83471,Cluster_2
+GO:0005680,GO:0005680,Cellular Component,2,11,220,0.01395,0.03167,10.83471,Cluster_2
+GO:0042448,GO:0042448,Biological Process,2,12,220,0.01656,0.03204,9.93182,Cluster_2
+GO:0047442,GO:0047442,Molecular Function,2,12,220,0.01656,0.03204,9.93182,Cluster_2
+GO:0048488,GO:0048488,Biological Process,2,12,220,0.01656,0.03204,9.93182,Cluster_2
+GO:0009086,GO:0009086,Biological Process,2,12,220,0.01656,0.03204,9.93182,Cluster_2
+GO:0042446,GO:0042446,Biological Process,2,12,220,0.01656,0.03204,9.93182,Cluster_2
+GO:0006325,GO:0006325,Biological Process,2,12,220,0.01656,0.03204,9.93182,Cluster_2
+GO:0004508,GO:0004508,Molecular Function,2,12,220,0.01656,0.03204,9.93182,Cluster_2
+GO:0007059,GO:0007059,Biological Process,2,12,220,0.01656,0.03204,9.93182,Cluster_2
+GO:0006298,GO:0006298,Biological Process,2,12,220,0.01656,0.03204,9.93182,Cluster_2
+GO:0042393,GO:0042393,Molecular Function,3,33,220,0.01756,0.03343,5.41736,Cluster_2
+GO:0016705,"oxidoreductase activity (paired donors, O2 incorporation)",Molecular Function,4,63,220,0.02127,0.03984,3.78355,Cluster_2
+GO:0006334,GO:0006334,Biological Process,3,36,220,0.02216,0.04023,4.96591,Cluster_2
+GO:0005874,GO:0005874,Cellular Component,3,36,220,0.02216,0.04023,4.96591,Cluster_2
+GO:0051537,GO:0051537,Molecular Function,2,15,220,0.02549,0.04558,7.94545,Cluster_2
+GO:0016491,GO:0016491,Molecular Function,6,142,220,0.03253,0.05729,2.51793,Cluster_2
+GO:0007417,GO:0007417,Biological Process,2,18,220,0.03595,0.0606,6.62121,Cluster_2
+GO:0008395,steroid hydroxylase activity,Molecular Function,2,18,220,0.03595,0.0606,6.62121,Cluster_2
+GO:0006284,GO:0006284,Biological Process,2,18,220,0.03595,0.0606,6.62121,Cluster_2
+GO:0019905,GO:0019905,Molecular Function,2,20,220,0.04368,0.07159,5.95909,Cluster_2
+GO:0051726,GO:0051726,Biological Process,2,20,220,0.04368,0.07159,5.95909,Cluster_2
+GO:0001786,GO:0001786,Molecular Function,2,21,220,0.04776,0.07415,5.67532,Cluster_2
+GO:0070006,GO:0070006,Molecular Function,2,21,220,0.04776,0.07415,5.67532,Cluster_2
+GO:0014059,GO:0014059,Biological Process,2,21,220,0.04776,0.07415,5.67532,Cluster_2
+GO:0017158,GO:0017158,Biological Process,2,21,220,0.04776,0.07415,5.67532,Cluster_2
+GO:0005856,GO:0005856,Cellular Component,3,50,220,0.05136,0.07871,3.57545,Cluster_2
+GO:0030276,GO:0030276,Molecular Function,2,23,220,0.0563,0.08518,5.18182,Cluster_2
+GO:0071277,GO:0071277,Biological Process,2,24,220,0.06076,0.09075,4.96591,Cluster_2
+GO:0015171,GO:0015171,Molecular Function,2,25,220,0.06533,0.09637,4.76727,Cluster_2
+GO:0008270,GO:0008270,Molecular Function,13,493,220,0.07224,0.10524,1.57136,Cluster_2
+GO:0005507,GO:0005507,Molecular Function,2,29,220,0.08469,0.12098,4.10972,Cluster_2
+GO:0004674,GO:0004674,Molecular Function,4,99,220,0.0851,0.12098,2.40771,Cluster_2
+GO:0005759,GO:0005759,Cellular Component,2,37,220,0.12756,0.17918,3.22113,Cluster_2
+GO:0005544,GO:0005544,Molecular Function,2,41,220,0.15055,0.20656,2.90687,Cluster_2
+GO:0006310,GO:0006310,Biological Process,2,41,220,0.15055,0.20656,2.90687,Cluster_2
+GO:0003824,GO:0003824,Molecular Function,2,42,220,0.15642,0.21215,2.83766,Cluster_2
+GO:0004497,GO:0004497,Molecular Function,2,43,220,0.16233,0.21767,2.77167,Cluster_2
+GO:0005813,GO:0005813,Cellular Component,3,89,220,0.18799,0.24925,2.00868,Cluster_2
+GO:0055085,GO:0055085,Biological Process,8,340,220,0.21287,0.2791,1.40214,Cluster_2
+GO:0030246,GO:0030246,Molecular Function,2,53,220,0.22319,0.28941,2.24871,Cluster_2
+GO:0000977,GO:0000977,Molecular Function,2,58,220,0.25429,0.32616,2.05486,Cluster_2
+GO:0061630,GO:0061630,Molecular Function,4,159,220,0.27781,0.35249,1.49914,Cluster_2
+GO:0005509,GO:0005509,Molecular Function,11,539,220,0.2959,0.37145,1.21614,Cluster_2
+GO:0000209,GO:0000209,Biological Process,3,120,220,0.32706,0.40624,1.48977,Cluster_2
+GO:0006511,GO:0006511,Biological Process,2,76,220,0.36552,0.44929,1.56818,Cluster_2
+GO:0005975,GO:0005975,Biological Process,2,89,220,0.44195,0.53763,1.33912,Cluster_2
+GO:0007018,microtubule-based movement,Biological Process,2,90,220,0.44763,0.53898,1.32424,Cluster_2
+GO:0004672,GO:0004672,Molecular Function,3,150,220,0.46244,0.55119,1.19182,Cluster_2
+GO:0046872,GO:0046872,Molecular Function,3,152,220,0.47111,0.55497,1.17614,Cluster_2
+GO:0004842,GO:0004842,Molecular Function,2,95,220,0.47551,0.55497,1.25455,Cluster_2
+GO:0004222,GO:0004222,Molecular Function,3,154,220,0.47972,0.55497,1.16086,Cluster_2
+GO:0005525,GTP binding,Molecular Function,4,217,220,0.49582,0.56803,1.09845,Cluster_2
+GO:0006508,GO:0006508,Biological Process,5,284,220,0.52021,0.59023,1.04914,Cluster_2
+GO:0006355,GO:0006355,Biological Process,2,125,220,0.62351,0.70071,0.95345,Cluster_2
+GO:0005737,cytoplasm,Cellular Component,17,1084,220,0.65148,0.72523,0.93454,Cluster_2
+GO:0003676,GO:0003676,Molecular Function,3,207,220,0.67877,0.74855,0.86364,Cluster_2
+GO:0005886,plasma membrane,Cellular Component,9,614,220,0.70821,0.77378,0.87348,Cluster_2
+GO:0006357,GO:0006357,Biological Process,6,423,220,0.71815,0.77745,0.84526,Cluster_2
+GO:0000978,GO:0000978,Molecular Function,4,295,220,0.73347,0.78682,0.80801,Cluster_2
+GO:0005829,cytosol,Cellular Component,5,398,220,0.80228,0.85288,0.74863,Cluster_2
+GO:0006468,GO:0006468,Biological Process,5,413,220,0.82728,0.87159,0.72144,Cluster_2
+GO:0003924,GTPase activity,Molecular Function,2,201,220,0.85447,0.89228,0.59294,Cluster_2
+GO:0000981,GO:0000981,Molecular Function,4,363,220,0.86265,0.89292,0.65665,Cluster_2
+GO:0007165,GO:0007165,Biological Process,2,292,220,0.95882,0.98383,0.40816,Cluster_2
+GO:0005615,GO:0005615,Cellular Component,2,441,220,0.99557,1.0,0.27025,Cluster_2
+GO:0007186,GO:0007186,Biological Process,3,1122,220,1.0,1.0,0.15933,Cluster_2
+GO:0004930,GO:0004930,Molecular Function,3,1123,220,1.0,1.0,0.15919,Cluster_2
+GO:0009986,cell surface,Cellular Component,10,48,279,0.0,1e-05,9.78943,Cluster_3
+GO:0005886,plasma membrane,Cellular Component,34,614,279,0.0,1e-05,2.60201,Cluster_3
+GO:0015026,coreceptor activity,Molecular Function,7,23,279,0.0,1e-05,14.30108,Cluster_3
+GO:0005035,death receptor activity,Molecular Function,7,23,279,0.0,1e-05,14.30108,Cluster_3
+GO:0048406,nerve growth factor binding,Molecular Function,7,23,279,0.0,1e-05,14.30108,Cluster_3
+GO:0007266,Rho protein signal transduction,Biological Process,7,33,279,0.0,0.00013,9.96742,Cluster_3
+GO:0046373,L-arabinose metabolic process,Biological Process,4,9,279,2e-05,0.00046,20.88411,Cluster_3
+GO:0046556,alpha-L-arabinofuranosidase activity,Molecular Function,4,9,279,2e-05,0.00046,20.88411,Cluster_3
+GO:0045197,establishment/maintenance of epithelial cell apical/basal polarity,Biological Process,6,38,279,0.00014,0.00239,7.41935,Cluster_3
+GO:0036374,glutathione hydrolase activity,Molecular Function,4,14,279,0.00017,0.00267,13.4255,Cluster_3
+GO:0006751,GO:0006751,Biological Process,4,16,279,0.0003,0.0041,11.74731,Cluster_3
+GO:0035250,GO:0035250,Molecular Function,3,7,279,0.00031,0.0041,20.13825,Cluster_3
+GO:0004656,GO:0004656,Molecular Function,4,17,279,0.00038,0.00464,11.05629,Cluster_3
+GO:0018401,GO:0018401,Biological Process,4,18,279,0.00049,0.00544,10.44205,Cluster_3
+GO:0005576,GO:0005576,Cellular Component,12,182,279,0.00052,0.00548,3.09819,Cluster_3
+GO:0006024,GO:0006024,Biological Process,3,9,279,0.00073,0.00715,15.66308,Cluster_3
+GO:0031418,GO:0031418,Molecular Function,4,21,279,0.0009,0.00764,8.95033,Cluster_3
+GO:0031410,GO:0031410,Cellular Component,4,21,279,0.0009,0.00764,8.95033,Cluster_3
+GO:0032991,protein-containing complex,Cellular Component,5,36,279,0.00092,0.00764,6.52628,Cluster_3
+GO:0005615,GO:0005615,Cellular Component,20,441,279,0.00122,0.00953,2.13103,Cluster_3
+GO:0008330,GO:0008330,Molecular Function,2,3,279,0.00133,0.00953,31.32616,Cluster_3
+GO:0090110,GO:0090110,Biological Process,2,3,279,0.00133,0.00953,31.32616,Cluster_3
+GO:0007157,heterophilic cell-cell adhesion,Biological Process,5,41,279,0.00169,0.01151,5.7304,Cluster_3
+GO:0042026,protein refolding,Biological Process,3,13,279,0.00233,0.01523,10.84367,Cluster_3
+GO:0043409,GO:0043409,Biological Process,2,4,279,0.00263,0.01557,23.49462,Cluster_3
+GO:0017017,GO:0017017,Molecular Function,2,4,279,0.00263,0.01557,23.49462,Cluster_3
+GO:0005509,GO:0005509,Molecular Function,22,539,279,0.00268,0.01557,1.91793,Cluster_3
+GO:0006820,GO:0006820,Biological Process,3,15,279,0.00359,0.01943,9.39785,Cluster_3
+GO:0031048,GO:0031048,Biological Process,3,15,279,0.00359,0.01943,9.39785,Cluster_3
+GO:0004386,GO:0004386,Molecular Function,3,16,279,0.00435,0.02275,8.81048,Cluster_3
+GO:0006486,GO:0006486,Biological Process,5,55,279,0.00615,0.03115,4.27175,Cluster_3
+GO:0007029,GO:0007029,Biological Process,2,6,279,0.0064,0.03139,15.66308,Cluster_3
+GO:0030127,GO:0030127,Cellular Component,2,7,279,0.00883,0.04078,13.4255,Cluster_3
+GO:0034620,GO:0034620,Biological Process,2,7,279,0.00883,0.04078,13.4255,Cluster_3
+GO:0031380,GO:0031380,Cellular Component,3,21,279,0.00955,0.04283,6.71275,Cluster_3
+GO:0070971,GO:0070971,Cellular Component,2,8,279,0.01161,0.04721,11.74731,Cluster_3
+GO:2001069,GO:2001069,Molecular Function,2,8,279,0.01161,0.04721,11.74731,Cluster_3
+GO:0005979,GO:0005979,Biological Process,2,8,279,0.01161,0.04721,11.74731,Cluster_3
+GO:0005975,GO:0005975,Biological Process,6,89,279,0.01173,0.04721,3.16781,Cluster_3
+GO:0000209,GO:0000209,Biological Process,7,120,279,0.0142,0.05502,2.74104,Cluster_3
+GO:0000164,GO:0000164,Cellular Component,2,9,279,0.01472,0.05502,10.44205,Cluster_3
+GO:0008157,GO:0008157,Molecular Function,2,9,279,0.01472,0.05502,10.44205,Cluster_3
+GO:0000226,GO:0000226,Biological Process,4,46,279,0.01626,0.05934,4.08602,Cluster_3
+GO:0005776,GO:0005776,Cellular Component,2,10,279,0.01814,0.05934,9.39785,Cluster_3
+GO:0008201,GO:0008201,Molecular Function,2,10,279,0.01814,0.05934,9.39785,Cluster_3
+GO:0030261,GO:0030261,Biological Process,2,10,279,0.01814,0.05934,9.39785,Cluster_3
+GO:0031072,GO:0031072,Molecular Function,2,10,279,0.01814,0.05934,9.39785,Cluster_3
+GO:0051085,GO:0051085,Biological Process,2,10,279,0.01814,0.05934,9.39785,Cluster_3
+GO:0030154,GO:0030154,Biological Process,7,127,279,0.01884,0.06037,2.58996,Cluster_3
+GO:0061630,GO:0061630,Molecular Function,8,159,279,0.02048,0.0643,2.36424,Cluster_3
+GO:0031492,GO:0031492,Molecular Function,2,11,279,0.02187,0.06477,8.5435,Cluster_3
+GO:0045910,negative regulation of DNA recombination,Biological Process,2,11,279,0.02187,0.06477,8.5435,Cluster_3
+GO:0097192,GO:0097192,Biological Process,2,11,279,0.02187,0.06477,8.5435,Cluster_3
+GO:0003714,GO:0003714,Molecular Function,3,29,279,0.02316,0.06734,4.86096,Cluster_3
+GO:0030968,GO:0030968,Biological Process,2,12,279,0.02588,0.07386,7.83154,Cluster_3
+GO:0048856,GO:0048856,Biological Process,3,31,279,0.02763,0.07745,4.54735,Cluster_3
+GO:0051787,misfolded protein binding,Molecular Function,2,13,279,0.03016,0.08163,7.22911,Cluster_3
+GO:0008630,GO:0008630,Biological Process,2,13,279,0.03016,0.08163,7.22911,Cluster_3
+GO:0007154,GO:0007154,Biological Process,2,14,279,0.0347,0.09132,6.71275,Cluster_3
+GO:0005741,GO:0005741,Cellular Component,3,34,279,0.03511,0.09132,4.14611,Cluster_3
+GO:0043161,GO:0043161,Biological Process,6,115,279,0.03617,0.09132,2.45161,Cluster_3
+GO:0016485,protein processing,Biological Process,3,35,279,0.03782,0.09132,4.02765,Cluster_3
+GO:0005200,GO:0005200,Molecular Function,2,15,279,0.03948,0.09132,6.26523,Cluster_3
+GO:0030414,GO:0030414,Molecular Function,2,15,279,0.03948,0.09132,6.26523,Cluster_3
+GO:0005198,GO:0005198,Molecular Function,2,15,279,0.03948,0.09132,6.26523,Cluster_3
+GO:0004879,GO:0004879,Molecular Function,2,15,279,0.03948,0.09132,6.26523,Cluster_3
+GO:0042127,GO:0042127,Biological Process,2,15,279,0.03948,0.09132,6.26523,Cluster_3
+GO:0042981,GO:0042981,Biological Process,5,88,279,0.03955,0.09132,2.66984,Cluster_3
+GO:0005774,GO:0005774,Cellular Component,2,16,279,0.0445,0.09981,5.87366,Cluster_3
+GO:0034440,GO:0034440,Biological Process,2,16,279,0.0445,0.09981,5.87366,Cluster_3
+GO:0030182,GO:0030182,Biological Process,3,39,279,0.04967,0.10413,3.61456,Cluster_3
+GO:0016702,GO:0016702,Molecular Function,2,17,279,0.04974,0.10413,5.52815,Cluster_3
+GO:0042803,GO:0042803,Molecular Function,2,17,279,0.04974,0.10413,5.52815,Cluster_3
+GO:0003950,GO:0003950,Molecular Function,2,17,279,0.04974,0.10413,5.52815,Cluster_3
+GO:0000045,GO:0000045,Biological Process,2,17,279,0.04974,0.10413,5.52815,Cluster_3
+GO:0008270,GO:0008270,Molecular Function,16,493,279,0.06216,0.12841,1.52501,Cluster_3
+GO:0140662,ATP-dependent protein folding chaperone,Molecular Function,2,20,279,0.06668,0.13595,4.69892,Cluster_3
+GO:0005109,GO:0005109,Molecular Function,2,23,279,0.08521,0.17151,4.08602,Cluster_3
+GO:0045165,GO:0045165,Biological Process,2,24,279,0.0917,0.18223,3.91577,Cluster_3
+GO:0003690,GO:0003690,Molecular Function,2,25,279,0.09832,0.19057,3.75914,Cluster_3
+GO:0015171,GO:0015171,Molecular Function,2,25,279,0.09832,0.19057,3.75914,Cluster_3
+GO:0003755,GO:0003755,Molecular Function,2,27,279,0.11195,0.21176,3.48068,Cluster_3
+GO:0018105,GO:0018105,Biological Process,2,27,279,0.11195,0.21176,3.48068,Cluster_3
+GO:0005783,GO:0005783,Cellular Component,6,162,279,0.1321,0.24691,1.74034,Cluster_3
+GO:0006470,GO:0006470,Biological Process,3,60,279,0.13542,0.25013,2.34946,Cluster_3
+GO:0046982,GO:0046982,Molecular Function,3,67,279,0.17088,0.30782,2.104,Cluster_3
+GO:0006629,GO:0006629,Biological Process,2,36,279,0.17804,0.30782,2.61051,Cluster_3
+GO:0005874,GO:0005874,Cellular Component,2,36,279,0.17804,0.30782,2.61051,Cluster_3
+GO:0006334,GO:0006334,Biological Process,2,36,279,0.17804,0.30782,2.61051,Cluster_3
+GO:0035091,GO:0035091,Molecular Function,2,36,279,0.17804,0.30782,2.61051,Cluster_3
+GO:0000978,GO:0000978,Molecular Function,9,295,279,0.17842,0.30782,1.43357,Cluster_3
+GO:0022857,GO:0022857,Molecular Function,5,145,279,0.19674,0.33368,1.62032,Cluster_3
+GO:0046330,GO:0046330,Biological Process,3,72,279,0.19765,0.33368,1.95789,Cluster_3
+GO:0005764,GO:0005764,Cellular Component,2,40,279,0.20904,0.34915,2.34946,Cluster_3
+GO:0051082,unfolded protein binding,Molecular Function,2,41,279,0.21688,0.35843,2.29216,Cluster_3
+GO:0016887,ATP hydrolysis activity,Molecular Function,7,231,279,0.22252,0.36392,1.42392,Cluster_3
+GO:0031625,GO:0031625,Molecular Function,2,43,279,0.23263,0.37269,2.18555,Cluster_3
+GO:0005125,GO:0005125,Molecular Function,2,43,279,0.23263,0.37269,2.18555,Cluster_3
+GO:0043565,GO:0043565,Molecular Function,2,44,279,0.24053,0.3739,2.13587,Cluster_3
+GO:0071949,GO:0071949,Molecular Function,2,44,279,0.24053,0.3739,2.13587,Cluster_3
+GO:0060070,GO:0060070,Biological Process,2,44,279,0.24053,0.3739,2.13587,Cluster_3
+GO:0000981,GO:0000981,Molecular Function,10,363,279,0.24606,0.3787,1.29447,Cluster_3
+GO:0000278,mitotic cell cycle,Biological Process,2,45,279,0.24845,0.3787,2.08841,Cluster_3
+GO:0007275,GO:0007275,Biological Process,5,164,279,0.27101,0.40704,1.4326,Cluster_3
+GO:0005201,GO:0005201,Molecular Function,2,48,279,0.27223,0.40704,1.95789,Cluster_3
+GO:0006355,GO:0006355,Biological Process,4,125,279,0.27595,0.40725,1.50366,Cluster_3
+GO:0030527,GO:0030527,Molecular Function,2,49,279,0.28015,0.40725,1.91793,Cluster_3
+GO:0006888,GO:0006888,Biological Process,2,49,279,0.28015,0.40725,1.91793,Cluster_3
+GO:0007165,GO:0007165,Biological Process,8,292,279,0.28347,0.4083,1.28738,Cluster_3
+GO:0005506,iron ion binding,Molecular Function,4,129,279,0.29499,0.42104,1.45703,Cluster_3
+GO:0000786,GO:0000786,Cellular Component,2,54,279,0.31961,0.45206,1.74034,Cluster_3
+GO:0005737,cytoplasm,Cellular Component,25,1084,279,0.36669,0.51401,1.0837,Cluster_3
+GO:0005230,GO:0005230,Molecular Function,2,61,279,0.37389,0.51948,1.54063,Cluster_3
+GO:0060271,GO:0060271,Biological Process,2,63,279,0.38909,0.52329,1.49172,Cluster_3
+GO:0016787,GO:0016787,Molecular Function,2,63,279,0.38909,0.52329,1.49172,Cluster_3
+GO:0007166,GO:0007166,Biological Process,2,63,279,0.38909,0.52329,1.49172,Cluster_3
+GO:0004672,GO:0004672,Molecular Function,4,150,279,0.39642,0.52329,1.25305,Cluster_3
+GO:0070534,GO:0070534,Biological Process,2,64,279,0.39663,0.52329,1.46841,Cluster_3
+GO:0042277,GO:0042277,Molecular Function,2,64,279,0.39663,0.52329,1.46841,Cluster_3
+GO:0046872,GO:0046872,Molecular Function,4,152,279,0.40605,0.53125,1.23656,Cluster_3
+GO:0004222,GO:0004222,Molecular Function,4,154,279,0.41565,0.53919,1.2205,Cluster_3
+GO:0033209,GO:0033209,Biological Process,2,67,279,0.41899,0.53919,1.40266,Cluster_3
+GO:0007156,GO:0007156,Biological Process,2,68,279,0.42635,0.5442,1.38204,Cluster_3
+GO:0098802,GO:0098802,Cellular Component,2,71,279,0.44812,0.56729,1.32364,Cluster_3
+GO:0043122,GO:0043122,Biological Process,2,72,279,0.45528,0.56729,1.30526,Cluster_3
+GO:0035725,GO:0035725,Biological Process,2,72,279,0.45528,0.56729,1.30526,Cluster_3
+GO:0006886,GO:0006886,Biological Process,2,73,279,0.46238,0.57161,1.28738,Cluster_3
+GO:0005524,ATP binding,Molecular Function,20,909,279,0.47217,0.57914,1.03387,Cluster_3
+GO:0006511,GO:0006511,Biological Process,2,76,279,0.48336,0.58828,1.23656,Cluster_3
+GO:0007169,GO:0007169,Biological Process,3,128,279,0.51499,0.62195,1.10131,Cluster_3
+GO:0006468,GO:0006468,Biological Process,9,413,279,0.51909,0.62212,1.02398,Cluster_3
+GO:0005634,nucleus,Cellular Component,24,1126,279,0.52848,0.62857,1.00155,Cluster_3
+GO:0050877,GO:0050877,Biological Process,2,84,279,0.53676,0.63362,1.11879,Cluster_3
+GO:0042391,GO:0042391,Biological Process,2,90,279,0.57425,0.66292,1.04421,Cluster_3
+GO:0007018,microtubule-based movement,Biological Process,2,90,279,0.57425,0.66292,1.04421,Cluster_3
+GO:0004888,GO:0004888,Molecular Function,2,90,279,0.57425,0.66292,1.04421,Cluster_3
+GO:0008017,GO:0008017,Molecular Function,2,96,279,0.60949,0.69847,0.97894,Cluster_3
+GO:0005829,cytosol,Cellular Component,8,398,279,0.61551,0.70026,0.94451,Cluster_3
+GO:0045202,GO:0045202,Cellular Component,2,98,279,0.62073,0.70112,0.95896,Cluster_3
+GO:0004674,GO:0004674,Molecular Function,2,99,279,0.62626,0.70231,0.94928,Cluster_3
+GO:0003677,DNA binding,Molecular Function,5,258,279,0.64583,0.71912,0.91064,Cluster_3
+GO:0004714,GO:0004714,Molecular Function,2,109,279,0.67814,0.74434,0.86219,Cluster_3
+GO:0005525,GTP binding,Molecular Function,4,217,279,0.68223,0.74434,0.86616,Cluster_3
+GO:0006357,GO:0006357,Biological Process,8,423,279,0.68271,0.74434,0.88869,Cluster_3
+GO:0033674,GO:0033674,Biological Process,2,113,279,0.69719,0.75489,0.83167,Cluster_3
+GO:0004252,GO:0004252,Molecular Function,2,120,279,0.72828,0.77418,0.78315,Cluster_3
+GO:0043005,GO:0043005,Cellular Component,2,120,279,0.72828,0.77418,0.78315,Cluster_3
+GO:0030594,GO:0030594,Molecular Function,2,121,279,0.7325,0.77418,0.77668,Cluster_3
+GO:0055085,GO:0055085,Biological Process,6,340,279,0.73473,0.77418,0.82922,Cluster_3
+GO:0043235,GO:0043235,Cellular Component,2,133,279,0.77888,0.81522,0.70661,Cluster_3
+GO:0003924,GTPase activity,Molecular Function,3,201,279,0.80513,0.83712,0.70133,Cluster_3
+GO:0007268,GO:0007268,Biological Process,2,150,279,0.8325,0.85988,0.62652,Cluster_3
+GO:0006508,GO:0006508,Biological Process,4,284,279,0.85839,0.88084,0.66182,Cluster_3
+GO:0003723,RNA binding,Molecular Function,3,284,279,0.94369,0.95587,0.49637,Cluster_3
+GO:0005739,mitochondrion,Cellular Component,3,284,279,0.94369,0.95587,0.49637,Cluster_3
+GO:0004930,GO:0004930,Molecular Function,16,1123,279,0.97109,0.97731,0.66948,Cluster_3
+GO:0007186,GO:0007186,Biological Process,15,1122,279,0.98384,0.98384,0.6282,Cluster_3
+GO:0006506,GPI anchor biosynthetic process,Biological Process,4,26,127,0.00011,0.00692,15.88128,Cluster_4
+GO:0140662,ATP-dependent protein folding chaperone,Molecular Function,3,20,127,0.0009,0.01484,15.48425,Cluster_4
+GO:0071014,post-mRNA release spliceosomal complex,Cellular Component,2,5,127,0.00091,0.01484,41.29134,Cluster_4
+GO:0045116,protein neddylation,Biological Process,2,5,127,0.00091,0.01484,41.29134,Cluster_4
+GO:0005832,chaperonin-containing T-complex,Cellular Component,2,6,127,0.00136,0.0177,34.40945,Cluster_4
+GO:0042276,GO:0042276,Biological Process,2,7,127,0.00189,0.02052,29.49381,Cluster_4
+GO:0006006,GO:0006006,Biological Process,2,9,127,0.00321,0.02977,22.93963,Cluster_4
+GO:0000387,GO:0000387,Biological Process,2,13,127,0.00677,0.04501,15.88128,Cluster_4
+GO:0051082,unfolded protein binding,Molecular Function,3,41,127,0.00724,0.04501,7.55329,Cluster_4
+GO:0008198,GO:0008198,Molecular Function,2,14,127,0.00785,0.04501,14.74691,Cluster_4
+GO:0005737,cytoplasm,Cellular Component,19,1084,127,0.00816,0.04501,1.80935,Cluster_4
+GO:0005730,GO:0005730,Cellular Component,4,84,127,0.00893,0.04501,4.91564,Cluster_4
+GO:0017156,GO:0017156,Biological Process,2,15,127,0.009,0.04501,13.76378,Cluster_4
+GO:0030488,GO:0030488,Biological Process,2,16,127,0.01022,0.04677,12.90354,Cluster_4
+GO:0008168,GO:0008168,Molecular Function,2,17,127,0.01151,0.04677,12.14451,Cluster_4
+GO:0050661,GO:0050661,Molecular Function,2,17,127,0.01151,0.04677,12.14451,Cluster_4
+GO:0017158,GO:0017158,Biological Process,2,21,127,0.01734,0.0559,9.83127,Cluster_4
+GO:0014059,GO:0014059,Biological Process,2,21,127,0.01734,0.0559,9.83127,Cluster_4
+GO:0005762,GO:0005762,Cellular Component,2,21,127,0.01734,0.0559,9.83127,Cluster_4
+GO:0001786,GO:0001786,Molecular Function,2,21,127,0.01734,0.0559,9.83127,Cluster_4
+GO:0003887,GO:0003887,Molecular Function,2,22,127,0.01895,0.0559,9.3844,Cluster_4
+GO:0007030,GO:0007030,Biological Process,2,22,127,0.01895,0.0559,9.3844,Cluster_4
+GO:0030276,GO:0030276,Molecular Function,2,23,127,0.02063,0.0559,8.97638,Cluster_4
+GO:0071277,GO:0071277,Biological Process,2,24,127,0.02236,0.0559,8.60236,Cluster_4
+GO:0000049,GO:0000049,Molecular Function,2,24,127,0.02236,0.0559,8.60236,Cluster_4
+GO:0016311,GO:0016311,Biological Process,2,24,127,0.02236,0.0559,8.60236,Cluster_4
+GO:0071011,GO:0071011,Cellular Component,2,25,127,0.02415,0.05623,8.25827,Cluster_4
+GO:0016887,ATP hydrolysis activity,Molecular Function,6,231,127,0.02488,0.05623,2.68126,Cluster_4
+GO:0000398,GO:0000398,Biological Process,3,65,127,0.02509,0.05623,4.76439,Cluster_4
+GO:0000149,GO:0000149,Molecular Function,2,27,127,0.02791,0.05851,7.64654,Cluster_4
+GO:0016592,GO:0016592,Cellular Component,2,27,127,0.02791,0.05851,7.64654,Cluster_4
+GO:0003712,GO:0003712,Molecular Function,2,34,127,0.04269,0.08603,6.07226,Cluster_4
+GO:0003713,GO:0003713,Molecular Function,2,35,127,0.045,0.08603,5.89876,Cluster_4
+GO:0005768,GO:0005768,Cellular Component,2,35,127,0.045,0.08603,5.89876,Cluster_4
+GO:0006606,GO:0006606,Biological Process,2,38,127,0.05219,0.09692,5.43307,Cluster_4
+GO:0006457,protein folding,Biological Process,2,39,127,0.05467,0.09871,5.29376,Cluster_4
+GO:0003723,RNA binding,Molecular Function,6,284,127,0.05796,0.10182,2.18088,Cluster_4
+GO:0005544,GO:0005544,Molecular Function,2,41,127,0.05975,0.10221,5.03553,Cluster_4
+GO:0008083,GO:0008083,Molecular Function,2,44,127,0.06767,0.11278,4.6922,Cluster_4
+GO:0003735,GO:0003735,Molecular Function,3,110,127,0.09108,0.14801,2.81532,Cluster_4
+GO:0000977,GO:0000977,Molecular Function,2,58,127,0.1085,0.17201,3.5596,Cluster_4
+GO:0045893,GO:0045893,Biological Process,2,61,127,0.11794,0.18253,3.38454,Cluster_4
+GO:0005739,mitochondrion,Cellular Component,5,284,127,0.14176,0.21428,1.8174,Cluster_4
+GO:0006886,GO:0006886,Biological Process,2,73,127,0.1575,0.23267,2.82817,Cluster_4
+GO:0022857,GO:0022857,Molecular Function,3,145,127,0.1661,0.23992,2.13576,Cluster_4
+GO:0140359,GO:0140359,Molecular Function,2,85,127,0.19911,0.28135,2.4289,Cluster_4
+GO:0006412,GO:0006412,Biological Process,2,87,127,0.20618,0.28514,2.37307,Cluster_4
+GO:0005840,GO:0005840,Cellular Component,2,90,127,0.21683,0.29362,2.29396,Cluster_4
+GO:0006357,GO:0006357,Biological Process,6,423,127,0.22718,0.30137,1.46423,Cluster_4
+GO:0055085,GO:0055085,Biological Process,5,340,127,0.23389,0.30405,1.51806,Cluster_4
+GO:0000981,GO:0000981,Molecular Function,5,363,127,0.27588,0.35162,1.42188,Cluster_4
+GO:0005634,nucleus,Cellular Component,13,1126,127,0.29511,0.36888,1.1918,Cluster_4
+GO:0005789,GO:0005789,Cellular Component,2,125,127,0.34203,0.41947,1.65165,Cluster_4
+GO:0030154,GO:0030154,Biological Process,2,127,127,0.34908,0.42019,1.62564,Cluster_4
+GO:0046872,GO:0046872,Molecular Function,2,152,127,0.43461,0.51363,1.35827,Cluster_4
+GO:0003677,DNA binding,Molecular Function,3,258,127,0.45789,0.53148,1.20033,Cluster_4
+GO:0005783,GO:0005783,Cellular Component,2,162,127,0.46716,0.53272,1.27442,Cluster_4
+GO:0000978,GO:0000978,Molecular Function,3,295,127,0.54745,0.61352,1.04978,Cluster_4
+GO:0003924,GTPase activity,Molecular Function,2,201,127,0.5828,0.64207,1.02715,Cluster_4
+GO:0005525,GTP binding,Molecular Function,2,217,127,0.62466,0.67672,0.95141,Cluster_4
+GO:0005829,cytosol,Cellular Component,3,398,127,0.74585,0.79476,0.7781,Cluster_4
+GO:0005524,ATP binding,Molecular Function,7,909,127,0.78601,0.82404,0.79494,Cluster_4
+GO:0005886,plasma membrane,Cellular Component,3,614,127,0.9408,0.96939,0.50437,Cluster_4
+GO:0008270,GO:0008270,Molecular Function,2,493,127,0.95487,0.96939,0.41878,Cluster_4
+GO:0005509,GO:0005509,Molecular Function,2,539,127,0.96939,0.96939,0.38304,Cluster_4
+GO:0005776,GO:0005776,Cellular Component,3,10,297,0.00123,0.06794,13.24242,Overexpression_candidates
+GO:0009952,GO:0009952,Biological Process,3,11,297,0.00166,0.06794,12.03857,Overexpression_candidates
+GO:0050767,GO:0050767,Biological Process,3,11,297,0.00166,0.06794,12.03857,Overexpression_candidates
+GO:0003723,RNA binding,Molecular Function,15,284,297,0.0021,0.06794,2.33141,Overexpression_candidates
+GO:0005634,nucleus,Cellular Component,40,1126,297,0.00287,0.06794,1.56808,Overexpression_candidates
+GO:0005737,cytoplasm,Cellular Component,38,1084,297,0.00457,0.06794,1.54739,Overexpression_candidates
+GO:0007064,GO:0007064,Biological Process,2,5,297,0.00489,0.06794,17.65657,Overexpression_candidates
+GO:0015030,GO:0015030,Cellular Component,2,5,297,0.00489,0.06794,17.65657,Overexpression_candidates
+GO:0005484,GO:0005484,Molecular Function,3,17,297,0.00618,0.06794,7.78966,Overexpression_candidates
+GO:0000045,GO:0000045,Biological Process,3,17,297,0.00618,0.06794,7.78966,Overexpression_candidates
+GO:0007266,Rho protein signal transduction,Biological Process,4,33,297,0.00629,0.06794,5.35047,Overexpression_candidates
+GO:0043130,GO:0043130,Molecular Function,4,34,297,0.00701,0.06794,5.19311,Overexpression_candidates
+GO:0008541,GO:0008541,Cellular Component,2,6,297,0.00722,0.06794,14.7138,Overexpression_candidates
+GO:0010992,GO:0010992,Biological Process,2,6,297,0.00722,0.06794,14.7138,Overexpression_candidates
+GO:0000978,GO:0000978,Molecular Function,14,295,297,0.00744,0.06794,2.09485,Overexpression_candidates
+GO:0005762,GO:0005762,Cellular Component,3,21,297,0.01131,0.08411,6.30592,Overexpression_candidates
+GO:0005684,GO:0005684,Cellular Component,2,8,297,0.01309,0.08411,11.03535,Overexpression_candidates
+GO:0004402,GO:0004402,Molecular Function,2,8,297,0.01309,0.08411,11.03535,Overexpression_candidates
+GO:0051082,unfolded protein binding,Molecular Function,4,41,297,0.01353,0.08411,4.30648,Overexpression_candidates
+GO:0005035,death receptor activity,Molecular Function,3,23,297,0.01457,0.08411,5.75758,Overexpression_candidates
+GO:0048406,nerve growth factor binding,Molecular Function,3,23,297,0.01457,0.08411,5.75758,Overexpression_candidates
+GO:0015026,coreceptor activity,Molecular Function,3,23,297,0.01457,0.08411,5.75758,Overexpression_candidates
+GO:0042981,GO:0042981,Biological Process,6,88,297,0.01478,0.08411,3.00964,Overexpression_candidates
+GO:0043161,GO:0043161,Biological Process,7,115,297,0.01565,0.08411,2.68687,Overexpression_candidates
+GO:0008540,"proteasome regulatory particle, base subcomplex",Cellular Component,2,9,297,0.01658,0.08411,9.8092,Overexpression_candidates
+GO:0005844,GO:0005844,Cellular Component,2,9,297,0.01658,0.08411,9.8092,Overexpression_candidates
+GO:0070628,proteasome binding,Molecular Function,2,9,297,0.01658,0.08411,9.8092,Overexpression_candidates
+GO:0006506,GPI anchor biosynthetic process,Biological Process,3,26,297,0.02036,0.09021,5.09324,Overexpression_candidates
+GO:0005839,proteasome core complex,Cellular Component,2,10,297,0.02041,0.09021,8.82828,Overexpression_candidates
+GO:0005871,GO:0005871,Cellular Component,2,10,297,0.02041,0.09021,8.82828,Overexpression_candidates
+GO:0031072,GO:0031072,Molecular Function,2,10,297,0.02041,0.09021,8.82828,Overexpression_candidates
+GO:0043122,GO:0043122,Biological Process,5,72,297,0.02352,0.09622,3.06538,Overexpression_candidates
+GO:0016573,GO:0016573,Biological Process,2,11,297,0.02458,0.09622,8.02571,Overexpression_candidates
+GO:0006906,GO:0006906,Biological Process,2,11,297,0.02458,0.09622,8.02571,Overexpression_candidates
+GO:0055037,GO:0055037,Cellular Component,2,11,297,0.02458,0.09622,8.02571,Overexpression_candidates
+GO:0006511,GO:0006511,Biological Process,5,76,297,0.0289,0.10478,2.90404,Overexpression_candidates
+GO:0008239,GO:0008239,Molecular Function,2,12,297,0.02906,0.10478,7.3569,Overexpression_candidates
+GO:0007005,GO:0007005,Biological Process,2,12,297,0.02906,0.10478,7.3569,Overexpression_candidates
+GO:0006357,GO:0006357,Biological Process,16,423,297,0.03164,0.11116,1.66965,Overexpression_candidates
+GO:0030686,GO:0030686,Cellular Component,2,13,297,0.03384,0.11308,6.79099,Overexpression_candidates
+GO:0003725,GO:0003725,Molecular Function,2,13,297,0.03384,0.11308,6.79099,Overexpression_candidates
+GO:0003724,GO:0003724,Molecular Function,3,32,297,0.03518,0.11477,4.13826,Overexpression_candidates
+GO:0000981,GO:0000981,Molecular Function,14,363,297,0.03724,0.11585,1.70242,Overexpression_candidates
+GO:0005829,cytosol,Cellular Component,15,398,297,0.03772,0.11585,1.66362,Overexpression_candidates
+GO:0004713,GO:0004713,Molecular Function,2,14,297,0.0389,0.11585,6.30592,Overexpression_candidates
+GO:0000422,GO:0000422,Biological Process,2,14,297,0.0389,0.11585,6.30592,Overexpression_candidates
+GO:0003678,GO:0003678,Molecular Function,2,15,297,0.04423,0.12623,5.88552,Overexpression_candidates
+GO:0042254,GO:0042254,Biological Process,2,15,297,0.04423,0.12623,5.88552,Overexpression_candidates
+GO:0008168,GO:0008168,Molecular Function,2,17,297,0.05562,0.15551,5.19311,Overexpression_candidates
+GO:0070534,GO:0070534,Biological Process,4,64,297,0.05694,0.15601,2.75884,Overexpression_candidates
+GO:0000398,GO:0000398,Biological Process,4,65,297,0.05964,0.15801,2.71639,Overexpression_candidates
+GO:0005524,ATP binding,Molecular Function,28,909,297,0.05997,0.15801,1.35969,Overexpression_candidates
+GO:0033209,GO:0033209,Biological Process,4,67,297,0.06524,0.16864,2.63531,Overexpression_candidates
+GO:0140658,GO:0140658,Molecular Function,2,20,297,0.07436,0.17898,4.41414,Overexpression_candidates
+GO:0031624,GO:0031624,Molecular Function,2,20,297,0.07436,0.17898,4.41414,Overexpression_candidates
+GO:0005769,GO:0005769,Cellular Component,2,20,297,0.07436,0.17898,4.41414,Overexpression_candidates
+GO:0098802,GO:0098802,Cellular Component,4,71,297,0.07723,0.17898,2.48684,Overexpression_candidates
+GO:0016887,ATP hydrolysis activity,Molecular Function,9,231,297,0.0802,0.17898,1.7198,Overexpression_candidates
+GO:0046330,GO:0046330,Biological Process,4,72,297,0.08039,0.17898,2.4523,Overexpression_candidates
+GO:0008237,GO:0008237,Molecular Function,2,21,297,0.081,0.17898,4.20394,Overexpression_candidates
+GO:0032436,GO:0032436,Biological Process,2,21,297,0.081,0.17898,4.20394,Overexpression_candidates
+GO:0016459,GO:0016459,Cellular Component,2,21,297,0.081,0.17898,4.20394,Overexpression_candidates
+GO:0031201,GO:0031201,Cellular Component,2,22,297,0.08781,0.19095,4.01286,Overexpression_candidates
+GO:0006281,DNA repair,Biological Process,3,47,297,0.09014,0.19296,2.81754,Overexpression_candidates
+GO:0009986,cell surface,Cellular Component,3,48,297,0.09462,0.19675,2.75884,Overexpression_candidates
+GO:0008757,GO:0008757,Molecular Function,2,23,297,0.09479,0.19675,3.83838,Overexpression_candidates
+GO:0005085,GO:0005085,Molecular Function,4,77,297,0.09712,0.1986,2.29306,Overexpression_candidates
+GO:0006888,GO:0006888,Biological Process,3,49,297,0.09918,0.19946,2.70254,Overexpression_candidates
+GO:0005622,GO:0005622,Cellular Component,2,24,297,0.10191,0.19946,3.67845,Overexpression_candidates
+GO:0000049,GO:0000049,Molecular Function,2,24,297,0.10191,0.19946,3.67845,Overexpression_candidates
+GO:0005739,mitochondrion,Cellular Component,10,284,297,0.11219,0.21647,1.55428,Overexpression_candidates
+GO:0000151,GO:0000151,Cellular Component,2,27,297,0.12411,0.23292,3.26973,Overexpression_candidates
+GO:0000149,GO:0000149,Molecular Function,2,27,297,0.12411,0.23292,3.26973,Overexpression_candidates
+GO:0004725,GO:0004725,Molecular Function,2,28,297,0.13175,0.24376,3.15296,Overexpression_candidates
+GO:0007411,GO:0007411,Biological Process,3,56,297,0.13344,0.24376,2.36472,Overexpression_candidates
+GO:0004252,GO:0004252,Molecular Function,5,120,297,0.13674,0.24649,1.83923,Overexpression_candidates
+GO:0005507,GO:0005507,Molecular Function,2,29,297,0.13949,0.24818,3.04424,Overexpression_candidates
+GO:0008270,GO:0008270,Molecular Function,15,493,297,0.15184,0.25626,1.34305,Overexpression_candidates
+GO:0005789,GO:0005789,Cellular Component,5,125,297,0.15428,0.25626,1.76566,Overexpression_candidates
+GO:0006470,GO:0006470,Biological Process,3,60,297,0.15462,0.25626,2.20707,Overexpression_candidates
+GO:0032040,GO:0032040,Cellular Component,2,31,297,0.15525,0.25626,2.84783,Overexpression_candidates
+GO:0048856,GO:0048856,Biological Process,2,31,297,0.15525,0.25626,2.84783,Overexpression_candidates
+GO:0030170,GO:0030170,Molecular Function,2,31,297,0.15525,0.25626,2.84783,Overexpression_candidates
+GO:0030154,GO:0030154,Biological Process,5,127,297,0.16154,0.26157,1.73785,Overexpression_candidates
+GO:0005783,GO:0005783,Cellular Component,6,162,297,0.16229,0.26157,1.63487,Overexpression_candidates
+GO:0003700,GO:0003700,Molecular Function,2,34,297,0.17947,0.28591,2.59655,Overexpression_candidates
+GO:0016757,GO:0016757,Molecular Function,2,36,297,0.19592,0.30852,2.4523,Overexpression_candidates
+GO:0003682,chromatin binding,Molecular Function,2,37,297,0.20421,0.31435,2.38602,Overexpression_candidates
+GO:0005759,GO:0005759,Cellular Component,2,37,297,0.20421,0.31435,2.38602,Overexpression_candidates
+GO:0006457,protein folding,Biological Process,2,39,297,0.22091,0.33627,2.26366,Overexpression_candidates
+GO:0009653,GO:0009653,Biological Process,2,40,297,0.2293,0.34521,2.20707,Overexpression_candidates
+GO:0046983,GO:0046983,Molecular Function,3,74,297,0.23531,0.34829,1.78952,Overexpression_candidates
+GO:0005544,GO:0005544,Molecular Function,2,41,297,0.23771,0.34829,2.15324,Overexpression_candidates
+GO:0003735,GO:0003735,Molecular Function,4,110,297,0.23897,0.34829,1.60514,Overexpression_candidates
+GO:0003824,GO:0003824,Molecular Function,2,42,297,0.24614,0.35495,2.10197,Overexpression_candidates
+GO:0003729,GO:0003729,Molecular Function,3,77,297,0.25352,0.35588,1.7198,Overexpression_candidates
+GO:0004497,GO:0004497,Molecular Function,2,43,297,0.25457,0.35588,2.05309,Overexpression_candidates
+GO:0031625,GO:0031625,Molecular Function,2,43,297,0.25457,0.35588,2.05309,Overexpression_candidates
+GO:0016579,GO:0016579,Biological Process,2,46,297,0.2799,0.38734,1.91919,Overexpression_candidates
+GO:0061630,GO:0061630,Molecular Function,5,159,297,0.29257,0.40082,1.38809,Overexpression_candidates
+GO:0005730,GO:0005730,Cellular Component,3,84,297,0.29666,0.4024,1.57648,Overexpression_candidates
+GO:0006508,GO:0006508,Biological Process,8,284,297,0.31568,0.42401,1.24342,Overexpression_candidates
+GO:0005840,GO:0005840,Cellular Component,3,90,297,0.33398,0.44422,1.47138,Overexpression_candidates
+GO:0004843,GO:0004843,Molecular Function,2,53,297,0.33857,0.44601,1.66571,Overexpression_candidates
+GO:0062023,GO:0062023,Cellular Component,2,55,297,0.3551,0.46332,1.60514,Overexpression_candidates
+GO:0005525,GTP binding,Molecular Function,6,217,297,0.36897,0.47687,1.2205,Overexpression_candidates
+GO:0004674,GO:0004674,Molecular Function,3,99,297,0.3897,0.49896,1.33762,Overexpression_candidates
+GO:0098609,GO:0098609,Biological Process,2,62,297,0.41166,0.52219,1.42392,Overexpression_candidates
+GO:0005794,GO:0005794,Cellular Component,4,145,297,0.41737,0.52252,1.21769,Overexpression_candidates
+GO:0016705,"oxidoreductase activity (paired donors, O2 incorporation)",Molecular Function,2,63,297,0.41954,0.52252,1.40131,Overexpression_candidates
+GO:0005096,GO:0005096,Molecular Function,2,67,297,0.45053,0.55606,1.31765,Overexpression_candidates
+GO:0007156,GO:0007156,Biological Process,2,68,297,0.45813,0.55962,1.29828,Overexpression_candidates
+GO:0004222,GO:0004222,Molecular Function,4,154,297,0.46276,0.55962,1.14653,Overexpression_candidates
+GO:0000139,GO:0000139,Cellular Component,2,69,297,0.46567,0.55962,1.27946,Overexpression_candidates
+GO:0003924,GTPase activity,Molecular Function,5,201,297,0.48001,0.57183,1.09805,Overexpression_candidates
+GO:0006886,GO:0006886,Biological Process,2,73,297,0.4952,0.58485,1.20935,Overexpression_candidates
+GO:0000209,GO:0000209,Biological Process,3,120,297,0.5137,0.60151,1.10354,Overexpression_candidates
+GO:0051015,GO:0051015,Molecular Function,2,77,297,0.52367,0.60799,1.14653,Overexpression_candidates
+GO:0006355,GO:0006355,Biological Process,3,125,297,0.54127,0.62315,1.05939,Overexpression_candidates
+GO:0020037,heme binding,Molecular Function,3,131,297,0.57314,0.65364,1.01087,Overexpression_candidates
+GO:0005654,GO:0005654,Cellular Component,2,85,297,0.5773,0.65364,1.03862,Overexpression_candidates
+GO:0006412,GO:0006412,Biological Process,2,87,297,0.59,0.66254,1.01475,Overexpression_candidates
+GO:0004842,GO:0004842,Molecular Function,2,95,297,0.63796,0.71057,0.92929,Overexpression_candidates
+GO:0005509,GO:0005509,Molecular Function,11,539,297,0.68173,0.75321,0.90085,Overexpression_candidates
+GO:0003676,GO:0003676,Molecular Function,4,207,297,0.69383,0.76044,0.85297,Overexpression_candidates
+GO:0005886,plasma membrane,Cellular Component,12,614,297,0.74115,0.80586,0.8627,Overexpression_candidates
+GO:0005576,GO:0005576,Cellular Component,3,182,297,0.78475,0.84194,0.72761,Overexpression_candidates
+GO:0005615,GO:0005615,Cellular Component,8,441,297,0.78663,0.84194,0.80075,Overexpression_candidates
+GO:0005506,iron ion binding,Molecular Function,2,129,297,0.79389,0.84313,0.68436,Overexpression_candidates
+GO:0043235,GO:0043235,Cellular Component,2,133,297,0.8077,0.85119,0.66378,Overexpression_candidates
+GO:0006468,GO:0006468,Biological Process,7,413,297,0.83115,0.86922,0.74816,Overexpression_candidates
+GO:0022857,GO:0022857,Molecular Function,2,145,297,0.8443,0.87628,0.60885,Overexpression_candidates
+GO:0046872,GO:0046872,Molecular Function,2,152,297,0.86263,0.88857,0.58081,Overexpression_candidates
+GO:0055085,GO:0055085,Biological Process,5,340,297,0.88798,0.90787,0.64914,Overexpression_candidates
+GO:0007165,GO:0007165,Biological Process,2,292,297,0.99088,1.0,0.30234,Overexpression_candidates
+GO:0004930,GO:0004930,Molecular Function,8,1123,297,0.99999,1.0,0.31445,Overexpression_candidates
+GO:0007186,GO:0007186,Biological Process,7,1122,297,1.0,1.0,0.27539,Overexpression_candidates
+GO:0008540,"proteasome regulatory particle, base subcomplex",Cellular Component,9,9,1394,0.0,0.0,9.40459,Heat_induced_all
+GO:0005737,cytoplasm,Cellular Component,176,1084,1394,0.0,0.0,1.52694,Heat_induced_all
+GO:0016887,ATP hydrolysis activity,Molecular Function,54,231,1394,0.0,0.0,2.19848,Heat_induced_all
+GO:0048406,nerve growth factor binding,Molecular Function,13,23,1394,0.0,1e-05,5.31564,Heat_induced_all
+GO:0005035,death receptor activity,Molecular Function,13,23,1394,0.0,1e-05,5.31564,Heat_induced_all
+GO:0015026,coreceptor activity,Molecular Function,13,23,1394,0.0,1e-05,5.31564,Heat_induced_all
+GO:0005634,nucleus,Cellular Component,174,1126,1394,0.0,1e-05,1.45328,Heat_induced_all
+GO:0030433,ubiquitin-dependent ERAD pathway,Biological Process,14,28,1394,0.0,2e-05,4.7023,Heat_induced_all
+GO:0008395,steroid hydroxylase activity,Molecular Function,11,18,1394,0.0,2e-05,5.74725,Heat_induced_all
+GO:0003723,RNA binding,Molecular Function,59,284,1394,0.0,2e-05,1.95377,Heat_induced_all
+GO:0005839,proteasome core complex,Cellular Component,8,10,1394,0.0,4e-05,7.52367,Heat_induced_all
+GO:0005739,mitochondrion,Cellular Component,58,284,1394,0.0,4e-05,1.92066,Heat_induced_all
+GO:0051787,misfolded protein binding,Molecular Function,9,13,1394,0.0,4e-05,6.51087,Heat_induced_all
+GO:0016226,iron-sulfur cluster assembly,Biological Process,8,11,1394,0.0,9e-05,6.8397,Heat_induced_all
+GO:0007266,Rho protein signal transduction,Biological Process,14,33,1394,0.0,0.00011,3.98983,Heat_induced_all
+GO:0016705,"oxidoreductase activity (paired donors, O2 incorporation)",Molecular Function,20,63,1394,0.0,0.00018,2.98558,Heat_induced_all
+GO:0005506,iron ion binding,Molecular Function,31,129,1394,1e-05,0.00037,2.26002,Heat_induced_all
+GO:0036402,proteasome-activating activity,Molecular Function,5,5,1394,1e-05,0.00046,9.40459,Heat_induced_all
+GO:0071014,post-mRNA release spliceosomal complex,Cellular Component,5,5,1394,1e-05,0.00046,9.40459,Heat_induced_all
+GO:0005829,cytosol,Cellular Component,69,398,1394,3e-05,0.00088,1.63044,Heat_induced_all
+GO:0006270,DNA replication initiation,Biological Process,7,11,1394,3e-05,0.00103,5.98474,Heat_induced_all
+GO:0003697,single-stranded DNA binding,Molecular Function,14,40,1394,4e-05,0.00103,3.29161,Heat_induced_all
+GO:0020037,heme binding,Molecular Function,30,131,1394,4e-05,0.00103,2.15372,Heat_induced_all
+GO:0070628,proteasome binding,Molecular Function,6,9,1394,9e-05,0.00246,6.26973,Heat_induced_all
+GO:0004298,threonine-type endopeptidase activity,Molecular Function,4,4,1394,0.00013,0.00308,9.40459,Heat_induced_all
+GO:0045943,positive regulation of transcription by RNA polymerase I,Biological Process,4,4,1394,0.00013,0.00308,9.40459,Heat_induced_all
+GO:0034515,proteasome storage granule,Cellular Component,4,4,1394,0.00013,0.00308,9.40459,Heat_induced_all
+GO:0005524,ATP binding,Molecular Function,131,909,1394,0.00014,0.0033,1.35534,Heat_induced_all
+GO:0005776,GO:0005776,Cellular Component,6,10,1394,0.00021,0.00447,5.64275,Heat_induced_all
+GO:0031072,GO:0031072,Molecular Function,6,10,1394,0.00021,0.00447,5.64275,Heat_induced_all
+GO:0051082,unfolded protein binding,Molecular Function,13,41,1394,0.00021,0.00447,2.98194,Heat_induced_all
+GO:0034620,GO:0034620,Biological Process,5,7,1394,0.00024,0.0048,6.71757,Heat_induced_all
+GO:0006511,GO:0006511,Biological Process,19,76,1394,0.00029,0.00569,2.35115,Heat_induced_all
+GO:0009986,cell surface,Cellular Component,14,48,1394,0.00033,0.00628,2.74301,Heat_induced_all
+GO:0043130,GO:0043130,Molecular Function,11,34,1394,0.00053,0.00974,3.04266,Heat_induced_all
+GO:0005684,GO:0005684,Cellular Component,5,8,1394,0.00057,0.00974,5.87787,Heat_induced_all
+GO:0043248,GO:0043248,Biological Process,4,5,1394,0.00058,0.00974,7.52367,Heat_induced_all
+GO:0000055,GO:0000055,Biological Process,4,5,1394,0.00058,0.00974,7.52367,Heat_induced_all
+GO:0006388,GO:0006388,Biological Process,4,5,1394,0.00058,0.00974,7.52367,Heat_induced_all
+GO:0051539,GO:0051539,Molecular Function,6,12,1394,0.00075,0.01192,4.7023,Heat_induced_all
+GO:0030968,GO:0030968,Biological Process,6,12,1394,0.00075,0.01192,4.7023,Heat_induced_all
+GO:0005801,GO:0005801,Cellular Component,3,3,1394,0.0012,0.01665,9.40459,Heat_induced_all
+GO:0000502,GO:0000502,Cellular Component,3,3,1394,0.0012,0.01665,9.40459,Heat_induced_all
+GO:0006271,DNA strand elongation involved in DNA replication,Biological Process,3,3,1394,0.0012,0.01665,9.40459,Heat_induced_all
+GO:0090110,GO:0090110,Biological Process,3,3,1394,0.0012,0.01665,9.40459,Heat_induced_all
+GO:0140663,GO:0140663,Molecular Function,3,3,1394,0.0012,0.01665,9.40459,Heat_induced_all
+GO:0000056,GO:0000056,Biological Process,3,3,1394,0.0012,0.01665,9.40459,Heat_induced_all
+GO:0003724,GO:0003724,Molecular Function,10,32,1394,0.00128,0.01744,2.93893,Heat_induced_all
+GO:0005164,GO:0005164,Molecular Function,9,27,1394,0.00134,0.01782,3.13486,Heat_induced_all
+GO:0006888,GO:0006888,Biological Process,13,49,1394,0.00141,0.01843,2.4951,Heat_induced_all
+GO:0008541,GO:0008541,Cellular Component,4,6,1394,0.0016,0.01969,6.26973,Heat_induced_all
+GO:0005664,GO:0005664,Cellular Component,4,6,1394,0.0016,0.01969,6.26973,Heat_induced_all
+GO:1904262,GO:1904262,Biological Process,4,6,1394,0.0016,0.01969,6.26973,Heat_induced_all
+GO:0005743,GO:0005743,Cellular Component,14,56,1394,0.00175,0.02117,2.35115,Heat_induced_all
+GO:0051085,GO:0051085,Biological Process,5,10,1394,0.00215,0.02548,4.7023,Heat_induced_all
+GO:0005778,GO:0005778,Cellular Component,7,19,1394,0.00241,0.02802,3.46485,Heat_induced_all
+GO:0000049,GO:0000049,Molecular Function,8,24,1394,0.00247,0.02828,3.13486,Heat_induced_all
+GO:0005789,GO:0005789,Cellular Component,24,125,1394,0.00293,0.03291,1.80568,Heat_induced_all
+GO:0006281,DNA repair,Biological Process,12,47,1394,0.00303,0.03331,2.40117,Heat_induced_all
+GO:0009898,GO:0009898,Cellular Component,6,15,1394,0.00307,0.03331,3.76184,Heat_induced_all
+GO:0140662,ATP-dependent protein folding chaperone,Molecular Function,7,20,1394,0.00337,0.0343,3.29161,Heat_induced_all
+GO:0004364,GO:0004364,Molecular Function,7,20,1394,0.00337,0.0343,3.29161,Heat_induced_all
+GO:0004176,GO:0004176,Molecular Function,4,7,1394,0.00342,0.0343,5.37405,Heat_induced_all
+GO:0001682,GO:0001682,Biological Process,4,7,1394,0.00342,0.0343,5.37405,Heat_induced_all
+GO:0030127,GO:0030127,Cellular Component,4,7,1394,0.00342,0.0343,5.37405,Heat_induced_all
+GO:0003688,DNA replication origin binding,Molecular Function,5,11,1394,0.0036,0.035,4.27481,Heat_induced_all
+GO:0005793,GO:0005793,Cellular Component,5,11,1394,0.0036,0.035,4.27481,Heat_induced_all
+GO:0004826,GO:0004826,Molecular Function,3,4,1394,0.00442,0.0384,7.05344,Heat_induced_all
+GO:0044233,GO:0044233,Cellular Component,3,4,1394,0.00442,0.0384,7.05344,Heat_induced_all
+GO:0005655,GO:0005655,Cellular Component,3,4,1394,0.00442,0.0384,7.05344,Heat_induced_all
+GO:0001731,GO:0001731,Biological Process,3,4,1394,0.00442,0.0384,7.05344,Heat_induced_all
+GO:0034982,GO:0034982,Biological Process,3,4,1394,0.00442,0.0384,7.05344,Heat_induced_all
+GO:0005787,GO:0005787,Cellular Component,3,4,1394,0.00442,0.0384,7.05344,Heat_induced_all
+GO:0005850,GO:0005850,Cellular Component,3,4,1394,0.00442,0.0384,7.05344,Heat_induced_all
+GO:0006432,GO:0006432,Biological Process,3,4,1394,0.00442,0.0384,7.05344,Heat_induced_all
+GO:0005762,GO:0005762,Cellular Component,7,21,1394,0.00459,0.0394,3.13486,Heat_induced_all
+GO:0034198,GO:0034198,Biological Process,4,8,1394,0.00627,0.05192,4.7023,Heat_induced_all
+GO:0016791,GO:0016791,Molecular Function,6,17,1394,0.00629,0.05192,3.31927,Heat_induced_all
+GO:0050661,GO:0050661,Molecular Function,6,17,1394,0.00629,0.05192,3.31927,Heat_induced_all
+GO:0070534,GO:0070534,Biological Process,14,64,1394,0.00646,0.05267,2.05725,Heat_induced_all
+GO:0043122,GO:0043122,Biological Process,15,72,1394,0.00787,0.06335,1.95929,Heat_induced_all
+GO:0008757,GO:0008757,Molecular Function,7,23,1394,0.00801,0.06372,2.86227,Heat_induced_all
+GO:0042026,protein refolding,Biological Process,5,13,1394,0.00836,0.06488,3.61715,Heat_induced_all
+GO:0030515,GO:0030515,Molecular Function,5,13,1394,0.00836,0.06488,3.61715,Heat_induced_all
+GO:0033209,GO:0033209,Biological Process,14,67,1394,0.00979,0.06631,1.96514,Heat_induced_all
+GO:0008312,GO:0008312,Molecular Function,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0019773,GO:0019773,Cellular Component,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0005786,GO:0005786,Cellular Component,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0016805,GO:0016805,Molecular Function,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0030150,GO:0030150,Biological Process,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0015030,GO:0015030,Cellular Component,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0009982,GO:0009982,Molecular Function,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0043928,GO:0043928,Biological Process,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0032007,GO:0032007,Biological Process,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0003839,GO:0003839,Molecular Function,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0000178,GO:0000178,Cellular Component,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0045116,protein neddylation,Biological Process,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0001730,GO:0001730,Molecular Function,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0060700,GO:0060700,Biological Process,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0042555,GO:0042555,Cellular Component,3,5,1394,0.01017,0.06631,5.64275,Heat_induced_all
+GO:0005758,GO:0005758,Cellular Component,4,9,1394,0.01034,0.06673,4.17982,Heat_induced_all
+GO:0006260,DNA replication,Biological Process,9,36,1394,0.01121,0.07167,2.35115,Heat_induced_all
+GO:0031625,GO:0031625,Molecular Function,10,43,1394,0.01298,0.08216,2.18711,Heat_induced_all
+GO:0005759,GO:0005759,Cellular Component,9,37,1394,0.01345,0.08435,2.2876,Heat_induced_all
+GO:0005730,GO:0005730,Cellular Component,16,84,1394,0.01462,0.09076,1.79135,Heat_induced_all
+GO:0140658,GO:0140658,Molecular Function,6,20,1394,0.01493,0.09097,2.82138,Heat_induced_all
+GO:0031624,GO:0031624,Molecular Function,6,20,1394,0.01493,0.09097,2.82138,Heat_induced_all
+GO:0099536,GO:0099536,Biological Process,4,10,1394,0.01579,0.09448,3.76184,Heat_induced_all
+GO:0006261,DNA-templated DNA replication,Biological Process,4,10,1394,0.01579,0.09448,3.76184,Heat_induced_all
+GO:0098802,GO:0098802,Cellular Component,14,71,1394,0.01615,0.09567,1.85443,Heat_induced_all
+GO:0005198,GO:0005198,Molecular Function,5,15,1394,0.01629,0.09567,3.13486,Heat_induced_all
+GO:0046330,GO:0046330,Biological Process,14,72,1394,0.01815,0.10018,1.82867,Heat_induced_all
+GO:0006614,GO:0006614,Biological Process,3,6,1394,0.01874,0.10018,4.7023,Heat_induced_all
+GO:0044528,GO:0044528,Biological Process,3,6,1394,0.01874,0.10018,4.7023,Heat_induced_all
+GO:0004866,GO:0004866,Molecular Function,3,6,1394,0.01874,0.10018,4.7023,Heat_induced_all
+GO:0035770,GO:0035770,Cellular Component,3,6,1394,0.01874,0.10018,4.7023,Heat_induced_all
+GO:0000245,GO:0000245,Biological Process,3,6,1394,0.01874,0.10018,4.7023,Heat_induced_all
+GO:0071035,GO:0071035,Biological Process,3,6,1394,0.01874,0.10018,4.7023,Heat_induced_all
+GO:0007029,GO:0007029,Biological Process,3,6,1394,0.01874,0.10018,4.7023,Heat_induced_all
+GO:0071038,GO:0071038,Biological Process,3,6,1394,0.01874,0.10018,4.7023,Heat_induced_all
+GO:0000963,GO:0000963,Biological Process,3,6,1394,0.01874,0.10018,4.7023,Heat_induced_all
+GO:0003684,GO:0003684,Molecular Function,6,21,1394,0.01906,0.10018,2.68703,Heat_induced_all
+GO:0000151,GO:0000151,Cellular Component,7,27,1394,0.01993,0.10018,2.43823,Heat_induced_all
+GO:0018105,GO:0018105,Biological Process,7,27,1394,0.01993,0.10018,2.43823,Heat_induced_all
+GO:0008270,GO:0008270,Molecular Function,67,493,1394,0.02055,0.10018,1.27811,Heat_induced_all
+GO:0008408,GO:0008408,Molecular Function,5,16,1394,0.02166,0.10018,2.93893,Heat_induced_all
+GO:0051087,GO:0051087,Molecular Function,5,16,1394,0.02166,0.10018,2.93893,Heat_induced_all
+GO:0042981,GO:0042981,Biological Process,16,88,1394,0.02218,0.10018,1.70993,Heat_induced_all
+GO:0006707,GO:0006707,Biological Process,4,11,1394,0.02276,0.10018,3.41985,Heat_induced_all
+GO:0006906,GO:0006906,Biological Process,4,11,1394,0.02276,0.10018,3.41985,Heat_induced_all
+GO:0033781,GO:0033781,Molecular Function,4,11,1394,0.02276,0.10018,3.41985,Heat_induced_all
+GO:0034427,GO:0034427,Biological Process,4,11,1394,0.02276,0.10018,3.41985,Heat_induced_all
+GO:0007030,GO:0007030,Biological Process,6,22,1394,0.02392,0.10018,2.56489,Heat_induced_all
+GO:0051603,GO:0051603,Biological Process,6,22,1394,0.02392,0.10018,2.56489,Heat_induced_all
+GO:0006749,GO:0006749,Biological Process,6,22,1394,0.02392,0.10018,2.56489,Heat_induced_all
+GO:0003743,GO:0003743,Molecular Function,8,35,1394,0.02766,0.10018,2.14962,Heat_induced_all
+GO:0008168,GO:0008168,Molecular Function,5,17,1394,0.02806,0.10018,2.76606,Heat_induced_all
+GO:0000175,GO:0000175,Molecular Function,5,17,1394,0.02806,0.10018,2.76606,Heat_induced_all
+GO:0051287,GO:0051287,Molecular Function,5,17,1394,0.02806,0.10018,2.76606,Heat_induced_all
+GO:0005484,GO:0005484,Molecular Function,5,17,1394,0.02806,0.10018,2.76606,Heat_induced_all
+GO:0006631,GO:0006631,Biological Process,5,17,1394,0.02806,0.10018,2.76606,Heat_induced_all
+GO:0042276,GO:0042276,Biological Process,3,7,1394,0.03023,0.10018,4.03054,Heat_induced_all
+GO:0031167,GO:0031167,Biological Process,3,7,1394,0.03023,0.10018,4.03054,Heat_induced_all
+GO:0006879,GO:0006879,Biological Process,3,7,1394,0.03023,0.10018,4.03054,Heat_induced_all
+GO:0034475,GO:0034475,Biological Process,3,7,1394,0.03023,0.10018,4.03054,Heat_induced_all
+GO:0000105,GO:0000105,Biological Process,3,7,1394,0.03023,0.10018,4.03054,Heat_induced_all
+GO:0051536,GO:0051536,Molecular Function,3,7,1394,0.03023,0.10018,4.03054,Heat_induced_all
+GO:0003676,GO:0003676,Molecular Function,31,207,1394,0.03118,0.10018,1.40842,Heat_induced_all
+GO:0007005,GO:0007005,Biological Process,4,12,1394,0.03133,0.10018,3.13486,Heat_induced_all
+GO:0009086,GO:0009086,Biological Process,4,12,1394,0.03133,0.10018,3.13486,Heat_induced_all
+GO:0030942,GO:0030942,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0017069,GO:0017069,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0017125,GO:0017125,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0015886,GO:0015886,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:1990050,GO:1990050,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0090114,GO:0090114,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0071339,GO:0071339,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0097361,GO:0097361,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0090141,GO:0090141,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0009931,GO:0009931,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0043024,GO:0043024,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0004303,GO:0004303,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0004000,GO:0004000,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0004067,GO:0004067,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0042823,GO:0042823,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0043614,GO:0043614,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0046655,GO:0046655,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0004359,GO:0004359,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0002151,GO:0002151,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0000930,GO:0000930,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:1990130,GO:1990130,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0045329,GO:0045329,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0070851,GO:0070851,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0070914,GO:0070914,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0002161,GO:0002161,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0003689,GO:0003689,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0031954,GO:0031954,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0033063,GO:0033063,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0044613,GO:0044613,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0004828,GO:0004828,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0016151,GO:0016151,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0000479,GO:0000479,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0000298,GO:0000298,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0000466,GO:0000466,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0097352,GO:0097352,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0034455,GO:0034455,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0045047,GO:0045047,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0034457,GO:0034457,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0044545,GO:0044545,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0034450,GO:0034450,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0032469,GO:0032469,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0005663,DNA replication factor C complex,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0006518,GO:0006518,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0006545,GO:0006545,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0006729,GO:0006729,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0006807,GO:0006807,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0006417,GO:0006417,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0000172,GO:0000172,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0010499,GO:0010499,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0006434,GO:0006434,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0008297,GO:0008297,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0016504,GO:0016504,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0016559,GO:0016559,Biological Process,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0016597,GO:0016597,Molecular Function,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0005968,GO:0005968,Cellular Component,2,3,1394,0.0315,0.10018,6.26973,Heat_induced_all
+GO:0043161,GO:0043161,Biological Process,19,115,1394,0.03407,0.10783,1.5538,Heat_induced_all
+GO:0032040,GO:0032040,Cellular Component,7,31,1394,0.04068,0.12812,2.12362,Heat_induced_all
+GO:0030686,GO:0030686,Cellular Component,4,13,1394,0.04154,0.12836,2.89372,Heat_induced_all
+GO:0032981,GO:0032981,Biological Process,4,13,1394,0.04154,0.12836,2.89372,Heat_induced_all
+GO:0003725,GO:0003725,Molecular Function,4,13,1394,0.04154,0.12836,2.89372,Heat_induced_all
+GO:0000387,GO:0000387,Biological Process,4,13,1394,0.04154,0.12836,2.89372,Heat_induced_all
+GO:0006886,GO:0006886,Biological Process,13,73,1394,0.04272,0.12984,1.67479,Heat_induced_all
+GO:0070971,GO:0070971,Cellular Component,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0032543,GO:0032543,Biological Process,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0004683,GO:0004683,Molecular Function,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0000727,double-strand break repair via break-induced replication,Biological Process,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0051011,GO:0051011,Molecular Function,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0006515,GO:0006515,Biological Process,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0000467,GO:0000467,Biological Process,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0000460,GO:0000460,Biological Process,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0140664,GO:0140664,Molecular Function,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0006465,GO:0006465,Biological Process,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0017116,single-stranded DNA helicase activity,Molecular Function,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0006264,GO:0006264,Biological Process,3,8,1394,0.04461,0.12984,3.52672,Heat_induced_all
+GO:0006457,protein folding,Biological Process,8,39,1394,0.04962,0.1438,1.92915,Heat_induced_all
+GO:0008284,GO:0008284,Biological Process,6,26,1394,0.05127,0.14725,2.17029,Heat_induced_all
+GO:0006506,GPI anchor biosynthetic process,Biological Process,6,26,1394,0.05127,0.14725,2.17029,Heat_induced_all
+GO:0008198,GO:0008198,Molecular Function,4,14,1394,0.05341,0.15036,2.68703,Heat_induced_all
+GO:0006302,GO:0006302,Biological Process,4,14,1394,0.05341,0.15036,2.68703,Heat_induced_all
+GO:0031122,GO:0031122,Biological Process,4,14,1394,0.05341,0.15036,2.68703,Heat_induced_all
+GO:0035252,GO:0035252,Molecular Function,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0038202,GO:0038202,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0034244,GO:0034244,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0070475,GO:0070475,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0070987,GO:0070987,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0002098,GO:0002098,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:1990542,GO:1990542,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:2000812,GO:2000812,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0001522,GO:0001522,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0042645,GO:0042645,Cellular Component,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0034080,GO:0034080,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0032021,GO:0032021,Cellular Component,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0032797,GO:0032797,Cellular Component,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0032786,GO:0032786,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0034511,GO:0034511,Molecular Function,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0034976,GO:0034976,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0006098,GO:0006098,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0015421,GO:0015421,Molecular Function,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0006661,GO:0006661,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0008420,GO:0008420,Molecular Function,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0010521,GO:0010521,Molecular Function,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0010508,GO:0010508,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0000423,GO:0000423,Biological Process,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0000408,GO:0000408,Cellular Component,2,4,1394,0.05858,0.15036,4.7023,Heat_induced_all
+GO:0016592,GO:0016592,Cellular Component,6,27,1394,0.06022,0.15249,2.08991,Heat_induced_all
+GO:0006611,GO:0006611,Biological Process,3,9,1394,0.06174,0.15249,3.13486,Heat_induced_all
+GO:0045292,GO:0045292,Biological Process,3,9,1394,0.06174,0.15249,3.13486,Heat_induced_all
+GO:0008080,GO:0008080,Molecular Function,3,9,1394,0.06174,0.15249,3.13486,Heat_induced_all
+GO:0034975,GO:0034975,Biological Process,3,9,1394,0.06174,0.15249,3.13486,Heat_induced_all
+GO:0031297,GO:0031297,Biological Process,3,9,1394,0.06174,0.15249,3.13486,Heat_induced_all
+GO:0000176,GO:0000176,Cellular Component,3,9,1394,0.06174,0.15249,3.13486,Heat_induced_all
+GO:0017119,GO:0017119,Cellular Component,3,9,1394,0.06174,0.15249,3.13486,Heat_induced_all
+GO:0005844,GO:0005844,Cellular Component,3,9,1394,0.06174,0.15249,3.13486,Heat_induced_all
+GO:0000177,GO:0000177,Cellular Component,3,9,1394,0.06174,0.15249,3.13486,Heat_induced_all
+GO:0032436,GO:0032436,Biological Process,5,21,1394,0.06478,0.15938,2.23919,Heat_induced_all
+GO:0042254,GO:0042254,Biological Process,4,15,1394,0.0669,0.16337,2.50789,Heat_induced_all
+GO:0051537,GO:0051537,Molecular Function,4,15,1394,0.0669,0.16337,2.50789,Heat_induced_all
+GO:0006364,GO:0006364,Biological Process,6,28,1394,0.07004,0.17039,2.01527,Heat_induced_all
+GO:0004842,GO:0004842,Molecular Function,15,95,1394,0.0763,0.18493,1.48494,Heat_induced_all
+GO:0004722,GO:0004722,Molecular Function,5,22,1394,0.0768,0.18545,2.13741,Heat_induced_all
+GO:0000398,GO:0000398,Biological Process,11,65,1394,0.07999,0.19244,1.59155,Heat_induced_all
+GO:0004497,GO:0004497,Molecular Function,8,43,1394,0.08055,0.19297,1.74969,Heat_induced_all
+GO:0006914,GO:0006914,Biological Process,3,10,1394,0.08144,0.19297,2.82138,Heat_induced_all
+GO:0070847,GO:0070847,Cellular Component,3,10,1394,0.08144,0.19297,2.82138,Heat_induced_all
+GO:0043022,GO:0043022,Molecular Function,4,16,1394,0.08198,0.19297,2.35115,Heat_induced_all
+GO:0006406,GO:0006406,Biological Process,4,16,1394,0.08198,0.19297,2.35115,Heat_induced_all
+GO:0051225,GO:0051225,Biological Process,4,16,1394,0.08198,0.19297,2.35115,Heat_induced_all
+GO:0016747,GO:0016747,Molecular Function,5,23,1394,0.08993,0.19549,2.04448,Heat_induced_all
+GO:0006627,GO:0006627,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0034968,GO:0034968,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0004519,GO:0004519,Molecular Function,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0009267,GO:0009267,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0006283,GO:0006283,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0015914,GO:0015914,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0042054,GO:0042054,Molecular Function,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0004602,GO:0004602,Molecular Function,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:1901255,GO:1901255,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0007064,GO:0007064,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0061575,GO:0061575,Molecular Function,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0005657,GO:0005657,Cellular Component,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0030258,GO:0030258,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0018344,GO:0018344,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0000447,GO:0000447,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0000400,GO:0000400,Molecular Function,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0071051,GO:0071051,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0045252,GO:0045252,Cellular Component,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0007346,GO:0007346,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0043596,GO:0043596,Cellular Component,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0070577,GO:0070577,Molecular Function,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0043169,GO:0043169,Molecular Function,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0007249,GO:0007249,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0033588,GO:0033588,Cellular Component,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0033615,GO:0033615,Biological Process,2,5,1394,0.09085,0.19549,3.76184,Heat_induced_all
+GO:0003682,chromatin binding,Molecular Function,7,37,1394,0.09177,0.19682,1.77925,Heat_induced_all
+GO:0000045,GO:0000045,Biological Process,4,17,1394,0.09858,0.21072,2.21284,Heat_induced_all
+GO:0006470,GO:0006470,Biological Process,10,60,1394,0.09988,0.21282,1.56743,Heat_induced_all
+GO:0006606,GO:0006606,Biological Process,7,38,1394,0.10271,0.21351,1.73242,Heat_induced_all
+GO:0008028,GO:0008028,Molecular Function,3,11,1394,0.10344,0.21351,2.56489,Heat_induced_all
+GO:0050767,GO:0050767,Biological Process,3,11,1394,0.10344,0.21351,2.56489,Heat_induced_all
+GO:0009952,GO:0009952,Biological Process,3,11,1394,0.10344,0.21351,2.56489,Heat_induced_all
+GO:0055037,GO:0055037,Cellular Component,3,11,1394,0.10344,0.21351,2.56489,Heat_induced_all
+GO:0006139,GO:0006139,Biological Process,3,11,1394,0.10344,0.21351,2.56489,Heat_induced_all
+GO:0006378,GO:0006378,Biological Process,3,11,1394,0.10344,0.21351,2.56489,Heat_induced_all
+GO:0035861,GO:0035861,Cellular Component,3,11,1394,0.10344,0.21351,2.56489,Heat_induced_all
+GO:0000976,GO:0000976,Molecular Function,3,11,1394,0.10344,0.21351,2.56489,Heat_induced_all
+GO:0005622,GO:0005622,Cellular Component,5,24,1394,0.10414,0.21351,1.95929,Heat_induced_all
+GO:0016311,GO:0016311,Biological Process,5,24,1394,0.10414,0.21351,1.95929,Heat_induced_all
+GO:0000462,GO:0000462,Biological Process,5,24,1394,0.10414,0.21351,1.95929,Heat_induced_all
+GO:0006284,GO:0006284,Biological Process,4,18,1394,0.11658,0.2368,2.08991,Heat_induced_all
+GO:0006635,GO:0006635,Biological Process,4,18,1394,0.11658,0.2368,2.08991,Heat_induced_all
+GO:0000776,GO:0000776,Cellular Component,4,18,1394,0.11658,0.2368,2.08991,Heat_induced_all
+GO:0006777,GO:0006777,Biological Process,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0047150,GO:0047150,Molecular Function,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0008299,GO:0008299,Biological Process,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0006810,GO:0006810,Biological Process,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0097602,GO:0097602,Molecular Function,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0070062,GO:0070062,Cellular Component,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0005832,chaperonin-containing T-complex,Cellular Component,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0017101,GO:0017101,Cellular Component,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0000110,GO:0000110,Cellular Component,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0071108,GO:0071108,Biological Process,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0000923,GO:0000923,Cellular Component,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0031593,GO:0031593,Molecular Function,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0016558,GO:0016558,Biological Process,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0006207,GO:0006207,Biological Process,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0010992,GO:0010992,Biological Process,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0045216,GO:0045216,Biological Process,2,6,1394,0.1269,0.24373,3.13486,Heat_induced_all
+GO:0046872,GO:0046872,Molecular Function,21,152,1394,0.1271,0.24373,1.29932,Heat_induced_all
+GO:0006298,GO:0006298,Biological Process,3,12,1394,0.12747,0.24373,2.35115,Heat_induced_all
+GO:0008239,GO:0008239,Molecular Function,3,12,1394,0.12747,0.24373,2.35115,Heat_induced_all
+GO:0046777,GO:0046777,Biological Process,3,12,1394,0.12747,0.24373,2.35115,Heat_induced_all
+GO:0090630,GO:0090630,Biological Process,4,19,1394,0.1359,0.25757,1.97991,Heat_induced_all
+GO:0005643,GO:0005643,Cellular Component,4,19,1394,0.1359,0.25757,1.97991,Heat_induced_all
+GO:0006891,GO:0006891,Biological Process,4,19,1394,0.1359,0.25757,1.97991,Heat_induced_all
+GO:0031146,GO:0031146,Biological Process,5,27,1394,0.15272,0.28779,1.74159,Heat_induced_all
+GO:0000149,GO:0000149,Molecular Function,5,27,1394,0.15272,0.28779,1.74159,Heat_induced_all
+GO:0006413,GO:0006413,Biological Process,4,20,1394,0.1564,0.29302,1.88092,Heat_induced_all
+GO:0000723,GO:0000723,Biological Process,4,20,1394,0.1564,0.29302,1.88092,Heat_induced_all
+GO:0033617,GO:0033617,Biological Process,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0031175,GO:0031175,Biological Process,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0097543,GO:0097543,Cellular Component,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0005851,GO:0005851,Cellular Component,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0005788,GO:0005788,Cellular Component,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0030126,GO:0030126,Cellular Component,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0030490,GO:0030490,Biological Process,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0030496,GO:0030496,Cellular Component,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0015035,GO:0015035,Molecular Function,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0019902,GO:0019902,Molecular Function,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0072546,GO:0072546,Cellular Component,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:1902975,mitotic DNA replication initiation,Biological Process,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:1904108,GO:1904108,Biological Process,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0000070,mitotic sister chromatid segregation,Biological Process,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0005049,GO:0005049,Molecular Function,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0018345,GO:0018345,Biological Process,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0001671,GO:0001671,Molecular Function,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0030688,GO:0030688,Cellular Component,2,7,1394,0.16557,0.29495,2.68703,Heat_induced_all
+GO:0005096,GO:0005096,Molecular Function,10,67,1394,0.1704,0.30243,1.40367,Heat_induced_all
+GO:0004725,GO:0004725,Molecular Function,5,28,1394,0.1707,0.30243,1.67939,Heat_induced_all
+GO:0008237,GO:0008237,Molecular Function,4,21,1394,0.17795,0.31106,1.79135,Heat_induced_all
+GO:0008543,GO:0008543,Biological Process,4,21,1394,0.17795,0.31106,1.79135,Heat_induced_all
+GO:0006396,GO:0006396,Biological Process,4,21,1394,0.17795,0.31106,1.79135,Heat_induced_all
+GO:0005516,GO:0005516,Molecular Function,4,21,1394,0.17795,0.31106,1.79135,Heat_induced_all
+GO:0006890,GO:0006890,Biological Process,4,21,1394,0.17795,0.31106,1.79135,Heat_induced_all
+GO:0070403,GO:0070403,Molecular Function,3,14,1394,0.18048,0.31296,2.01527,Heat_induced_all
+GO:0006303,GO:0006303,Biological Process,3,14,1394,0.18048,0.31296,2.01527,Heat_induced_all
+GO:0005763,GO:0005763,Cellular Component,3,14,1394,0.18048,0.31296,2.01527,Heat_induced_all
+GO:0008083,GO:0008083,Molecular Function,7,44,1394,0.18171,0.31427,1.49618,Heat_induced_all
+GO:0019005,GO:0019005,Cellular Component,5,29,1394,0.18944,0.32676,1.62148,Heat_induced_all
+GO:0004843,GO:0004843,Molecular Function,8,53,1394,0.19698,0.33887,1.41956,Heat_induced_all
+GO:0005783,GO:0005783,Cellular Component,21,162,1394,0.19764,0.3391,1.21911,Heat_induced_all
+GO:0031201,GO:0031201,Cellular Component,4,22,1394,0.20043,0.34072,1.70993,Heat_induced_all
+GO:0043539,GO:0043539,Molecular Function,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0006904,GO:0006904,Biological Process,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0000390,GO:0000390,Biological Process,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0016538,GO:0016538,Molecular Function,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0031573,GO:0031573,Biological Process,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0035064,GO:0035064,Molecular Function,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0034388,GO:0034388,Cellular Component,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0004402,GO:0004402,Molecular Function,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0004300,GO:0004300,Molecular Function,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0000506,GO:0000506,Cellular Component,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0031080,GO:0031080,Cellular Component,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0006913,GO:0006913,Biological Process,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0016925,GO:0016925,Biological Process,2,8,1394,0.20589,0.34072,2.35115,Heat_induced_all
+GO:0045087,GO:0045087,Biological Process,3,15,1394,0.20888,0.34132,1.88092,Heat_induced_all
+GO:0003678,GO:0003678,Molecular Function,3,15,1394,0.20888,0.34132,1.88092,Heat_induced_all
+GO:0017156,GO:0017156,Biological Process,3,15,1394,0.20888,0.34132,1.88092,Heat_induced_all
+GO:0036297,GO:0036297,Biological Process,3,15,1394,0.20888,0.34132,1.88092,Heat_induced_all
+GO:0006955,GO:0006955,Biological Process,5,30,1394,0.20888,0.34132,1.56743,Heat_induced_all
+GO:0016579,GO:0016579,Biological Process,7,46,1394,0.21248,0.34634,1.43113,Heat_induced_all
+GO:0009058,GO:0009058,Biological Process,4,23,1394,0.2237,0.36372,1.63558,Heat_induced_all
+GO:0006268,GO:0006268,Biological Process,3,16,1394,0.23816,0.38531,1.76336,Heat_induced_all
+GO:0030687,GO:0030687,Cellular Component,3,16,1394,0.23816,0.38531,1.76336,Heat_induced_all
+GO:0007020,GO:0007020,Biological Process,2,9,1394,0.24708,0.39388,2.08991,Heat_induced_all
+GO:0030422,GO:0030422,Biological Process,2,9,1394,0.24708,0.39388,2.08991,Heat_induced_all
+GO:0006826,GO:0006826,Biological Process,2,9,1394,0.24708,0.39388,2.08991,Heat_induced_all
+GO:0019752,GO:0019752,Biological Process,2,9,1394,0.24708,0.39388,2.08991,Heat_induced_all
+GO:0006006,GO:0006006,Biological Process,2,9,1394,0.24708,0.39388,2.08991,Heat_induced_all
+GO:0051321,GO:0051321,Biological Process,2,9,1394,0.24708,0.39388,2.08991,Heat_induced_all
+GO:0005777,GO:0005777,Cellular Component,5,32,1394,0.24949,0.39675,1.46947,Heat_induced_all
+GO:0006355,GO:0006355,Biological Process,16,125,1394,0.25272,0.40092,1.20379,Heat_induced_all
+GO:0043171,GO:0043171,Biological Process,3,17,1394,0.26807,0.42218,1.65963,Heat_induced_all
+GO:0006974,GO:0006974,Biological Process,3,17,1394,0.26807,0.42218,1.65963,Heat_induced_all
+GO:0017056,GO:0017056,Molecular Function,3,17,1394,0.26807,0.42218,1.65963,Heat_induced_all
+GO:0071011,GO:0071011,Cellular Component,4,25,1394,0.27204,0.42739,1.50473,Heat_induced_all
+GO:0007131,GO:0007131,Biological Process,2,10,1394,0.28849,0.44573,1.88092,Heat_induced_all
+GO:0005871,GO:0005871,Cellular Component,2,10,1394,0.28849,0.44573,1.88092,Heat_induced_all
+GO:0007010,GO:0007010,Biological Process,2,10,1394,0.28849,0.44573,1.88092,Heat_induced_all
+GO:0006744,GO:0006744,Biological Process,2,10,1394,0.28849,0.44573,1.88092,Heat_induced_all
+GO:0006882,GO:0006882,Biological Process,2,10,1394,0.28849,0.44573,1.88092,Heat_induced_all
+GO:0005689,GO:0005689,Cellular Component,2,10,1394,0.28849,0.44573,1.88092,Heat_induced_all
+GO:0030674,GO:0030674,Molecular Function,2,10,1394,0.28849,0.44573,1.88092,Heat_induced_all
+GO:0140359,GO:0140359,Molecular Function,11,85,1394,0.29136,0.44882,1.21706,Heat_induced_all
+GO:0003712,GO:0003712,Molecular Function,5,34,1394,0.29187,0.44882,1.38303,Heat_induced_all
+GO:0005216,GO:0005216,Molecular Function,4,26,1394,0.29684,0.45539,1.44686,Heat_induced_all
+GO:0006397,GO:0006397,Biological Process,3,18,1394,0.29837,0.45559,1.56743,Heat_induced_all
+GO:0006099,GO:0006099,Biological Process,3,18,1394,0.29837,0.45559,1.56743,Heat_induced_all
+GO:0000139,GO:0000139,Cellular Component,9,69,1394,0.31012,0.47243,1.22669,Heat_induced_all
+GO:0003713,GO:0003713,Molecular Function,5,35,1394,0.31351,0.47537,1.34351,Heat_induced_all
+GO:0005768,GO:0005768,Cellular Component,5,35,1394,0.31351,0.47537,1.34351,Heat_induced_all
+GO:0071949,GO:0071949,Molecular Function,6,44,1394,0.32428,0.48294,1.28244,Heat_induced_all
+GO:0006367,GO:0006367,Biological Process,3,19,1394,0.32883,0.48294,1.48494,Heat_induced_all
+GO:0030334,GO:0030334,Biological Process,3,19,1394,0.32883,0.48294,1.48494,Heat_induced_all
+GO:0016573,GO:0016573,Biological Process,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0031234,GO:0031234,Cellular Component,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0005044,GO:0005044,Molecular Function,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0008134,GO:0008134,Molecular Function,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0008138,GO:0008138,Molecular Function,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0043015,GO:0043015,Molecular Function,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0008081,GO:0008081,Molecular Function,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0047498,GO:0047498,Molecular Function,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0004857,GO:0004857,Molecular Function,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0009103,GO:0009103,Biological Process,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0000463,GO:0000463,Biological Process,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0005925,GO:0005925,Cellular Component,2,11,1394,0.32961,0.48294,1.70993,Heat_induced_all
+GO:0016757,GO:0016757,Molecular Function,5,36,1394,0.33536,0.49025,1.30619,Heat_induced_all
+GO:0016491,GO:0016491,Molecular Function,17,142,1394,0.33972,0.49552,1.1259,Heat_induced_all
+GO:0016787,GO:0016787,Molecular Function,8,63,1394,0.35362,0.51464,1.19423,Heat_induced_all
+GO:0005769,GO:0005769,Cellular Component,3,20,1394,0.35926,0.51997,1.41069,Heat_induced_all
+GO:0000724,GO:0000724,Biological Process,6,46,1394,0.3636,0.51997,1.22669,Heat_induced_all
+GO:0030667,GO:0030667,Cellular Component,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0030134,GO:0030134,Cellular Component,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0006954,GO:0006954,Biological Process,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0000146,GO:0000146,Molecular Function,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0010181,GO:0010181,Molecular Function,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0004500,GO:0004500,Molecular Function,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0015297,GO:0015297,Molecular Function,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0061608,GO:0061608,Molecular Function,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0007265,GO:0007265,Biological Process,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0042421,GO:0042421,Biological Process,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0042420,GO:0042420,Biological Process,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0043087,GO:0043087,Biological Process,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0006589,GO:0006589,Biological Process,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0046475,GO:0046475,Biological Process,2,12,1394,0.37004,0.51997,1.56743,Heat_induced_all
+GO:0005507,GO:0005507,Molecular Function,4,29,1394,0.37234,0.52207,1.29718,Heat_induced_all
+GO:0043231,GO:0043231,Cellular Component,7,56,1394,0.38575,0.53915,1.17557,Heat_induced_all
+GO:0010628,GO:0010628,Biological Process,3,21,1394,0.38948,0.53915,1.34351,Heat_induced_all
+GO:0001786,GO:0001786,Molecular Function,3,21,1394,0.38948,0.53915,1.34351,Heat_induced_all
+GO:0017158,GO:0017158,Biological Process,3,21,1394,0.38948,0.53915,1.34351,Heat_induced_all
+GO:0014059,GO:0014059,Biological Process,3,21,1394,0.38948,0.53915,1.34351,Heat_induced_all
+GO:0016459,GO:0016459,Cellular Component,3,21,1394,0.38948,0.53915,1.34351,Heat_induced_all
+GO:0044877,GO:0044877,Molecular Function,2,13,1394,0.40946,0.56204,1.44686,Heat_induced_all
+GO:0005104,GO:0005104,Molecular Function,2,13,1394,0.40946,0.56204,1.44686,Heat_induced_all
+GO:0001708,GO:0001708,Biological Process,2,13,1394,0.40946,0.56204,1.44686,Heat_induced_all
+GO:0008194,UDP-glycosyltransferase activity,Molecular Function,2,13,1394,0.40946,0.56204,1.44686,Heat_induced_all
+GO:0005654,GO:0005654,Cellular Component,10,85,1394,0.41774,0.57078,1.10642,Heat_induced_all
+GO:0006351,GO:0006351,Biological Process,3,22,1394,0.41933,0.57078,1.28244,Heat_induced_all
+GO:0009887,GO:0009887,Biological Process,3,22,1394,0.41933,0.57078,1.28244,Heat_induced_all
+GO:0003887,GO:0003887,Molecular Function,3,22,1394,0.41933,0.57078,1.28244,Heat_induced_all
+GO:0003729,GO:0003729,Molecular Function,9,77,1394,0.43501,0.59088,1.09924,Heat_induced_all
+GO:0005544,GO:0005544,Molecular Function,5,41,1394,0.44494,0.60193,1.1469,Heat_induced_all
+GO:0009306,GO:0009306,Biological Process,2,14,1394,0.44762,0.60193,1.34351,Heat_induced_all
+GO:0000422,GO:0000422,Biological Process,2,14,1394,0.44762,0.60193,1.34351,Heat_induced_all
+GO:0004713,GO:0004713,Molecular Function,2,14,1394,0.44762,0.60193,1.34351,Heat_induced_all
+GO:0001934,GO:0001934,Biological Process,3,23,1394,0.44867,0.60193,1.22669,Heat_induced_all
+GO:0030276,GO:0030276,Molecular Function,3,23,1394,0.44867,0.60193,1.22669,Heat_induced_all
+GO:0050660,GO:0050660,Molecular Function,5,42,1394,0.46647,0.62451,1.11959,Heat_induced_all
+GO:0045893,GO:0045893,Biological Process,7,61,1394,0.47572,0.63394,1.07922,Heat_induced_all
+GO:0071277,GO:0071277,Biological Process,3,24,1394,0.4774,0.63394,1.17557,Heat_induced_all
+GO:0003333,GO:0003333,Biological Process,3,24,1394,0.4774,0.63394,1.17557,Heat_induced_all
+GO:0000922,GO:0000922,Cellular Component,3,24,1394,0.4774,0.63394,1.17557,Heat_induced_all
+GO:0003677,DNA binding,Molecular Function,28,258,1394,0.48429,0.63541,1.02065,Heat_induced_all
+GO:0030414,GO:0030414,Molecular Function,2,15,1394,0.48435,0.63541,1.25395,Heat_induced_all
+GO:0030234,GO:0030234,Molecular Function,2,15,1394,0.48435,0.63541,1.25395,Heat_induced_all
+GO:0006979,GO:0006979,Biological Process,2,15,1394,0.48435,0.63541,1.25395,Heat_induced_all
+GO:0006289,GO:0006289,Biological Process,2,15,1394,0.48435,0.63541,1.25395,Heat_induced_all
+GO:0019955,GO:0019955,Molecular Function,2,15,1394,0.48435,0.63541,1.25395,Heat_induced_all
+GO:0007155,GO:0007155,Biological Process,4,34,1394,0.49549,0.64741,1.10642,Heat_induced_all
+GO:0003700,GO:0003700,Molecular Function,4,34,1394,0.49549,0.64741,1.10642,Heat_induced_all
+GO:0015171,GO:0015171,Molecular Function,3,25,1394,0.5054,0.65642,1.12855,Heat_induced_all
+GO:1902600,GO:1902600,Biological Process,3,25,1394,0.5054,0.65642,1.12855,Heat_induced_all
+GO:0003690,GO:0003690,Molecular Function,3,25,1394,0.5054,0.65642,1.12855,Heat_induced_all
+GO:0003735,GO:0003735,Molecular Function,12,110,1394,0.50817,0.6587,1.02596,Heat_induced_all
+GO:0000209,GO:0000209,Biological Process,13,120,1394,0.5154,0.66029,1.01883,Heat_induced_all
+GO:0016485,protein processing,Biological Process,4,35,1394,0.51897,0.66029,1.07481,Heat_induced_all
+GO:0016616,GO:0016616,Molecular Function,2,16,1394,0.51952,0.66029,1.17557,Heat_induced_all
+GO:0030488,GO:0030488,Biological Process,2,16,1394,0.51952,0.66029,1.17557,Heat_induced_all
+GO:0005385,GO:0005385,Molecular Function,2,16,1394,0.51952,0.66029,1.17557,Heat_induced_all
+GO:0016575,GO:0016575,Biological Process,2,16,1394,0.51952,0.66029,1.17557,Heat_induced_all
+GO:0019221,GO:0019221,Biological Process,2,16,1394,0.51952,0.66029,1.17557,Heat_induced_all
+GO:0004896,GO:0004896,Molecular Function,2,16,1394,0.51952,0.66029,1.17557,Heat_induced_all
+GO:0034440,GO:0034440,Biological Process,2,16,1394,0.51952,0.66029,1.17557,Heat_induced_all
+GO:0006751,GO:0006751,Biological Process,2,16,1394,0.51952,0.66029,1.17557,Heat_induced_all
+GO:0004197,GO:0004197,Molecular Function,5,45,1394,0.52929,0.6701,1.04495,Heat_induced_all
+GO:0000278,mitotic cell cycle,Biological Process,5,45,1394,0.52929,0.6701,1.04495,Heat_induced_all
+GO:0007399,GO:0007399,Biological Process,3,26,1394,0.5326,0.67038,1.08515,Heat_induced_all
+GO:0005884,GO:0005884,Cellular Component,3,26,1394,0.5326,0.67038,1.08515,Heat_induced_all
+GO:0015629,GO:0015629,Cellular Component,3,26,1394,0.5326,0.67038,1.08515,Heat_induced_all
+GO:0046983,GO:0046983,Molecular Function,8,74,1394,0.53582,0.67313,1.01671,Heat_induced_all
+GO:0031491,GO:0031491,Molecular Function,2,17,1394,0.55305,0.68683,1.10642,Heat_induced_all
+GO:0004867,GO:0004867,Molecular Function,2,17,1394,0.55305,0.68683,1.10642,Heat_induced_all
+GO:0015630,GO:0015630,Cellular Component,2,17,1394,0.55305,0.68683,1.10642,Heat_induced_all
+GO:0016251,GO:0016251,Molecular Function,2,17,1394,0.55305,0.68683,1.10642,Heat_induced_all
+GO:0016702,GO:0016702,Molecular Function,2,17,1394,0.55305,0.68683,1.10642,Heat_induced_all
+GO:0003950,GO:0003950,Molecular Function,2,17,1394,0.55305,0.68683,1.10642,Heat_induced_all
+GO:0003755,GO:0003755,Molecular Function,3,27,1394,0.55894,0.69152,1.04495,Heat_induced_all
+GO:0007015,GO:0007015,Biological Process,3,27,1394,0.55894,0.69152,1.04495,Heat_induced_all
+GO:0005085,GO:0005085,Molecular Function,8,77,1394,0.58251,0.71816,0.9771,Heat_induced_all
+GO:0002181,GO:0002181,Biological Process,2,18,1394,0.58488,0.71816,1.04495,Heat_induced_all
+GO:0000413,GO:0000413,Biological Process,2,18,1394,0.58488,0.71816,1.04495,Heat_induced_all
+GO:0006887,GO:0006887,Biological Process,2,18,1394,0.58488,0.71816,1.04495,Heat_induced_all
+GO:0006357,GO:0006357,Biological Process,44,423,1394,0.58637,0.71863,0.97826,Heat_induced_all
+GO:0006811,GO:0006811,Biological Process,5,48,1394,0.5886,0.72001,0.97964,Heat_induced_all
+GO:0000785,GO:0000785,Cellular Component,5,49,1394,0.60743,0.73982,0.95965,Heat_induced_all
+GO:0003714,GO:0003714,Molecular Function,3,29,1394,0.60883,0.73982,0.97289,Heat_induced_all
+GO:0000122,GO:0000122,Biological Process,3,29,1394,0.60883,0.73982,0.97289,Heat_induced_all
+GO:0005813,GO:0005813,Cellular Component,9,89,1394,0.61455,0.73982,0.95103,Heat_induced_all
+GO:0006633,GO:0006633,Biological Process,2,19,1394,0.61501,0.73982,0.98996,Heat_induced_all
+GO:0015031,GO:0015031,Biological Process,2,19,1394,0.61501,0.73982,0.98996,Heat_induced_all
+GO:0017147,GO:0017147,Molecular Function,2,19,1394,0.61501,0.73982,0.98996,Heat_induced_all
+GO:1990904,GO:1990904,Cellular Component,2,19,1394,0.61501,0.73982,0.98996,Heat_induced_all
+GO:0000932,GO:0000932,Cellular Component,2,19,1394,0.61501,0.73982,0.98996,Heat_induced_all
+GO:0004674,GO:0004674,Molecular Function,10,99,1394,0.61684,0.74067,0.94996,Heat_induced_all
+GO:0009653,GO:0009653,Biological Process,4,40,1394,0.62762,0.75222,0.94046,Heat_induced_all
+GO:0071013,GO:0071013,Cellular Component,3,30,1394,0.63231,0.75632,0.94046,Heat_induced_all
+GO:0004252,GO:0004252,Molecular Function,12,120,1394,0.63336,0.75632,0.94046,Heat_induced_all
+GO:0051726,GO:0051726,Biological Process,2,20,1394,0.64342,0.76291,0.94046,Heat_induced_all
+GO:0000166,GO:0000166,Molecular Function,2,20,1394,0.64342,0.76291,0.94046,Heat_induced_all
+GO:0043138,GO:0043138,Molecular Function,2,20,1394,0.64342,0.76291,0.94046,Heat_induced_all
+GO:0016192,GO:0016192,Biological Process,5,51,1394,0.64356,0.76291,0.92202,Heat_induced_all
+GO:0006310,GO:0006310,Biological Process,4,41,1394,0.64737,0.76603,0.91752,Heat_induced_all
+GO:0015279,GO:0015279,Molecular Function,3,31,1394,0.65479,0.77202,0.91012,Heat_induced_all
+GO:0048856,GO:0048856,Biological Process,3,31,1394,0.65479,0.77202,0.91012,Heat_induced_all
+GO:0005773,GO:0005773,Cellular Component,2,21,1394,0.67015,0.78445,0.89568,Heat_induced_all
+GO:0006869,GO:0006869,Biological Process,2,21,1394,0.67015,0.78445,0.89568,Heat_induced_all
+GO:0070006,GO:0070006,Molecular Function,2,21,1394,0.67015,0.78445,0.89568,Heat_induced_all
+GO:0031418,GO:0031418,Molecular Function,2,21,1394,0.67015,0.78445,0.89568,Heat_induced_all
+GO:0070679,GO:0070679,Molecular Function,3,32,1394,0.67627,0.78737,0.88168,Heat_induced_all
+GO:0007264,GO:0007264,Biological Process,3,32,1394,0.67627,0.78737,0.88168,Heat_induced_all
+GO:0006828,GO:0006828,Biological Process,3,32,1394,0.67627,0.78737,0.88168,Heat_induced_all
+GO:0004222,GO:0004222,Molecular Function,15,154,1394,0.67967,0.78992,0.91603,Heat_induced_all
+GO:0034703,GO:0034703,Cellular Component,3,33,1394,0.69674,0.80689,0.85496,Heat_induced_all
+GO:0009897,GO:0009897,Cellular Component,3,33,1394,0.69674,0.80689,0.85496,Heat_induced_all
+GO:0000981,GO:0000981,Molecular Function,36,363,1394,0.69827,0.80722,0.93269,Heat_induced_all
+GO:0060070,GO:0060070,Biological Process,4,44,1394,0.70234,0.80905,0.85496,Heat_induced_all
+GO:0043565,GO:0043565,Molecular Function,4,44,1394,0.70234,0.80905,0.85496,Heat_induced_all
+GO:0006338,GO:0006338,Biological Process,3,34,1394,0.71622,0.82214,0.82982,Heat_induced_all
+GO:0008289,GO:0008289,Molecular Function,3,34,1394,0.71622,0.82214,0.82982,Heat_induced_all
+GO:0005109,GO:0005109,Molecular Function,2,23,1394,0.71872,0.823,0.81779,Heat_induced_all
+GO:0006412,GO:0006412,Biological Process,8,87,1394,0.7195,0.823,0.86479,Heat_induced_all
+GO:0051015,GO:0051015,Molecular Function,7,77,1394,0.72407,0.82678,0.85496,Heat_induced_all
+GO:0055085,GO:0055085,Biological Process,33,340,1394,0.73831,0.84139,0.9128,Heat_induced_all
+GO:0045165,GO:0045165,Biological Process,2,24,1394,0.74066,0.84139,0.78372,Heat_induced_all
+GO:0003924,GTPase activity,Molecular Function,19,201,1394,0.74073,0.84139,0.88899,Heat_induced_all
+GO:0000977,GO:0000977,Molecular Function,5,58,1394,0.75265,0.85344,0.81074,Heat_induced_all
+GO:0005840,GO:0005840,Cellular Component,8,90,1394,0.75411,0.85361,0.83596,Heat_induced_all
+GO:0000978,GO:0000978,Molecular Function,28,295,1394,0.76667,0.86633,0.89264,Heat_induced_all
+GO:0051480,GO:0051480,Biological Process,3,38,1394,0.78449,0.88492,0.74247,Heat_induced_all
+GO:0098609,GO:0098609,Biological Process,5,62,1394,0.80271,0.90392,0.75843,Heat_induced_all
+GO:0030154,GO:0030154,Biological Process,11,127,1394,0.80524,0.9052,0.81457,Heat_induced_all
+GO:0000287,GO:0000287,Molecular Function,3,40,1394,0.81318,0.90754,0.70534,Heat_induced_all
+GO:0007166,GO:0007166,Biological Process,5,63,1394,0.81389,0.90754,0.7464,Heat_induced_all
+GO:0007160,GO:0007160,Biological Process,2,28,1394,0.81428,0.90754,0.67176,Heat_induced_all
+GO:0005911,GO:0005911,Cellular Component,2,28,1394,0.81428,0.90754,0.67176,Heat_induced_all
+GO:0005765,GO:0005765,Cellular Component,2,28,1394,0.81428,0.90754,0.67176,Heat_induced_all
+GO:0030425,GO:0030425,Cellular Component,5,64,1394,0.82456,0.91742,0.73473,Heat_induced_all
+GO:0030246,GO:0030246,Molecular Function,4,53,1394,0.82927,0.9211,0.70978,Heat_induced_all
+GO:0003824,GO:0003824,Molecular Function,3,42,1394,0.83857,0.92984,0.67176,Heat_induced_all
+GO:0005814,GO:0005814,Cellular Component,2,30,1394,0.84358,0.93185,0.62697,Heat_induced_all
+GO:0005525,GTP binding,Molecular Function,19,217,1394,0.84562,0.93185,0.82344,Heat_induced_all
+GO:0005975,GO:0005975,Biological Process,7,89,1394,0.84798,0.93185,0.73969,Heat_induced_all
+GO:0005125,GO:0005125,Molecular Function,3,43,1394,0.85011,0.93185,0.65613,Heat_induced_all
+GO:0045944,GO:0045944,Biological Process,3,43,1394,0.85011,0.93185,0.65613,Heat_induced_all
+GO:0031267,GO:0031267,Molecular Function,3,43,1394,0.85011,0.93185,0.65613,Heat_induced_all
+GO:0062023,GO:0062023,Cellular Component,4,55,1394,0.85038,0.93185,0.68397,Heat_induced_all
+GO:0030170,GO:0030170,Molecular Function,2,31,1394,0.8566,0.93628,0.60675,Heat_induced_all
+GO:0005794,GO:0005794,Cellular Component,12,145,1394,0.8573,0.93628,0.77831,Heat_induced_all
+GO:0016477,GO:0016477,Biological Process,2,32,1394,0.86862,0.94548,0.58779,Heat_induced_all
+GO:0012505,GO:0012505,Cellular Component,2,32,1394,0.86862,0.94548,0.58779,Heat_induced_all
+GO:0070588,GO:0070588,Biological Process,3,45,1394,0.87104,0.94653,0.62697,Heat_induced_all
+GO:0061630,GO:0061630,Molecular Function,13,159,1394,0.87572,0.95003,0.76893,Heat_induced_all
+GO:0042393,GO:0042393,Molecular Function,2,33,1394,0.87971,0.95278,0.56998,Heat_induced_all
+GO:0005741,GO:0005741,Cellular Component,2,34,1394,0.88993,0.96225,0.55321,Heat_induced_all
+GO:0035091,GO:0035091,Molecular Function,2,36,1394,0.90799,0.97853,0.52248,Heat_induced_all
+GO:0006629,GO:0006629,Biological Process,2,36,1394,0.90799,0.97853,0.52248,Heat_induced_all
+GO:0005856,GO:0005856,Cellular Component,3,50,1394,0.91245,0.98172,0.56428,Heat_induced_all
+GO:0051959,GO:0051959,Molecular Function,2,37,1394,0.91594,0.98361,0.50836,Heat_induced_all
+GO:0016567,GO:0016567,Biological Process,6,88,1394,0.91723,0.98361,0.64122,Heat_induced_all
+GO:0030182,GO:0030182,Biological Process,2,39,1394,0.92995,0.9952,0.48229,Heat_induced_all
+GO:0007189,GO:0007189,Biological Process,3,53,1394,0.93109,0.9952,0.53234,Heat_induced_all
+GO:0006487,GO:0006487,Biological Process,2,40,1394,0.93609,0.99565,0.47023,Heat_induced_all
+GO:0015280,GO:0015280,Molecular Function,2,40,1394,0.93609,0.99565,0.47023,Heat_induced_all
+GO:0030424,GO:0030424,Cellular Component,2,40,1394,0.93609,0.99565,0.47023,Heat_induced_all
+GO:0007156,GO:0007156,Biological Process,4,68,1394,0.94027,0.99846,0.55321,Heat_induced_all
+GO:0007411,GO:0007411,Biological Process,3,56,1394,0.94601,1.0,0.50382,Heat_induced_all
+GO:0005802,GO:0005802,Cellular Component,2,42,1394,0.94688,1.0,0.44784,Heat_induced_all
+GO:0005262,GO:0005262,Molecular Function,2,42,1394,0.94688,1.0,0.44784,Heat_induced_all
+GO:0008017,GO:0008017,Molecular Function,6,96,1394,0.95041,1.0,0.58779,Heat_induced_all
+GO:0035725,GO:0035725,Biological Process,4,72,1394,0.95577,1.0,0.52248,Heat_induced_all
+GO:0007187,GO:0007187,Biological Process,3,59,1394,0.95788,1.0,0.4782,Heat_induced_all
+GO:0004993,GO:0004993,Molecular Function,3,59,1394,0.95788,1.0,0.4782,Heat_induced_all
+GO:0060271,GO:0060271,Biological Process,3,63,1394,0.96993,1.0,0.44784,Heat_induced_all
+GO:0042277,GO:0042277,Molecular Function,3,64,1394,0.97238,1.0,0.44084,Heat_induced_all
+GO:0030527,GO:0030527,Molecular Function,2,49,1394,0.97252,1.0,0.38386,Heat_induced_all
+GO:0000786,GO:0000786,Cellular Component,2,54,1394,0.98301,1.0,0.34832,Heat_induced_all
+GO:0006486,GO:0006486,Biological Process,2,55,1394,0.98458,1.0,0.34199,Heat_induced_all
+GO:0045505,GO:0045505,Molecular Function,2,55,1394,0.98458,1.0,0.34199,Heat_induced_all
+GO:0006508,GO:0006508,Biological Process,20,284,1394,0.98543,1.0,0.6623,Heat_induced_all
+GO:0007018,microtubule-based movement,Biological Process,4,90,1394,0.98944,1.0,0.41798,Heat_induced_all
+GO:0022857,GO:0022857,Molecular Function,8,145,1394,0.98971,1.0,0.51887,Heat_induced_all
+GO:0031012,GO:0031012,Cellular Component,2,63,1394,0.99296,1.0,0.29856,Heat_induced_all
+GO:0035556,GO:0035556,Biological Process,5,112,1394,0.99426,1.0,0.41985,Heat_induced_all
+GO:0046982,GO:0046982,Molecular Function,2,67,1394,0.99527,1.0,0.28073,Heat_induced_all
+GO:0005886,plasma membrane,Cellular Component,46,614,1394,0.99717,1.0,0.70458,Heat_induced_all
+GO:0004672,GO:0004672,Molecular Function,7,150,1394,0.99727,1.0,0.43888,Heat_induced_all
+GO:0005576,GO:0005576,Cellular Component,9,182,1394,0.99803,1.0,0.46506,Heat_induced_all
+GO:0070492,GO:0070492,Molecular Function,2,82,1394,0.99896,1.0,0.22938,Heat_induced_all
+GO:0043235,GO:0043235,Cellular Component,5,133,1394,0.99899,1.0,0.35356,Heat_induced_all
+GO:0015074,GO:0015074,Biological Process,2,83,1394,0.99906,1.0,0.22662,Heat_induced_all
+GO:0033674,GO:0033674,Biological Process,3,113,1394,0.9997,1.0,0.24968,Heat_induced_all
+GO:0005615,GO:0005615,Cellular Component,26,441,1394,0.99985,1.0,0.55447,Heat_induced_all
+GO:0030594,GO:0030594,Molecular Function,3,121,1394,0.99986,1.0,0.23317,Heat_induced_all
+GO:0007165,GO:0007165,Biological Process,14,292,1394,0.9999,1.0,0.45091,Heat_induced_all
+GO:0005509,GO:0005509,Molecular Function,33,539,1394,0.99993,1.0,0.57579,Heat_induced_all
+GO:0007169,GO:0007169,Biological Process,3,128,1394,0.99993,1.0,0.22042,Heat_induced_all
+GO:0007275,GO:0007275,Biological Process,5,164,1394,0.99993,1.0,0.28673,Heat_induced_all
+GO:0004714,GO:0004714,Molecular Function,2,109,1394,0.99994,1.0,0.17256,Heat_induced_all
+GO:0043005,GO:0043005,Cellular Component,2,120,1394,0.99998,1.0,0.15674,Heat_induced_all
+GO:0006468,GO:0006468,Biological Process,21,413,1394,0.99998,1.0,0.4782,Heat_induced_all
+GO:0007268,GO:0007268,Biological Process,3,150,1394,0.99999,1.0,0.18809,Heat_induced_all
+GO:0004930,GO:0004930,Molecular Function,22,1123,1394,1.0,1.0,0.18424,Heat_induced_all
+GO:0007186,GO:0007186,Biological Process,20,1122,1394,1.0,1.0,0.16764,Heat_induced_all
+GO:0000278,mitotic cell cycle,Biological Process,22,45,2037,0.0,0.00012,3.14646,Heat_repressed_all
+GO:0045197,establishment/maintenance of epithelial cell apical/basal polarity,Biological Process,19,38,2037,0.0,0.00027,3.21797,Heat_repressed_all
+GO:0008194,UDP-glycosyltransferase activity,Molecular Function,10,13,2037,0.0,0.00037,4.95072,Heat_repressed_all
+GO:0006270,DNA replication initiation,Biological Process,9,11,2037,0.0,0.0004,5.26577,Heat_repressed_all
+GO:0007018,microtubule-based movement,Biological Process,31,90,2037,1e-05,0.00094,2.21682,Heat_repressed_all
+GO:0032991,protein-containing complex,Cellular Component,17,36,2037,1e-05,0.00094,3.03919,Heat_repressed_all
+GO:0007157,heterophilic cell-cell adhesion,Biological Process,18,41,2037,1e-05,0.00155,2.82553,Heat_repressed_all
+GO:0006281,DNA repair,Biological Process,19,47,2037,3e-05,0.00301,2.60176,Heat_repressed_all
+GO:0045910,negative regulation of DNA recombination,Biological Process,8,11,2037,4e-05,0.00301,4.68068,Heat_repressed_all
+GO:0003697,single-stranded DNA binding,Molecular Function,17,40,2037,4e-05,0.00311,2.73527,Heat_repressed_all
+GO:0008569,minus-end-directed microtubule motor activity,Molecular Function,15,33,2037,4e-05,0.00311,2.92543,Heat_repressed_all
+GO:0016887,ATP hydrolysis activity,Molecular Function,59,231,2037,5e-05,0.00317,1.64381,Heat_repressed_all
+GO:0046556,alpha-L-arabinofuranosidase activity,Molecular Function,7,9,2037,6e-05,0.00317,5.00573,Heat_repressed_all
+GO:0046373,L-arabinose metabolic process,Biological Process,7,9,2037,6e-05,0.00317,5.00573,Heat_repressed_all
+GO:0030286,GO:0030286,Cellular Component,15,34,2037,7e-05,0.0035,2.83938,Heat_repressed_all
+GO:0006298,GO:0006298,Biological Process,8,12,2037,9e-05,0.00438,4.29062,Heat_repressed_all
+GO:0006260,DNA replication,Biological Process,15,36,2037,0.00015,0.0068,2.68164,Heat_repressed_all
+GO:0030261,GO:0030261,Biological Process,7,10,2037,0.00017,0.00711,4.50515,Heat_repressed_all
+GO:0051959,GO:0051959,Molecular Function,15,37,2037,0.00022,0.00878,2.60916,Heat_repressed_all
+GO:0035695,GO:0035695,Biological Process,6,8,2037,0.00029,0.01067,4.82695,Heat_repressed_all
+GO:0035694,GO:0035694,Biological Process,6,8,2037,0.00029,0.01067,4.82695,Heat_repressed_all
+GO:0005509,GO:0005509,Molecular Function,113,539,2037,0.00038,0.0118,1.34928,Heat_repressed_all
+GO:0045505,GO:0045505,Molecular Function,19,55,2037,0.0004,0.0118,2.22332,Heat_repressed_all
+GO:0031492,GO:0031492,Molecular Function,7,11,2037,0.0004,0.0118,4.0956,Heat_repressed_all
+GO:0003688,DNA replication origin binding,Molecular Function,7,11,2037,0.0004,0.0118,4.0956,Heat_repressed_all
+GO:0005524,ATP binding,Molecular Function,178,909,2037,0.0004,0.0118,1.26028,Heat_repressed_all
+GO:0005634,nucleus,Cellular Component,215,1126,2037,0.00044,0.01249,1.22889,Heat_repressed_all
+GO:0018401,GO:0018401,Biological Process,9,18,2037,0.00066,0.01758,3.21797,Heat_repressed_all
+GO:0007094,mitotic spindle assembly checkpoint signaling,Biological Process,6,9,2037,0.00077,0.01758,4.29062,Heat_repressed_all
+GO:0042127,GO:0042127,Biological Process,8,15,2037,0.00077,0.01758,3.4325,Heat_repressed_all
+GO:0005544,GO:0005544,Molecular Function,15,41,2037,0.0008,0.01758,2.35461,Heat_repressed_all
+GO:0003682,chromatin binding,Molecular Function,14,37,2037,0.00081,0.01758,2.43522,Heat_repressed_all
+GO:0047442,GO:0047442,Molecular Function,7,12,2037,0.00083,0.01758,3.7543,Heat_repressed_all
+GO:0004508,GO:0004508,Molecular Function,7,12,2037,0.00083,0.01758,3.7543,Heat_repressed_all
+GO:0042448,GO:0042448,Biological Process,7,12,2037,0.00083,0.01758,3.7543,Heat_repressed_all
+GO:0042446,GO:0042446,Biological Process,7,12,2037,0.00083,0.01758,3.7543,Heat_repressed_all
+GO:0008017,GO:0008017,Molecular Function,27,96,2037,0.00116,0.02389,1.81011,Heat_repressed_all
+GO:0034501,protein localization to kinetochore,Biological Process,5,7,2037,0.00144,0.02804,4.5971,Heat_repressed_all
+GO:1902975,mitotic DNA replication initiation,Biological Process,5,7,2037,0.00144,0.02804,4.5971,Heat_repressed_all
+GO:0008201,GO:0008201,Molecular Function,6,10,2037,0.00167,0.03168,3.86156,Heat_repressed_all
+GO:0071277,GO:0071277,Biological Process,10,24,2037,0.00193,0.03519,2.68164,Heat_repressed_all
+GO:0140359,GO:0140359,Molecular Function,24,85,2037,0.00201,0.03519,1.81721,Heat_repressed_all
+GO:0004222,GO:0004222,Molecular Function,38,154,2037,0.00203,0.03519,1.58809,Heat_repressed_all
+GO:0055085,GO:0055085,Biological Process,73,340,2037,0.00203,0.03519,1.38183,Heat_repressed_all
+GO:0004656,GO:0004656,Molecular Function,8,17,2037,0.00218,0.03626,3.02868,Heat_repressed_all
+GO:0030527,GO:0030527,Molecular Function,16,49,2037,0.00219,0.03626,2.10153,Heat_repressed_all
+GO:0042054,GO:0042054,Molecular Function,4,5,2037,0.00255,0.03764,5.14875,Heat_repressed_all
+GO:0004061,GO:0004061,Molecular Function,4,5,2037,0.00255,0.03764,5.14875,Heat_repressed_all
+GO:0033314,GO:0033314,Biological Process,4,5,2037,0.00255,0.03764,5.14875,Heat_repressed_all
+GO:0017158,GO:0017158,Biological Process,9,21,2037,0.00257,0.03764,2.75826,Heat_repressed_all
+GO:0001786,GO:0001786,Molecular Function,9,21,2037,0.00257,0.03764,2.75826,Heat_repressed_all
+GO:0014059,GO:0014059,Biological Process,9,21,2037,0.00257,0.03764,2.75826,Heat_repressed_all
+GO:0005576,GO:0005576,Cellular Component,43,182,2037,0.00264,0.03797,1.52058,Heat_repressed_all
+GO:0005856,GO:0005856,Cellular Component,16,50,2037,0.00277,0.03869,2.0595,Heat_repressed_all
+GO:0003777,GO:0003777,Molecular Function,12,33,2037,0.0028,0.03869,2.34034,Heat_repressed_all
+GO:0000727,double-strand break repair via break-induced replication,Biological Process,5,8,2037,0.00334,0.04132,4.02246,Heat_repressed_all
+GO:0060294,cilium movement involved in cell motility,Biological Process,5,8,2037,0.00334,0.04132,4.02246,Heat_repressed_all
+GO:0030915,Smc5-Smc6 complex,Cellular Component,5,8,2037,0.00334,0.04132,4.02246,Heat_repressed_all
+GO:0000776,GO:0000776,Cellular Component,8,18,2037,0.00339,0.04132,2.86042,Heat_repressed_all
+GO:0005741,GO:0005741,Cellular Component,12,34,2037,0.00372,0.04132,2.27151,Heat_repressed_all
+GO:0046416,GO:0046416,Biological Process,3,3,2037,0.00375,0.04132,6.43594,Heat_repressed_all
+GO:0003960,GO:0003960,Molecular Function,3,3,2037,0.00375,0.04132,6.43594,Heat_repressed_all
+GO:0006335,GO:0006335,Biological Process,3,3,2037,0.00375,0.04132,6.43594,Heat_repressed_all
+GO:0005663,DNA replication factor C complex,Cellular Component,3,3,2037,0.00375,0.04132,6.43594,Heat_repressed_all
+GO:0051315,GO:0051315,Biological Process,3,3,2037,0.00375,0.04132,6.43594,Heat_repressed_all
+GO:0003689,GO:0003689,Molecular Function,3,3,2037,0.00375,0.04132,6.43594,Heat_repressed_all
+GO:0003884,GO:0003884,Molecular Function,3,3,2037,0.00375,0.04132,6.43594,Heat_repressed_all
+GO:0045329,GO:0045329,Biological Process,3,3,2037,0.00375,0.04132,6.43594,Heat_repressed_all
+GO:0031262,GO:0031262,Cellular Component,3,3,2037,0.00375,0.04132,6.43594,Heat_repressed_all
+GO:0005814,GO:0005814,Cellular Component,11,30,2037,0.00386,0.04194,2.35984,Heat_repressed_all
+GO:0005506,iron ion binding,Molecular Function,32,129,2037,0.00402,0.04313,1.59651,Heat_repressed_all
+GO:0018107,GO:0018107,Biological Process,7,15,2037,0.0044,0.04648,3.00344,Heat_repressed_all
+GO:0009986,cell surface,Cellular Component,15,48,2037,0.00477,0.04968,2.01123,Heat_repressed_all
+GO:0030276,GO:0030276,Molecular Function,9,23,2037,0.00534,0.05487,2.51841,Heat_repressed_all
+GO:0007059,GO:0007059,Biological Process,6,12,2037,0.00553,0.05542,3.21797,Heat_repressed_all
+GO:0007052,GO:0007052,Biological Process,6,12,2037,0.00553,0.05542,3.21797,Heat_repressed_all
+GO:0005874,GO:0005874,Cellular Component,12,36,2037,0.0063,0.06067,2.14531,Heat_repressed_all
+GO:0006334,GO:0006334,Biological Process,12,36,2037,0.0063,0.06067,2.14531,Heat_repressed_all
+GO:0000786,GO:0000786,Cellular Component,16,54,2037,0.00644,0.06067,1.90694,Heat_repressed_all
+GO:0004180,GO:0004180,Molecular Function,5,9,2037,0.00656,0.06067,3.57552,Heat_repressed_all
+GO:0006024,GO:0006024,Biological Process,5,9,2037,0.00656,0.06067,3.57552,Heat_repressed_all
+GO:0004065,GO:0004065,Molecular Function,4,6,2037,0.0067,0.06067,4.29062,Heat_repressed_all
+GO:0051382,GO:0051382,Biological Process,4,6,2037,0.0067,0.06067,4.29062,Heat_repressed_all
+GO:0019441,GO:0019441,Biological Process,4,6,2037,0.0067,0.06067,4.29062,Heat_repressed_all
+GO:0000226,GO:0000226,Biological Process,14,46,2037,0.00813,0.07278,1.95876,Heat_repressed_all
+GO:0000281,GO:0000281,Biological Process,6,13,2037,0.00894,0.07912,2.97043,Heat_repressed_all
+GO:0016491,GO:0016491,Molecular Function,33,142,2037,0.01,0.08556,1.49568,Heat_repressed_all
+GO:0017056,GO:0017056,Molecular Function,7,17,2037,0.01,0.08556,2.65009,Heat_repressed_all
+GO:0070006,GO:0070006,Molecular Function,8,21,2037,0.01023,0.08556,2.45178,Heat_repressed_all
+GO:0031418,GO:0031418,Molecular Function,8,21,2037,0.01023,0.08556,2.45178,Heat_repressed_all
+GO:0031410,GO:0031410,Cellular Component,8,21,2037,0.01023,0.08556,2.45178,Heat_repressed_all
+GO:0006261,DNA-templated DNA replication,Biological Process,5,10,2037,0.01145,0.09151,3.21797,Heat_repressed_all
+GO:0030145,GO:0030145,Molecular Function,5,10,2037,0.01145,0.09151,3.21797,Heat_repressed_all
+GO:0005179,GO:0005179,Molecular Function,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0039706,GO:0039706,Molecular Function,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0006695,GO:0006695,Biological Process,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0007095,GO:0007095,Biological Process,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0046294,GO:0046294,Biological Process,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0004712,GO:0004712,Molecular Function,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0051091,GO:0051091,Biological Process,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0043296,GO:0043296,Cellular Component,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0090575,GO:0090575,Cellular Component,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0047757,GO:0047757,Molecular Function,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0030204,GO:0030204,Biological Process,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0005658,GO:0005658,Cellular Component,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0006189,GO:0006189,Biological Process,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0008273,GO:0008273,Molecular Function,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0034080,GO:0034080,Biological Process,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0030205,GO:0030205,Biological Process,3,4,2037,0.01324,0.09151,4.82695,Heat_repressed_all
+GO:0022857,GO:0022857,Molecular Function,33,145,2037,0.01365,0.09151,1.46473,Heat_repressed_all
+GO:0071949,GO:0071949,Molecular Function,13,44,2037,0.01371,0.09151,1.90153,Heat_repressed_all
+GO:0031032,GO:0031032,Biological Process,4,7,2037,0.01371,0.09151,3.67768,Heat_repressed_all
+GO:0048487,GO:0048487,Molecular Function,4,7,2037,0.01371,0.09151,3.67768,Heat_repressed_all
+GO:0035250,GO:0035250,Molecular Function,4,7,2037,0.01371,0.09151,3.67768,Heat_repressed_all
+GO:0008270,GO:0008270,Molecular Function,94,493,2037,0.01795,0.11876,1.22714,Heat_repressed_all
+GO:0008134,GO:0008134,Molecular Function,5,11,2037,0.01834,0.12033,2.92543,Heat_repressed_all
+GO:0017156,GO:0017156,Biological Process,6,15,2037,0.01976,0.12639,2.57437,Heat_repressed_all
+GO:0005200,GO:0005200,Molecular Function,6,15,2037,0.01976,0.12639,2.57437,Heat_repressed_all
+GO:0030414,GO:0030414,Molecular Function,6,15,2037,0.01976,0.12639,2.57437,Heat_repressed_all
+GO:0031573,GO:0031573,Biological Process,4,8,2037,0.02408,0.1466,3.21797,Heat_repressed_all
+GO:0017116,single-stranded DNA helicase activity,Molecular Function,4,8,2037,0.02408,0.1466,3.21797,Heat_repressed_all
+GO:0004563,GO:0004563,Molecular Function,4,8,2037,0.02408,0.1466,3.21797,Heat_repressed_all
+GO:0051301,GO:0051301,Biological Process,4,8,2037,0.02408,0.1466,3.21797,Heat_repressed_all
+GO:0005622,GO:0005622,Cellular Component,8,24,2037,0.02408,0.1466,2.14531,Heat_repressed_all
+GO:0036064,GO:0036064,Cellular Component,8,24,2037,0.02408,0.1466,2.14531,Heat_repressed_all
+GO:0005615,GO:0005615,Cellular Component,84,441,2037,0.02476,0.14872,1.22589,Heat_repressed_all
+GO:0046982,GO:0046982,Molecular Function,17,67,2037,0.02482,0.14872,1.633,Heat_repressed_all
+GO:0051726,GO:0051726,Biological Process,7,20,2037,0.02613,0.15418,2.25258,Heat_repressed_all
+GO:0042981,GO:0042981,Biological Process,21,88,2037,0.02655,0.15418,1.53585,Heat_repressed_all
+GO:0005886,plasma membrane,Cellular Component,113,614,2037,0.0274,0.15418,1.18446,Heat_repressed_all
+GO:0034451,GO:0034451,Cellular Component,5,12,2037,0.02749,0.15418,2.68164,Heat_repressed_all
+GO:0000712,GO:0000712,Biological Process,5,12,2037,0.02749,0.15418,2.68164,Heat_repressed_all
+GO:0072686,GO:0072686,Cellular Component,5,12,2037,0.02749,0.15418,2.68164,Heat_repressed_all
+GO:0051213,GO:0051213,Molecular Function,5,12,2037,0.02749,0.15418,2.68164,Heat_repressed_all
+GO:0009086,GO:0009086,Biological Process,5,12,2037,0.02749,0.15418,2.68164,Heat_repressed_all
+GO:0034440,GO:0034440,Biological Process,6,16,2037,0.02755,0.15418,2.41348,Heat_repressed_all
+GO:0060271,GO:0060271,Biological Process,16,63,2037,0.02867,0.15476,1.63452,Heat_repressed_all
+GO:0016787,GO:0016787,Molecular Function,16,63,2037,0.02867,0.15476,1.63452,Heat_repressed_all
+GO:0048019,GO:0048019,Molecular Function,3,5,2037,0.02929,0.15476,3.86156,Heat_repressed_all
+GO:0007064,GO:0007064,Biological Process,3,5,2037,0.02929,0.15476,3.86156,Heat_repressed_all
+GO:0015179,GO:0015179,Molecular Function,3,5,2037,0.02929,0.15476,3.86156,Heat_repressed_all
+GO:0006272,GO:0006272,Biological Process,3,5,2037,0.02929,0.15476,3.86156,Heat_repressed_all
+GO:0006273,GO:0006273,Biological Process,3,5,2037,0.02929,0.15476,3.86156,Heat_repressed_all
+GO:0042555,GO:0042555,Cellular Component,3,5,2037,0.02929,0.15476,3.86156,Heat_repressed_all
+GO:0005975,GO:0005975,Biological Process,21,89,2037,0.02983,0.15654,1.51859,Heat_repressed_all
+GO:0005930,GO:0005930,Cellular Component,8,25,2037,0.03072,0.16012,2.0595,Heat_repressed_all
+GO:0016702,GO:0016702,Molecular Function,6,17,2037,0.03713,0.18851,2.27151,Heat_repressed_all
+GO:0043171,GO:0043171,Biological Process,6,17,2037,0.03713,0.18851,2.27151,Heat_repressed_all
+GO:0000164,GO:0000164,Cellular Component,4,9,2037,0.03809,0.18851,2.86042,Heat_repressed_all
+GO:0031297,GO:0031297,Biological Process,4,9,2037,0.03809,0.18851,2.86042,Heat_repressed_all
+GO:0008080,GO:0008080,Molecular Function,4,9,2037,0.03809,0.18851,2.86042,Heat_repressed_all
+GO:0005876,GO:0005876,Cellular Component,4,9,2037,0.03809,0.18851,2.86042,Heat_repressed_all
+GO:0030203,GO:0030203,Biological Process,4,9,2037,0.03809,0.18851,2.86042,Heat_repressed_all
+GO:0070588,GO:0070588,Biological Process,12,45,2037,0.03815,0.18851,1.71625,Heat_repressed_all
+GO:0003993,GO:0003993,Molecular Function,5,13,2037,0.03908,0.18944,2.47536,Heat_repressed_all
+GO:0008630,GO:0008630,Biological Process,5,13,2037,0.03908,0.18944,2.47536,Heat_repressed_all
+GO:0030515,GO:0030515,Molecular Function,5,13,2037,0.03908,0.18944,2.47536,Heat_repressed_all
+GO:0015279,GO:0015279,Molecular Function,9,31,2037,0.04142,0.19824,1.8685,Heat_repressed_all
+GO:0032040,GO:0032040,Cellular Component,9,31,2037,0.04142,0.19824,1.8685,Heat_repressed_all
+GO:0006629,GO:0006629,Biological Process,10,36,2037,0.04321,0.20553,1.78776,Heat_repressed_all
+GO:0000978,GO:0000978,Molecular Function,57,295,2037,0.0444,0.20985,1.24355,Heat_repressed_all
+GO:0006508,GO:0006508,Biological Process,55,284,2037,0.04586,0.21542,1.2464,Heat_repressed_all
+GO:0006284,GO:0006284,Biological Process,6,18,2037,0.04858,0.2205,2.14531,Heat_repressed_all
+GO:0006828,GO:0006828,Biological Process,9,32,2037,0.04996,0.2205,1.81011,Heat_repressed_all
+GO:0070679,GO:0070679,Molecular Function,9,32,2037,0.04996,0.2205,1.81011,Heat_repressed_all
+GO:0070062,GO:0070062,Cellular Component,3,6,2037,0.05187,0.2205,3.21797,Heat_repressed_all
+GO:0003885,GO:0003885,Molecular Function,3,6,2037,0.05187,0.2205,3.21797,Heat_repressed_all
+GO:0036159,GO:0036159,Biological Process,3,6,2037,0.05187,0.2205,3.21797,Heat_repressed_all
+GO:0005664,GO:0005664,Cellular Component,3,6,2037,0.05187,0.2205,3.21797,Heat_repressed_all
+GO:0008299,GO:0008299,Biological Process,3,6,2037,0.05187,0.2205,3.21797,Heat_repressed_all
+GO:0051014,GO:0051014,Biological Process,3,6,2037,0.05187,0.2205,3.21797,Heat_repressed_all
+GO:0047150,GO:0047150,Molecular Function,3,6,2037,0.05187,0.2205,3.21797,Heat_repressed_all
+GO:0061511,GO:0061511,Biological Process,3,6,2037,0.05187,0.2205,3.21797,Heat_repressed_all
+GO:0006303,GO:0006303,Biological Process,5,14,2037,0.05323,0.2205,2.29855,Heat_repressed_all
+GO:0007154,GO:0007154,Biological Process,5,14,2037,0.05323,0.2205,2.29855,Heat_repressed_all
+GO:0080008,GO:0080008,Cellular Component,5,14,2037,0.05323,0.2205,2.29855,Heat_repressed_all
+GO:0003677,DNA binding,Molecular Function,50,258,2037,0.05418,0.2205,1.24727,Heat_repressed_all
+GO:0090090,GO:0090090,Biological Process,4,10,2037,0.05585,0.2205,2.57437,Heat_repressed_all
+GO:0034703,GO:0034703,Cellular Component,9,33,2037,0.05959,0.2205,1.75526,Heat_repressed_all
+GO:0042393,GO:0042393,Molecular Function,9,33,2037,0.05959,0.2205,1.75526,Heat_repressed_all
+GO:0051480,GO:0051480,Biological Process,10,38,2037,0.06027,0.2205,1.69367,Heat_repressed_all
+GO:0005643,GO:0005643,Cellular Component,6,19,2037,0.06199,0.2205,2.0324,Heat_repressed_all
+GO:0005739,mitochondrion,Cellular Component,54,284,2037,0.06308,0.2205,1.22373,Heat_repressed_all
+GO:0035101,GO:0035101,Cellular Component,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0016671,GO:0016671,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0006883,GO:0006883,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0030010,GO:0030010,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0019985,translesion synthesis,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0019948,GO:0019948,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0031510,GO:0031510,Cellular Component,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0032147,GO:0032147,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:1990423,GO:1990423,Cellular Component,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0036376,GO:0036376,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0051295,GO:0051295,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:2000134,GO:2000134,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0000172,GO:0000172,Cellular Component,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0070182,GO:0070182,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0004800,GO:0004800,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0007051,GO:0007051,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0016818,GO:0016818,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0030007,GO:0030007,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0043546,GO:0043546,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0009308,amine metabolic process,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0015616,GO:0015616,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0008115,GO:0008115,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0034455,GO:0034455,Cellular Component,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0006271,DNA strand elongation involved in DNA replication,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0000002,GO:0000002,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0016151,GO:0016151,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0003910,GO:0003910,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0004000,GO:0004000,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0008330,GO:0008330,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0016571,GO:0016571,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0008131,primary amine oxidase activity,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0018149,GO:0018149,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0017076,GO:0017076,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0019103,GO:0019103,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0015075,GO:0015075,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0003810,GO:0003810,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0001540,GO:0001540,Molecular Function,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0001669,GO:0001669,Cellular Component,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0000076,GO:0000076,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0006301,GO:0006301,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0006164,GO:0006164,Biological Process,2,3,2037,0.0649,0.2205,4.29062,Heat_repressed_all
+GO:0005254,GO:0005254,Molecular Function,13,54,2037,0.06665,0.22523,1.54939,Heat_repressed_all
+GO:0000922,GO:0000922,Cellular Component,7,24,2037,0.06689,0.22523,1.87715,Heat_repressed_all
+GO:0000785,GO:0000785,Cellular Component,12,49,2037,0.06821,0.22867,1.57615,Heat_repressed_all
+GO:0043565,GO:0043565,Molecular Function,11,44,2037,0.06945,0.23182,1.60898,Heat_repressed_all
+GO:0030234,GO:0030234,Molecular Function,5,15,2037,0.06996,0.2325,2.14531,Heat_repressed_all
+GO:0097192,GO:0097192,Biological Process,4,11,2037,0.07728,0.2484,2.34034,Heat_repressed_all
+GO:0005680,GO:0005680,Cellular Component,4,11,2037,0.07728,0.2484,2.34034,Heat_repressed_all
+GO:0035861,GO:0035861,Cellular Component,4,11,2037,0.07728,0.2484,2.34034,Heat_repressed_all
+GO:0034599,GO:0034599,Biological Process,4,11,2037,0.07728,0.2484,2.34034,Heat_repressed_all
+GO:0140658,GO:0140658,Molecular Function,6,20,2037,0.07736,0.2484,1.93078,Heat_repressed_all
+GO:0008104,GO:0008104,Biological Process,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0015250,GO:0015250,Molecular Function,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0007076,GO:0007076,Biological Process,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0032508,GO:0032508,Biological Process,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0000070,mitotic sister chromatid segregation,Biological Process,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0000775,GO:0000775,Cellular Component,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0000077,GO:0000077,Biological Process,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0001682,GO:0001682,Biological Process,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0004622,GO:0004622,Molecular Function,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0016627,GO:0016627,Molecular Function,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0044782,GO:0044782,Biological Process,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0006689,GO:0006689,Biological Process,3,7,2037,0.0805,0.2484,2.75826,Heat_repressed_all
+GO:0005694,chromosome,Cellular Component,7,25,2037,0.08095,0.2484,1.80206,Heat_repressed_all
+GO:0003690,GO:0003690,Molecular Function,7,25,2037,0.08095,0.2484,1.80206,Heat_repressed_all
+GO:0030154,GO:0030154,Biological Process,26,127,2037,0.08135,0.24862,1.31759,Heat_repressed_all
+GO:0005667,GO:0005667,Cellular Component,8,30,2037,0.08227,0.25044,1.71625,Heat_repressed_all
+GO:0007283,GO:0007283,Biological Process,5,16,2037,0.08924,0.27057,2.01123,Heat_repressed_all
+GO:0000724,GO:0000724,Biological Process,11,46,2037,0.09059,0.27355,1.53903,Heat_repressed_all
+GO:0007098,GO:0007098,Biological Process,4,12,2037,0.10218,0.29767,2.14531,Heat_repressed_all
+GO:0006325,GO:0006325,Biological Process,4,12,2037,0.10218,0.29767,2.14531,Heat_repressed_all
+GO:0022829,GO:0022829,Molecular Function,4,12,2037,0.10218,0.29767,2.14531,Heat_repressed_all
+GO:0015813,GO:0015813,Biological Process,4,12,2037,0.10218,0.29767,2.14531,Heat_repressed_all
+GO:0020037,heme binding,Molecular Function,26,131,2037,0.10843,0.29767,1.27736,Heat_repressed_all
+GO:0042803,GO:0042803,Molecular Function,5,17,2037,0.11096,0.29767,1.89292,Heat_repressed_all
+GO:0015630,GO:0015630,Cellular Component,5,17,2037,0.11096,0.29767,1.89292,Heat_repressed_all
+GO:0031491,GO:0031491,Molecular Function,5,17,2037,0.11096,0.29767,1.89292,Heat_repressed_all
+GO:0051287,GO:0051287,Molecular Function,5,17,2037,0.11096,0.29767,1.89292,Heat_repressed_all
+GO:0005777,GO:0005777,Cellular Component,8,32,2037,0.11199,0.29767,1.60898,Heat_repressed_all
+GO:0018105,GO:0018105,Biological Process,7,27,2037,0.11376,0.29767,1.66858,Heat_repressed_all
+GO:0003755,GO:0003755,Molecular Function,7,27,2037,0.11376,0.29767,1.66858,Heat_repressed_all
+GO:0008061,GO:0008061,Molecular Function,6,22,2037,0.11387,0.29767,1.75526,Heat_repressed_all
+GO:0140664,GO:0140664,Molecular Function,3,8,2037,0.11435,0.29767,2.41348,Heat_repressed_all
+GO:0005979,GO:0005979,Biological Process,3,8,2037,0.11435,0.29767,2.41348,Heat_repressed_all
+GO:0043139,GO:0043139,Molecular Function,3,8,2037,0.11435,0.29767,2.41348,Heat_repressed_all
+GO:1990573,GO:1990573,Biological Process,3,8,2037,0.11435,0.29767,2.41348,Heat_repressed_all
+GO:0004300,GO:0004300,Molecular Function,3,8,2037,0.11435,0.29767,2.41348,Heat_repressed_all
+GO:0016925,GO:0016925,Biological Process,3,8,2037,0.11435,0.29767,2.41348,Heat_repressed_all
+GO:2001069,GO:2001069,Molecular Function,3,8,2037,0.11435,0.29767,2.41348,Heat_repressed_all
+GO:0034388,GO:0034388,Cellular Component,3,8,2037,0.11435,0.29767,2.41348,Heat_repressed_all
+GO:0005201,GO:0005201,Molecular Function,11,48,2037,0.11521,0.29767,1.4749,Heat_repressed_all
+GO:0006536,GO:0006536,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0030983,GO:0030983,Molecular Function,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0004591,GO:0004591,Molecular Function,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0035735,GO:0035735,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0051310,GO:0051310,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0032807,GO:0032807,Cellular Component,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0006004,GO:0006004,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0000796,GO:0000796,Cellular Component,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0070475,GO:0070475,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0004540,GO:0004540,Molecular Function,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0004535,GO:0004535,Molecular Function,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0004560,GO:0004560,Molecular Function,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0048476,GO:0048476,Cellular Component,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0060236,GO:0060236,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0017017,GO:0017017,Molecular Function,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0043409,GO:0043409,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0045943,positive regulation of transcription by RNA polymerase I,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0042645,GO:0042645,Cellular Component,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0051276,GO:0051276,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0004035,GO:0004035,Molecular Function,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0047820,GO:0047820,Molecular Function,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0007096,GO:0007096,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0016126,GO:0016126,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0008154,GO:0008154,Biological Process,2,4,2037,0.11657,0.29767,3.21797,Heat_repressed_all
+GO:0030198,GO:0030198,Biological Process,10,43,2037,0.1199,0.30517,1.49673,Heat_repressed_all
+GO:0004674,GO:0004674,Molecular Function,20,99,2037,0.12726,0.32281,1.30019,Heat_repressed_all
+GO:0042554,GO:0042554,Biological Process,4,13,2037,0.13022,0.32707,1.98029,Heat_repressed_all
+GO:0006814,GO:0006814,Biological Process,4,13,2037,0.13022,0.32707,1.98029,Heat_repressed_all
+GO:0016460,GO:0016460,Cellular Component,4,13,2037,0.13022,0.32707,1.98029,Heat_repressed_all
+GO:0004725,GO:0004725,Molecular Function,7,28,2037,0.13241,0.33127,1.60898,Heat_repressed_all
+GO:0048406,nerve growth factor binding,Molecular Function,6,23,2037,0.13485,0.33127,1.67894,Heat_repressed_all
+GO:0005035,death receptor activity,Molecular Function,6,23,2037,0.13485,0.33127,1.67894,Heat_repressed_all
+GO:0008757,GO:0008757,Molecular Function,6,23,2037,0.13485,0.33127,1.67894,Heat_repressed_all
+GO:0015026,coreceptor activity,Molecular Function,6,23,2037,0.13485,0.33127,1.67894,Heat_repressed_all
+GO:0009058,GO:0009058,Biological Process,6,23,2037,0.13485,0.33127,1.67894,Heat_repressed_all
+GO:0006635,GO:0006635,Biological Process,5,18,2037,0.13494,0.33127,1.78776,Heat_repressed_all
+GO:0006486,GO:0006486,Biological Process,12,55,2037,0.13636,0.33367,1.4042,Heat_repressed_all
+GO:0000981,GO:0000981,Molecular Function,64,363,2037,0.14871,0.36271,1.13471,Heat_repressed_all
+GO:0032465,GO:0032465,Biological Process,3,9,2037,0.15248,0.36837,2.14531,Heat_repressed_all
+GO:0016176,GO:0016176,Molecular Function,3,9,2037,0.15248,0.36837,2.14531,Heat_repressed_all
+GO:0008157,GO:0008157,Molecular Function,3,9,2037,0.15248,0.36837,2.14531,Heat_repressed_all
+GO:0035269,GO:0035269,Biological Process,6,24,2037,0.15751,0.37673,1.60898,Heat_repressed_all
+GO:0003333,GO:0003333,Biological Process,6,24,2037,0.15751,0.37673,1.60898,Heat_repressed_all
+GO:0015293,GO:0015293,Molecular Function,5,19,2037,0.161,0.37673,1.69367,Heat_repressed_all
+GO:0036374,glutathione hydrolase activity,Molecular Function,4,14,2037,0.16102,0.37673,1.83884,Heat_repressed_all
+GO:0001733,GO:0001733,Molecular Function,4,14,2037,0.16102,0.37673,1.83884,Heat_repressed_all
+GO:0005112,GO:0005112,Molecular Function,4,14,2037,0.16102,0.37673,1.83884,Heat_repressed_all
+GO:0008198,GO:0008198,Molecular Function,4,14,2037,0.16102,0.37673,1.83884,Heat_repressed_all
+GO:1902476,GO:1902476,Biological Process,11,52,2037,0.17454,0.37673,1.36145,Heat_repressed_all
+GO:0034968,GO:0034968,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0005657,GO:0005657,Cellular Component,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:2000779,GO:2000779,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0060285,GO:0060285,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0047372,GO:0047372,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0140110,GO:0140110,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0035312,GO:0035312,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0035999,GO:0035999,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0071539,GO:0071539,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0008236,GO:0008236,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0006265,GO:0006265,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0043014,GO:0043014,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0043169,GO:0043169,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0043186,GO:0043186,Cellular Component,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0006282,GO:0006282,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0034454,GO:0034454,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0004794,GO:0004794,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0004861,GO:0004861,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0032036,GO:0032036,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0032007,GO:0032007,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0032880,GO:0032880,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0032418,GO:0032418,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0003906,GO:0003906,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0010389,GO:0010389,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0043596,GO:0043596,Cellular Component,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0044772,GO:0044772,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0003941,GO:0003941,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0016539,GO:0016539,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0016139,GO:0016139,Biological Process,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0008821,GO:0008821,Molecular Function,2,5,2037,0.17475,0.37673,2.57437,Heat_repressed_all
+GO:0016758,GO:0016758,Molecular Function,5,20,2037,0.18888,0.40365,1.60898,Heat_repressed_all
+GO:0030246,GO:0030246,Molecular Function,11,53,2037,0.19131,0.40365,1.33576,Heat_repressed_all
+GO:0008203,GO:0008203,Biological Process,3,10,2037,0.19389,0.40365,1.93078,Heat_repressed_all
+GO:0005871,GO:0005871,Cellular Component,3,10,2037,0.19389,0.40365,1.93078,Heat_repressed_all
+GO:0005546,GO:0005546,Molecular Function,3,10,2037,0.19389,0.40365,1.93078,Heat_repressed_all
+GO:0005543,GO:0005543,Molecular Function,3,10,2037,0.19389,0.40365,1.93078,Heat_repressed_all
+GO:0042626,GO:0042626,Molecular Function,3,10,2037,0.19389,0.40365,1.93078,Heat_repressed_all
+GO:0005245,GO:0005245,Molecular Function,3,10,2037,0.19389,0.40365,1.93078,Heat_repressed_all
+GO:0009247,GO:0009247,Biological Process,4,15,2037,0.19413,0.40365,1.71625,Heat_repressed_all
+GO:0036297,GO:0036297,Biological Process,4,15,2037,0.19413,0.40365,1.71625,Heat_repressed_all
+GO:0006289,GO:0006289,Biological Process,4,15,2037,0.19413,0.40365,1.71625,Heat_repressed_all
+GO:0004879,GO:0004879,Molecular Function,4,15,2037,0.19413,0.40365,1.71625,Heat_repressed_all
+GO:0051537,GO:0051537,Molecular Function,4,15,2037,0.19413,0.40365,1.71625,Heat_repressed_all
+GO:0048856,GO:0048856,Biological Process,7,31,2037,0.19639,0.40613,1.45328,Heat_repressed_all
+GO:0030170,GO:0030170,Molecular Function,7,31,2037,0.19639,0.40613,1.45328,Heat_repressed_all
+GO:0008284,GO:0008284,Biological Process,6,26,2037,0.20721,0.42734,1.48522,Heat_repressed_all
+GO:0005813,GO:0005813,Cellular Component,17,89,2037,0.21258,0.43722,1.22934,Heat_repressed_all
+GO:0005516,GO:0005516,Molecular Function,5,21,2037,0.21832,0.44662,1.53237,Heat_repressed_all
+GO:0004089,GO:0004089,Molecular Function,5,21,2037,0.21832,0.44662,1.53237,Heat_repressed_all
+GO:0038023,GO:0038023,Molecular Function,10,49,2037,0.22188,0.45269,1.31346,Heat_repressed_all
+GO:0006751,GO:0006751,Biological Process,4,16,2037,0.2291,0.45435,1.60898,Heat_repressed_all
+GO:0005774,GO:0005774,Cellular Component,4,16,2037,0.2291,0.45435,1.60898,Heat_repressed_all
+GO:0060090,GO:0060090,Molecular Function,4,16,2037,0.2291,0.45435,1.60898,Heat_repressed_all
+GO:0031514,GO:0031514,Cellular Component,4,16,2037,0.2291,0.45435,1.60898,Heat_repressed_all
+GO:0006268,GO:0006268,Biological Process,4,16,2037,0.2291,0.45435,1.60898,Heat_repressed_all
+GO:0006606,GO:0006606,Biological Process,8,38,2037,0.22933,0.45435,1.35493,Heat_repressed_all
+GO:0000149,GO:0000149,Molecular Function,6,27,2037,0.23392,0.45435,1.43021,Heat_repressed_all
+GO:0032259,GO:0032259,Biological Process,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0006565,GO:0006565,Biological Process,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0051045,GO:0051045,Biological Process,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0051016,GO:0051016,Biological Process,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0010951,GO:0010951,Biological Process,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0045216,GO:0045216,Biological Process,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0017108,GO:0017108,Molecular Function,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0019894,GO:0019894,Molecular Function,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0006952,GO:0006952,Biological Process,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0010033,GO:0010033,Biological Process,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0004707,GO:0004707,Molecular Function,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0005847,GO:0005847,Cellular Component,2,6,2037,0.23619,0.45435,2.14531,Heat_repressed_all
+GO:0048791,GO:0048791,Biological Process,3,11,2037,0.23762,0.45435,1.75526,Heat_repressed_all
+GO:0015501,GO:0015501,Molecular Function,3,11,2037,0.23762,0.45435,1.75526,Heat_repressed_all
+GO:0047498,GO:0047498,Molecular Function,3,11,2037,0.23762,0.45435,1.75526,Heat_repressed_all
+GO:0005819,GO:0005819,Cellular Component,3,11,2037,0.23762,0.45435,1.75526,Heat_repressed_all
+GO:0010008,GO:0010008,Cellular Component,3,11,2037,0.23762,0.45435,1.75526,Heat_repressed_all
+GO:0005313,GO:0005313,Molecular Function,3,11,2037,0.23762,0.45435,1.75526,Heat_repressed_all
+GO:0009887,GO:0009887,Biological Process,5,22,2037,0.24904,0.475,1.46271,Heat_repressed_all
+GO:0015276,GO:0015276,Molecular Function,4,17,2037,0.26545,0.50251,1.51434,Heat_repressed_all
+GO:0003950,GO:0003950,Molecular Function,4,17,2037,0.26545,0.50251,1.51434,Heat_repressed_all
+GO:0050661,GO:0050661,Molecular Function,4,17,2037,0.26545,0.50251,1.51434,Heat_repressed_all
+GO:0031012,GO:0031012,Cellular Component,12,63,2037,0.26699,0.50417,1.22589,Heat_repressed_all
+GO:0000287,GO:0000287,Molecular Function,8,40,2037,0.27573,0.51938,1.28719,Heat_repressed_all
+GO:0030574,GO:0030574,Biological Process,3,12,2037,0.28277,0.52095,1.60898,Heat_repressed_all
+GO:0048488,GO:0048488,Biological Process,3,12,2037,0.28277,0.52095,1.60898,Heat_repressed_all
+GO:0010181,GO:0010181,Molecular Function,3,12,2037,0.28277,0.52095,1.60898,Heat_repressed_all
+GO:0046475,GO:0046475,Biological Process,3,12,2037,0.28277,0.52095,1.60898,Heat_repressed_all
+GO:0006874,GO:0006874,Biological Process,3,12,2037,0.28277,0.52095,1.60898,Heat_repressed_all
+GO:0070534,GO:0070534,Biological Process,12,64,2037,0.28575,0.52095,1.20674,Heat_repressed_all
+GO:0046314,GO:0046314,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0004844,GO:0004844,Molecular Function,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0004553,GO:0004553,Molecular Function,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0006700,GO:0006700,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0006865,GO:0006865,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0000079,GO:0000079,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0097510,GO:0097510,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0019902,GO:0019902,Molecular Function,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0006704,GO:0006704,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0004601,GO:0004601,Molecular Function,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0016324,GO:0016324,Cellular Component,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0007179,GO:0007179,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0048038,GO:0048038,Molecular Function,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0004111,GO:0004111,Molecular Function,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0047238,GO:0047238,Molecular Function,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0008285,GO:0008285,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0030490,GO:0030490,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0030705,GO:0030705,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0006405,GO:0006405,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0051536,GO:0051536,Molecular Function,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0031145,GO:0031145,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0034650,GO:0034650,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0036158,GO:0036158,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0030148,GO:0030148,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0071375,GO:0071375,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0031175,GO:0031175,Biological Process,2,7,2037,0.29847,0.52095,1.83884,Heat_repressed_all
+GO:0006310,GO:0006310,Biological Process,8,41,2037,0.29983,0.52212,1.25579,Heat_repressed_all
+GO:0007417,GO:0007417,Biological Process,4,18,2037,0.30274,0.52599,1.43021,Heat_repressed_all
+GO:0016311,GO:0016311,Biological Process,5,24,2037,0.3132,0.54293,1.34082,Heat_repressed_all
+GO:0046330,GO:0046330,Biological Process,13,72,2037,0.3234,0.55934,1.16204,Heat_repressed_all
+GO:0005262,GO:0005262,Molecular Function,8,42,2037,0.32437,0.55975,1.22589,Heat_repressed_all
+GO:0006811,GO:0006811,Biological Process,9,48,2037,0.32522,0.55993,1.20674,Heat_repressed_all
+GO:0046872,GO:0046872,Molecular Function,26,152,2037,0.32834,0.56056,1.10088,Heat_repressed_all
+GO:0030686,GO:0030686,Cellular Component,3,13,2037,0.32853,0.56056,1.48522,Heat_repressed_all
+GO:0005938,GO:0005938,Cellular Component,3,13,2037,0.32853,0.56056,1.48522,Heat_repressed_all
+GO:0005104,GO:0005104,Molecular Function,3,13,2037,0.32853,0.56056,1.48522,Heat_repressed_all
+GO:0090630,GO:0090630,Biological Process,4,19,2037,0.34053,0.57845,1.35493,Heat_repressed_all
+GO:0030334,GO:0030334,Biological Process,4,19,2037,0.34053,0.57845,1.35493,Heat_repressed_all
+GO:0033209,GO:0033209,Biological Process,12,67,2037,0.34408,0.58264,1.1527,Heat_repressed_all
+GO:0015171,GO:0015171,Molecular Function,5,25,2037,0.34608,0.58264,1.28719,Heat_repressed_all
+GO:0006357,GO:0006357,Biological Process,69,423,2037,0.34786,0.58264,1.04983,Heat_repressed_all
+GO:0010468,GO:0010468,Biological Process,6,31,2037,0.34858,0.58264,1.24566,Heat_repressed_all
+GO:0000307,GO:0000307,Cellular Component,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0031080,GO:0031080,Cellular Component,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0006264,GO:0006264,Biological Process,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0043240,GO:0043240,Cellular Component,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0000289,GO:0000289,Biological Process,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0007021,GO:0007021,Biological Process,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0000390,GO:0000390,Biological Process,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0032012,GO:0032012,Biological Process,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0006567,GO:0006567,Biological Process,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0030206,GO:0030206,Biological Process,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0030976,GO:0030976,Molecular Function,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0016788,GO:0016788,Molecular Function,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0007023,GO:0007023,Biological Process,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0050321,GO:0050321,Molecular Function,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0016973,GO:0016973,Biological Process,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0004683,GO:0004683,Molecular Function,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0043539,GO:0043539,Molecular Function,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0016538,GO:0016538,Molecular Function,2,8,2037,0.35984,0.58264,1.60898,Heat_repressed_all
+GO:0046983,GO:0046983,Molecular Function,13,74,2037,0.36131,0.58377,1.13064,Heat_repressed_all
+GO:0004715,GO:0004715,Molecular Function,3,14,2037,0.37421,0.59601,1.37913,Heat_repressed_all
+GO:0070403,GO:0070403,Molecular Function,3,14,2037,0.37421,0.59601,1.37913,Heat_repressed_all
+GO:0003341,GO:0003341,Biological Process,3,14,2037,0.37421,0.59601,1.37913,Heat_repressed_all
+GO:0006302,GO:0006302,Biological Process,3,14,2037,0.37421,0.59601,1.37913,Heat_repressed_all
+GO:0036065,GO:0036065,Biological Process,3,14,2037,0.37421,0.59601,1.37913,Heat_repressed_all
+GO:0046920,GO:0046920,Molecular Function,3,14,2037,0.37421,0.59601,1.37913,Heat_repressed_all
+GO:0008083,GO:0008083,Molecular Function,8,44,2037,0.37437,0.59601,1.17017,Heat_repressed_all
+GO:0019905,GO:0019905,Molecular Function,4,20,2037,0.37845,0.60125,1.28719,Heat_repressed_all
+GO:0030182,GO:0030182,Biological Process,7,39,2037,0.40373,0.64008,1.15517,Heat_repressed_all
+GO:0007266,Rho protein signal transduction,Biological Process,6,33,2037,0.40795,0.64064,1.17017,Heat_repressed_all
+GO:0010628,GO:0010628,Biological Process,4,21,2037,0.41612,0.64064,1.22589,Heat_repressed_all
+GO:0031380,GO:0031380,Cellular Component,4,21,2037,0.41612,0.64064,1.22589,Heat_repressed_all
+GO:0008543,GO:0008543,Biological Process,4,21,2037,0.41612,0.64064,1.22589,Heat_repressed_all
+GO:0005635,GO:0005635,Cellular Component,2,9,2037,0.41909,0.64064,1.43021,Heat_repressed_all
+GO:0007548,GO:0007548,Biological Process,2,9,2037,0.41909,0.64064,1.43021,Heat_repressed_all
+GO:0000030,GO:0000030,Molecular Function,2,9,2037,0.41909,0.64064,1.43021,Heat_repressed_all
+GO:0019752,GO:0019752,Biological Process,2,9,2037,0.41909,0.64064,1.43021,Heat_repressed_all
+GO:0006936,GO:0006936,Biological Process,2,9,2037,0.41909,0.64064,1.43021,Heat_repressed_all
+GO:0051321,GO:0051321,Biological Process,2,9,2037,0.41909,0.64064,1.43021,Heat_repressed_all
+GO:0055088,GO:0055088,Biological Process,2,9,2037,0.41909,0.64064,1.43021,Heat_repressed_all
+GO:0006611,GO:0006611,Biological Process,2,9,2037,0.41909,0.64064,1.43021,Heat_repressed_all
+GO:0051015,GO:0051015,Molecular Function,13,77,2037,0.41922,0.64064,1.08659,Heat_repressed_all
+GO:0015631,GO:0015631,Molecular Function,3,15,2037,0.41924,0.64064,1.28719,Heat_repressed_all
+GO:0009898,GO:0009898,Cellular Component,3,15,2037,0.41924,0.64064,1.28719,Heat_repressed_all
+GO:0006820,GO:0006820,Biological Process,3,15,2037,0.41924,0.64064,1.28719,Heat_repressed_all
+GO:0045087,GO:0045087,Biological Process,3,15,2037,0.41924,0.64064,1.28719,Heat_repressed_all
+GO:0031048,GO:0031048,Biological Process,3,15,2037,0.41924,0.64064,1.28719,Heat_repressed_all
+GO:0098802,GO:0098802,Cellular Component,12,71,2037,0.42454,0.64744,1.08776,Heat_repressed_all
+GO:0003700,GO:0003700,Molecular Function,6,34,2037,0.43751,0.6659,1.13575,Heat_repressed_all
+GO:0043122,GO:0043122,Biological Process,12,72,2037,0.44477,0.67558,1.07266,Heat_repressed_all
+GO:0005654,GO:0005654,Cellular Component,14,85,2037,0.45148,0.68441,1.06004,Heat_repressed_all
+GO:0006470,GO:0006470,Biological Process,10,60,2037,0.4585,0.69304,1.07266,Heat_repressed_all
+GO:0050808,GO:0050808,Biological Process,3,16,2037,0.46311,0.69304,1.20674,Heat_repressed_all
+GO:0019901,GO:0019901,Molecular Function,3,16,2037,0.46311,0.69304,1.20674,Heat_repressed_all
+GO:0004386,GO:0004386,Molecular Function,3,16,2037,0.46311,0.69304,1.20674,Heat_repressed_all
+GO:0006406,GO:0006406,Biological Process,3,16,2037,0.46311,0.69304,1.20674,Heat_repressed_all
+GO:0051225,GO:0051225,Biological Process,3,16,2037,0.46311,0.69304,1.20674,Heat_repressed_all
+GO:0016485,protein processing,Biological Process,6,35,2037,0.46679,0.69304,1.1033,Heat_repressed_all
+GO:0004672,GO:0004672,Molecular Function,24,150,2037,0.47237,0.69304,1.02975,Heat_repressed_all
+GO:0008191,GO:0008191,Molecular Function,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0003774,GO:0003774,Molecular Function,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0008422,GO:0008422,Molecular Function,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0099536,GO:0099536,Biological Process,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0010506,GO:0010506,Biological Process,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0031966,GO:0031966,Cellular Component,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0005776,GO:0005776,Cellular Component,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0015175,GO:0015175,Molecular Function,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0007099,GO:0007099,Biological Process,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0007131,GO:0007131,Biological Process,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0035869,GO:0035869,Cellular Component,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0004181,GO:0004181,Molecular Function,2,10,2037,0.47539,0.69304,1.28719,Heat_repressed_all
+GO:0007165,GO:0007165,Biological Process,46,292,2037,0.48438,0.70239,1.01388,Heat_repressed_all
+GO:0003824,GO:0003824,Molecular Function,7,42,2037,0.48456,0.70239,1.07266,Heat_repressed_all
+GO:0050660,GO:0050660,Molecular Function,7,42,2037,0.48456,0.70239,1.07266,Heat_repressed_all
+GO:0016747,GO:0016747,Molecular Function,4,23,2037,0.48956,0.7056,1.11929,Heat_repressed_all
+GO:0005109,GO:0005109,Molecular Function,4,23,2037,0.48956,0.7056,1.11929,Heat_repressed_all
+GO:0001934,GO:0001934,Biological Process,4,23,2037,0.48956,0.7056,1.11929,Heat_repressed_all
+GO:0005891,GO:0005891,Cellular Component,3,17,2037,0.50547,0.72578,1.13575,Heat_repressed_all
+GO:0004867,GO:0004867,Molecular Function,3,17,2037,0.50547,0.72578,1.13575,Heat_repressed_all
+GO:0005125,GO:0005125,Molecular Function,7,43,2037,0.51087,0.7269,1.04771,Heat_repressed_all
+GO:0031625,GO:0031625,Molecular Function,7,43,2037,0.51087,0.7269,1.04771,Heat_repressed_all
+GO:0004497,GO:0004497,Molecular Function,7,43,2037,0.51087,0.7269,1.04771,Heat_repressed_all
+GO:0005743,GO:0005743,Cellular Component,9,56,2037,0.51259,0.7269,1.03435,Heat_repressed_all
+GO:0000462,GO:0000462,Biological Process,4,24,2037,0.52484,0.7269,1.07266,Heat_repressed_all
+GO:0045165,GO:0045165,Biological Process,4,24,2037,0.52484,0.7269,1.07266,Heat_repressed_all
+GO:0033781,GO:0033781,Molecular Function,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0008138,GO:0008138,Molecular Function,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0002224,GO:0002224,Biological Process,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0035082,GO:0035082,Biological Process,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0043015,GO:0043015,Molecular Function,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0008139,GO:0008139,Molecular Function,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0000028,GO:0000028,Biological Process,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0008028,GO:0008028,Molecular Function,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0098703,GO:0098703,Biological Process,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0006906,GO:0006906,Biological Process,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0045454,GO:0045454,Biological Process,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0018095,GO:0018095,Biological Process,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0031234,GO:0031234,Cellular Component,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0019941,GO:0019941,Biological Process,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0006707,GO:0006707,Biological Process,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0032922,GO:0032922,Biological Process,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0008081,GO:0008081,Molecular Function,2,11,2037,0.52822,0.7269,1.17017,Heat_repressed_all
+GO:0060070,GO:0060070,Biological Process,7,44,2037,0.5367,0.73724,1.0239,Heat_repressed_all
+GO:0006099,GO:0006099,Biological Process,3,18,2037,0.54602,0.74868,1.07266,Heat_repressed_all
+GO:0071880,GO:0071880,Biological Process,4,25,2037,0.55888,0.76495,1.02975,Heat_repressed_all
+GO:0005251,GO:0005251,Molecular Function,7,45,2037,0.56196,0.76777,1.00115,Heat_repressed_all
+GO:0005829,cytosol,Cellular Component,61,398,2037,0.56891,0.77212,0.98641,Heat_repressed_all
+GO:0006821,GO:0006821,Biological Process,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0006644,GO:0006644,Biological Process,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0031386,GO:0031386,Molecular Function,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0007265,GO:0007265,Biological Process,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0061608,GO:0061608,Molecular Function,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0051539,GO:0051539,Molecular Function,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0002020,GO:0002020,Molecular Function,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0008239,GO:0008239,Molecular Function,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0006509,GO:0006509,Biological Process,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0030509,GO:0030509,Biological Process,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0046777,GO:0046777,Biological Process,2,12,2037,0.57731,0.77212,1.07266,Heat_repressed_all
+GO:0017147,GO:0017147,Molecular Function,3,19,2037,0.58454,0.78042,1.0162,Heat_repressed_all
+GO:0060395,GO:0060395,Biological Process,4,26,2037,0.59156,0.78566,0.99014,Heat_repressed_all
+GO:0005216,GO:0005216,Molecular Function,4,26,2037,0.59156,0.78566,0.99014,Heat_repressed_all
+GO:0005884,GO:0005884,Cellular Component,4,26,2037,0.59156,0.78566,0.99014,Heat_repressed_all
+GO:0009897,GO:0009897,Cellular Component,5,33,2037,0.59823,0.79312,0.97514,Heat_repressed_all
+GO:0000723,GO:0000723,Biological Process,3,20,2037,0.62091,0.80737,0.96539,Heat_repressed_all
+GO:0043138,GO:0043138,Molecular Function,3,20,2037,0.62091,0.80737,0.96539,Heat_repressed_all
+GO:0004977,GO:0004977,Molecular Function,3,20,2037,0.62091,0.80737,0.96539,Heat_repressed_all
+GO:0000166,GO:0000166,Molecular Function,3,20,2037,0.62091,0.80737,0.96539,Heat_repressed_all
+GO:0140662,ATP-dependent protein folding chaperone,Molecular Function,3,20,2037,0.62091,0.80737,0.96539,Heat_repressed_all
+GO:0044877,GO:0044877,Molecular Function,2,13,2037,0.62255,0.80737,0.99014,Heat_repressed_all
+GO:0004693,GO:0004693,Molecular Function,2,13,2037,0.62255,0.80737,0.99014,Heat_repressed_all
+GO:0008046,GO:0008046,Molecular Function,2,13,2037,0.62255,0.80737,0.99014,Heat_repressed_all
+GO:0006637,GO:0006637,Biological Process,2,13,2037,0.62255,0.80737,0.99014,Heat_repressed_all
+GO:0003725,GO:0003725,Molecular Function,2,13,2037,0.62255,0.80737,0.99014,Heat_repressed_all
+GO:0001708,GO:0001708,Biological Process,2,13,2037,0.62255,0.80737,0.99014,Heat_repressed_all
+GO:0042026,protein refolding,Biological Process,2,13,2037,0.62255,0.80737,0.99014,Heat_repressed_all
+GO:0005164,GO:0005164,Molecular Function,4,27,2037,0.62277,0.80737,0.95347,Heat_repressed_all
+GO:0005737,cytoplasm,Cellular Component,165,1084,2037,0.63176,0.81763,0.97964,Heat_repressed_all
+GO:0006468,GO:0006468,Biological Process,62,413,2037,0.63895,0.82554,0.96617,Heat_repressed_all
+GO:0005911,GO:0005911,Cellular Component,4,28,2037,0.65242,0.8322,0.91942,Heat_repressed_all
+GO:0005765,GO:0005765,Cellular Component,4,28,2037,0.65242,0.8322,0.91942,Heat_repressed_all
+GO:0007219,GO:0007219,Biological Process,5,35,2037,0.65246,0.8322,0.91942,Heat_repressed_all
+GO:0007168,GO:0007168,Biological Process,3,21,2037,0.65505,0.8322,0.91942,Heat_repressed_all
+GO:0001653,GO:0001653,Molecular Function,3,21,2037,0.65505,0.8322,0.91942,Heat_repressed_all
+GO:0003684,GO:0003684,Molecular Function,3,21,2037,0.65505,0.8322,0.91942,Heat_repressed_all
+GO:0032436,GO:0032436,Biological Process,3,21,2037,0.65505,0.8322,0.91942,Heat_repressed_all
+GO:0005773,GO:0005773,Cellular Component,3,21,2037,0.65505,0.8322,0.91942,Heat_repressed_all
+GO:0006396,GO:0006396,Biological Process,3,21,2037,0.65505,0.8322,0.91942,Heat_repressed_all
+GO:0045892,GO:0045892,Biological Process,3,21,2037,0.65505,0.8322,0.91942,Heat_repressed_all
+GO:0016705,"oxidoreductase activity (paired donors, O2 incorporation)",Molecular Function,9,63,2037,0.66134,0.8379,0.91942,Heat_repressed_all
+GO:0072659,GO:0072659,Biological Process,2,14,2037,0.66394,0.8379,0.91942,Heat_repressed_all
+GO:0016706,GO:0016706,Molecular Function,2,14,2037,0.66394,0.8379,0.91942,Heat_repressed_all
+GO:0004970,GO:0004970,Molecular Function,2,14,2037,0.66394,0.8379,0.91942,Heat_repressed_all
+GO:0045944,GO:0045944,Biological Process,6,43,2037,0.67703,0.8517,0.89804,Heat_repressed_all
+GO:0035091,GO:0035091,Molecular Function,5,36,2037,0.67775,0.8517,0.89388,Heat_repressed_all
+GO:0030036,GO:0030036,Biological Process,4,29,2037,0.68046,0.8517,0.88772,Heat_repressed_all
+GO:0005507,GO:0005507,Molecular Function,4,29,2037,0.68046,0.8517,0.88772,Heat_repressed_all
+GO:0003714,GO:0003714,Molecular Function,4,29,2037,0.68046,0.8517,0.88772,Heat_repressed_all
+GO:0006351,GO:0006351,Biological Process,3,22,2037,0.68691,0.85288,0.87763,Heat_repressed_all
+GO:0004722,GO:0004722,Molecular Function,3,22,2037,0.68691,0.85288,0.87763,Heat_repressed_all
+GO:0022848,GO:0022848,Molecular Function,3,22,2037,0.68691,0.85288,0.87763,Heat_repressed_all
+GO:0007030,GO:0007030,Biological Process,3,22,2037,0.68691,0.85288,0.87763,Heat_repressed_all
+GO:0000977,GO:0000977,Molecular Function,8,58,2037,0.69803,0.85288,0.88772,Heat_repressed_all
+GO:0000209,GO:0000209,Biological Process,17,120,2037,0.69928,0.85288,0.91176,Heat_repressed_all
+GO:0032504,GO:0032504,Biological Process,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0051453,GO:0051453,Biological Process,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0042813,GO:0042813,Molecular Function,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0043531,GO:0043531,Molecular Function,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0006979,GO:0006979,Biological Process,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0019955,GO:0019955,Molecular Function,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0043025,GO:0043025,Cellular Component,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0003678,GO:0003678,Molecular Function,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0009378,GO:0009378,Molecular Function,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0008519,GO:0008519,Molecular Function,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0072488,GO:0072488,Biological Process,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0097272,GO:0097272,Biological Process,2,15,2037,0.70158,0.85288,0.85812,Heat_repressed_all
+GO:0005868,GO:0005868,Cellular Component,3,23,2037,0.71651,0.86964,0.83947,Heat_repressed_all
+GO:0016616,GO:0016616,Molecular Function,2,16,2037,0.73565,0.88301,0.80449,Heat_repressed_all
+GO:0006478,GO:0006478,Biological Process,2,16,2037,0.73565,0.88301,0.80449,Heat_repressed_all
+GO:0004896,GO:0004896,Molecular Function,2,16,2037,0.73565,0.88301,0.80449,Heat_repressed_all
+GO:0019221,GO:0019221,Biological Process,2,16,2037,0.73565,0.88301,0.80449,Heat_repressed_all
+GO:0005912,GO:0005912,Cellular Component,2,16,2037,0.73565,0.88301,0.80449,Heat_repressed_all
+GO:0008476,GO:0008476,Molecular Function,2,16,2037,0.73565,0.88301,0.80449,Heat_repressed_all
+GO:0004521,GO:0004521,Molecular Function,2,16,2037,0.73565,0.88301,0.80449,Heat_repressed_all
+GO:0001517,GO:0001517,Molecular Function,3,24,2037,0.74389,0.8901,0.80449,Heat_repressed_all
+GO:0006790,GO:0006790,Biological Process,3,24,2037,0.74389,0.8901,0.80449,Heat_repressed_all
+GO:0007156,GO:0007156,Biological Process,9,68,2037,0.7494,0.89467,0.85181,Heat_repressed_all
+GO:0045893,GO:0045893,Biological Process,8,61,2037,0.75151,0.89467,0.84406,Heat_repressed_all
+GO:0005230,GO:0005230,Molecular Function,8,61,2037,0.75151,0.89467,0.84406,Heat_repressed_all
+GO:0008076,GO:0008076,Cellular Component,7,54,2037,0.75469,0.89467,0.83429,Heat_repressed_all
+GO:0051966,GO:0051966,Biological Process,4,32,2037,0.75486,0.89467,0.80449,Heat_repressed_all
+GO:0007216,GO:0007216,Biological Process,4,32,2037,0.75486,0.89467,0.80449,Heat_repressed_all
+GO:0061630,GO:0061630,Molecular Function,22,159,2037,0.75594,0.89467,0.89051,Heat_repressed_all
+GO:0004888,GO:0004888,Molecular Function,12,90,2037,0.76088,0.89583,0.85812,Heat_repressed_all
+GO:0009653,GO:0009653,Biological Process,5,40,2037,0.76623,0.89583,0.80449,Heat_repressed_all
+GO:0000175,GO:0000175,Molecular Function,2,17,2037,0.76634,0.89583,0.75717,Heat_repressed_all
+GO:0000045,GO:0000045,Biological Process,2,17,2037,0.76634,0.89583,0.75717,Heat_repressed_all
+GO:0008168,GO:0008168,Molecular Function,2,17,2037,0.76634,0.89583,0.75717,Heat_repressed_all
+GO:0007214,GO:0007214,Biological Process,2,17,2037,0.76634,0.89583,0.75717,Heat_repressed_all
+GO:0035567,GO:0035567,Biological Process,2,17,2037,0.76634,0.89583,0.75717,Heat_repressed_all
+GO:0006631,GO:0006631,Biological Process,2,17,2037,0.76634,0.89583,0.75717,Heat_repressed_all
+GO:1902600,GO:1902600,Biological Process,3,25,2037,0.76912,0.89633,0.77231,Heat_repressed_all
+GO:0006044,GO:0006044,Biological Process,3,25,2037,0.76912,0.89633,0.77231,Heat_repressed_all
+GO:0050877,GO:0050877,Biological Process,11,84,2037,0.77543,0.90074,0.8428,Heat_repressed_all
+GO:0022841,GO:0022841,Molecular Function,4,33,2037,0.77646,0.90074,0.78011,Heat_repressed_all
+GO:0030322,GO:0030322,Biological Process,4,33,2037,0.77646,0.90074,0.78011,Heat_repressed_all
+GO:0007166,GO:0007166,Biological Process,8,63,2037,0.78326,0.90724,0.81726,Heat_repressed_all
+GO:0008146,GO:0008146,Molecular Function,5,41,2037,0.7852,0.90811,0.78487,Heat_repressed_all
+GO:0015629,GO:0015629,Cellular Component,3,26,2037,0.79228,0.91029,0.74261,Heat_repressed_all
+GO:0006182,GO:0006182,Biological Process,3,26,2037,0.79228,0.91029,0.74261,Heat_repressed_all
+GO:0004383,GO:0004383,Molecular Function,3,26,2037,0.79228,0.91029,0.74261,Heat_repressed_all
+GO:0008395,steroid hydroxylase activity,Molecular Function,2,18,2037,0.79388,0.91029,0.7151,Heat_repressed_all
+GO:0000413,GO:0000413,Biological Process,2,18,2037,0.79388,0.91029,0.7151,Heat_repressed_all
+GO:0034220,GO:0034220,Biological Process,6,49,2037,0.79426,0.91029,0.78807,Heat_repressed_all
+GO:0001640,GO:0001640,Molecular Function,4,34,2037,0.79653,0.91152,0.75717,Heat_repressed_all
+GO:0042277,GO:0042277,Molecular Function,8,64,2037,0.79796,0.91179,0.80449,Heat_repressed_all
+GO:0035725,GO:0035725,Biological Process,9,72,2037,0.80743,0.92123,0.80449,Heat_repressed_all
+GO:0032580,GO:0032580,Cellular Component,3,27,2037,0.81347,0.92416,0.7151,Heat_repressed_all
+GO:0000151,GO:0000151,Cellular Component,3,27,2037,0.81347,0.92416,0.7151,Heat_repressed_all
+GO:0003713,GO:0003713,Molecular Function,4,35,2037,0.81512,0.92416,0.73554,Heat_repressed_all
+GO:0045211,GO:0045211,Cellular Component,4,35,2037,0.81512,0.92416,0.73554,Heat_repressed_all
+GO:0051923,GO:0051923,Biological Process,2,19,2037,0.81851,0.92416,0.67747,Heat_repressed_all
+GO:0005102,GO:0005102,Molecular Function,2,19,2037,0.81851,0.92416,0.67747,Heat_repressed_all
+GO:0006633,GO:0006633,Biological Process,2,19,2037,0.81851,0.92416,0.67747,Heat_repressed_all
+GO:0006364,GO:0006364,Biological Process,3,28,2037,0.8328,0.9389,0.68956,Heat_repressed_all
+GO:0006355,GO:0006355,Biological Process,16,125,2037,0.83459,0.93953,0.8238,Heat_repressed_all
+GO:0031624,GO:0031624,Molecular Function,2,20,2037,0.84047,0.94335,0.64359,Heat_repressed_all
+GO:0005769,GO:0005769,Cellular Component,2,20,2037,0.84047,0.94335,0.64359,Heat_repressed_all
+GO:0042391,GO:0042391,Biological Process,11,90,2037,0.84616,0.94724,0.78661,Heat_repressed_all
+GO:0005783,GO:0005783,Cellular Component,21,162,2037,0.84645,0.94724,0.83429,Heat_repressed_all
+GO:0004197,GO:0004197,Molecular Function,5,45,2037,0.84928,0.94724,0.7151,Heat_repressed_all
+GO:0030544,GO:0030544,Molecular Function,3,29,2037,0.85037,0.94724,0.66579,Heat_repressed_all
+GO:0000122,GO:0000122,Biological Process,3,29,2037,0.85037,0.94724,0.66579,Heat_repressed_all
+GO:0007189,GO:0007189,Biological Process,6,53,2037,0.85219,0.94724,0.7286,Heat_repressed_all
+GO:0045202,GO:0045202,Cellular Component,12,98,2037,0.85264,0.94724,0.78807,Heat_repressed_all
+GO:0016459,GO:0016459,Cellular Component,2,21,2037,0.85998,0.9499,0.61295,Heat_repressed_all
+GO:0006869,GO:0006869,Biological Process,2,21,2037,0.85998,0.9499,0.61295,Heat_repressed_all
+GO:0008237,GO:0008237,Molecular Function,2,21,2037,0.85998,0.9499,0.61295,Heat_repressed_all
+GO:0007169,GO:0007169,Biological Process,16,128,2037,0.86038,0.9499,0.80449,Heat_repressed_all
+GO:0007275,GO:0007275,Biological Process,21,164,2037,0.86128,0.9499,0.82411,Heat_repressed_all
+GO:0005085,GO:0005085,Molecular Function,9,77,2037,0.86499,0.95262,0.75225,Heat_repressed_all
+GO:0006955,GO:0006955,Biological Process,3,30,2037,0.86632,0.9527,0.64359,Heat_repressed_all
+GO:0003887,GO:0003887,Molecular Function,2,22,2037,0.87729,0.96199,0.58509,Heat_repressed_all
+GO:0006749,GO:0006749,Biological Process,2,22,2037,0.87729,0.96199,0.58509,Heat_repressed_all
+GO:0005525,GTP binding,Molecular Function,28,217,2037,0.88184,0.96559,0.83044,Heat_repressed_all
+GO:0004714,GO:0004714,Molecular Function,13,109,2037,0.8835,0.96601,0.76759,Heat_repressed_all
+GO:0043231,GO:0043231,Cellular Component,6,56,2037,0.88626,0.96764,0.68956,Heat_repressed_all
+GO:0030424,GO:0030424,Cellular Component,4,40,2037,0.88817,0.96834,0.64359,Heat_repressed_all
+GO:0004842,GO:0004842,Molecular Function,11,95,2037,0.89073,0.96974,0.74521,Heat_repressed_all
+GO:0050982,GO:0050982,Biological Process,3,32,2037,0.89377,0.97165,0.60337,Heat_repressed_all
+GO:0005929,GO:0005929,Cellular Component,4,41,2037,0.89931,0.97628,0.6279,Heat_repressed_all
+GO:0004983,GO:0004983,Molecular Function,2,24,2037,0.90612,0.98228,0.53633,Heat_repressed_all
+GO:0043005,GO:0043005,Cellular Component,14,120,2037,0.90775,0.98265,0.75086,Heat_repressed_all
+GO:0033674,GO:0033674,Biological Process,13,113,2037,0.91086,0.98323,0.74042,Heat_repressed_all
+GO:0071805,GO:0071805,Biological Process,11,98,2037,0.91197,0.98323,0.7224,Heat_repressed_all
+GO:0005096,GO:0005096,Molecular Function,7,67,2037,0.91311,0.98323,0.67241,Heat_repressed_all
+GO:0007155,GO:0007155,Biological Process,3,34,2037,0.91604,0.98323,0.56788,Heat_repressed_all
+GO:0043130,GO:0043130,Molecular Function,3,34,2037,0.91604,0.98323,0.56788,Heat_repressed_all
+GO:0008289,GO:0008289,Molecular Function,3,34,2037,0.91604,0.98323,0.56788,Heat_repressed_all
+GO:0031267,GO:0031267,Molecular Function,4,43,2037,0.91867,0.98466,0.59869,Heat_repressed_all
+GO:0006511,GO:0006511,Biological Process,8,76,2037,0.92061,0.98481,0.67747,Heat_repressed_all
+GO:0005730,GO:0005730,Cellular Component,9,84,2037,0.9214,0.98481,0.68956,Heat_repressed_all
+GO:0050839,GO:0050839,Molecular Function,2,26,2037,0.92852,0.98964,0.49507,Heat_repressed_all
+GO:0007399,GO:0007399,Biological Process,2,26,2037,0.92852,0.98964,0.49507,Heat_repressed_all
+GO:0043235,GO:0043235,Cellular Component,15,133,2037,0.9361,0.99526,0.72586,Heat_repressed_all
+GO:0007015,GO:0007015,Biological Process,2,27,2037,0.93772,0.99526,0.47674,Heat_repressed_all
+GO:0031146,GO:0031146,Biological Process,2,27,2037,0.93772,0.99526,0.47674,Heat_repressed_all
+GO:0005759,GO:0005759,Cellular Component,3,37,2037,0.94155,0.99794,0.52183,Heat_repressed_all
+GO:0030425,GO:0030425,Cellular Component,6,64,2037,0.94626,1.0,0.60337,Heat_repressed_all
+GO:0030594,GO:0030594,Molecular Function,13,121,2037,0.94972,1.0,0.69146,Heat_repressed_all
+GO:0019005,GO:0019005,Cellular Component,2,29,2037,0.95286,1.0,0.44386,Heat_repressed_all
+GO:0070492,GO:0070492,Molecular Function,8,82,2037,0.95291,1.0,0.6279,Heat_repressed_all
+GO:0043161,GO:0043161,Biological Process,12,115,2037,0.95628,1.0,0.67158,Heat_repressed_all
+GO:0071013,GO:0071013,Cellular Component,2,30,2037,0.95904,1.0,0.42906,Heat_repressed_all
+GO:0005764,GO:0005764,Cellular Component,3,40,2037,0.95971,1.0,0.4827,Heat_repressed_all
+GO:0004993,GO:0004993,Molecular Function,5,59,2037,0.96293,1.0,0.54542,Heat_repressed_all
+GO:0007187,GO:0007187,Biological Process,5,59,2037,0.96293,1.0,0.54542,Heat_repressed_all
+GO:0007268,GO:0007268,Biological Process,16,150,2037,0.96683,1.0,0.6865,Heat_repressed_all
+GO:0012505,GO:0012505,Cellular Component,2,32,2037,0.96915,1.0,0.40225,Heat_repressed_all
+GO:0003724,GO:0003724,Molecular Function,2,32,2037,0.96915,1.0,0.40225,Heat_repressed_all
+GO:0004252,GO:0004252,Molecular Function,12,120,2037,0.97068,1.0,0.64359,Heat_repressed_all
+GO:0051260,GO:0051260,Biological Process,3,43,2037,0.97246,1.0,0.44902,Heat_repressed_all
+GO:0016567,GO:0016567,Biological Process,8,88,2037,0.97293,1.0,0.58509,Heat_repressed_all
+GO:0098609,GO:0098609,Biological Process,5,62,2037,0.97327,1.0,0.51903,Heat_repressed_all
+GO:0006338,GO:0006338,Biological Process,2,34,2037,0.97683,1.0,0.37858,Heat_repressed_all
+GO:0062023,GO:0062023,Cellular Component,4,55,2037,0.97939,1.0,0.46807,Heat_repressed_all
+GO:0022008,GO:0022008,Biological Process,2,35,2037,0.97995,1.0,0.36777,Heat_repressed_all
+GO:0005768,GO:0005768,Cellular Component,2,35,2037,0.97995,1.0,0.36777,Heat_repressed_all
+GO:0016579,GO:0016579,Biological Process,3,46,2037,0.98132,1.0,0.41973,Heat_repressed_all
+GO:0016757,GO:0016757,Molecular Function,2,36,2037,0.98265,1.0,0.35755,Heat_repressed_all
+GO:0035556,GO:0035556,Biological Process,10,112,2037,0.98602,1.0,0.57464,Heat_repressed_all
+GO:0006457,protein folding,Biological Process,2,39,2037,0.9888,1.0,0.33005,Heat_repressed_all
+GO:0015280,GO:0015280,Molecular Function,2,40,2037,0.99033,1.0,0.3218,Heat_repressed_all
+GO:0016192,GO:0016192,Biological Process,3,51,2037,0.99036,1.0,0.37858,Heat_repressed_all
+GO:0003924,GTPase activity,Molecular Function,20,201,2037,0.9922,1.0,0.64039,Heat_repressed_all
+GO:0004843,GO:0004843,Molecular Function,3,53,2037,0.99264,1.0,0.3643,Heat_repressed_all
+GO:0005802,GO:0005802,Cellular Component,2,42,2037,0.99281,1.0,0.30647,Heat_repressed_all
+GO:0007411,GO:0007411,Biological Process,3,56,2037,0.99511,1.0,0.34478,Heat_repressed_all
+GO:0003729,GO:0003729,Molecular Function,5,77,2037,0.99531,1.0,0.41792,Heat_repressed_all
+GO:0005794,GO:0005794,Cellular Component,10,145,2037,0.99951,1.0,0.44386,Heat_repressed_all
+GO:0005789,GO:0005789,Cellular Component,7,125,2037,0.99984,1.0,0.36041,Heat_repressed_all
+GO:0000139,GO:0000139,Cellular Component,2,69,2037,0.99988,1.0,0.18655,Heat_repressed_all
+GO:0006886,GO:0006886,Biological Process,2,73,2037,0.99994,1.0,0.17633,Heat_repressed_all
+GO:0003723,RNA binding,Molecular Function,22,284,2037,0.99998,1.0,0.49856,Heat_repressed_all
+GO:0015074,GO:0015074,Biological Process,2,83,2037,0.99999,1.0,0.15508,Heat_repressed_all
+GO:0006412,GO:0006412,Biological Process,2,87,2037,0.99999,1.0,0.14795,Heat_repressed_all
+GO:0005840,GO:0005840,Cellular Component,2,90,2037,1.0,1.0,0.14302,Heat_repressed_all
+GO:0003676,GO:0003676,Molecular Function,12,207,2037,1.0,1.0,0.3731,Heat_repressed_all
+GO:0003735,GO:0003735,Molecular Function,2,110,2037,1.0,1.0,0.11702,Heat_repressed_all
+GO:0004930,GO:0004930,Molecular Function,77,1123,2037,1.0,1.0,0.44129,Heat_repressed_all
+GO:0007186,GO:0007186,Biological Process,74,1122,2037,1.0,1.0,0.42447,Heat_repressed_all
